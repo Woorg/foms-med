@@ -1,0 +1,131 @@
+.video {
+    height: 131px;
+    @include mq($small) {
+        height: 142px;
+    }
+    &_wide {
+        @include mq($small) {
+            height: 384px;
+        }
+        .video__object {
+            width: 100%;
+            flex-basis: auto;
+            @include mq($small) {
+                max-width: 683px;
+            }
+        }
+        .video__button-icon {
+            @include mq($small) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    &__in {
+        // display: flex;
+        height: 100%;
+        display: flex;
+        line-height: 1;
+        @include mq($small) {
+            height: auto;
+        }
+    }
+
+    &__object {
+        position: relative;
+        flex-grow: 1;
+        overflow: hidden;
+        @include mq($small) {
+            flex-basis: 56.4%;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include resetbutton();
+        // color: var(--white);
+        opacity: .8;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+        @include tr(.3s ease);
+
+        @include mq($small) {
+
+        }
+
+        .video__button-1 {
+            color: transparent;
+            @include tr(.3s ease)
+        }
+
+        .video__button-2 {
+            color: var(--white);
+            @include tr(.3s ease)
+        }
+
+
+        &:hover {
+            opacity: 1;
+            // color: var(--black);
+            @include tr(.3s ease)
+
+            .video__button-1 {
+                color: var(--black);
+                @include tr(.3s ease)
+            }
+
+            .video__button-2 {
+                color: var(--white);
+                @include tr(.3s ease)
+            }
+
+        }
+    }
+
+    &__button-icon {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    &__entry {
+        display: none;
+        @include mq($small) {
+            margin-left: 20px;
+            flex-basis: 47.4%;
+            display: flex;
+        }
+    }
+
+    &__entry-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+
+    &__more {
+        margin-top: 5px;
+    }
+
+    // &__button-icon {
+    //     .video__button-1 {
+    //         background: red;
+    //     }
+    // }
+
+
+
+    &__preview {
+        height: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+}

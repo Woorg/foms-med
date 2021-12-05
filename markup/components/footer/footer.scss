@@ -1,0 +1,84 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(-180deg, rgba(13,22,54,1) 0%, rgba(13,21,52,1) 100%);
+
+
+    &__container {
+        padding-top: 74px;
+
+        padding-bottom: $padding-section;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        color: rgba(255,255,255,.5);
+
+        @include mq($m) {
+            padding-top: 43px;
+
+        }
+
+    }
+
+    &__logo {
+        margin-bottom: 34px;
+        @include mq($m) {
+            margin-bottom: 50px;
+
+        }
+    }
+
+    &__nav {
+        margin-bottom: 15px;
+        width: 100%;
+        @include mq($m) {
+            margin-bottom: 0;
+            width: auto;
+        }
+    }
+
+    &__form {
+
+        @include mq($m) {
+            display: none;
+        }
+    }
+
+    &__social {
+        margin-top: 14px;
+        max-width: 104px;
+        color: var(--white);
+        order: 4;
+        @include mq($m) {
+            max-width: 112px;
+            order: 2;
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid #1D2C6B;
+        margin-top: 24px;
+        padding-top: 30px;
+        padding-bottom: 17px;
+        max-width: 100%;
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: -0.3px;
+        text-align: left;
+        @include mq($m) {
+            margin-bottom: 0;
+            padding-top: 35px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.63;
+            letter-spacing: -0.2px;
+            text-align: center;
+        }
+    }
+
+
+
+}

@@ -1,0 +1,115 @@
+// Common styles of the project
+
+html, body {
+    height: 100%;
+}
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    color: var(--black);
+    font-display: swap;
+    font-family: $inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    &__wrapper {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+        overflow: hidden;
+    }
+
+    &__main {
+        z-index: 1;
+        position: relative;
+        background: #0C1431;
+
+        overflow: hidden;
+        &::after {
+
+            @include mq($m) {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2050px;
+                min-height: 2151px;
+                content: '';
+                background: url('../img/general/main-bg.png') 0 0 ;
+            }
+
+        }
+    }
+
+    &__news {
+        display: none;
+        @include mq($m) {
+            display: block;
+        }
+    }
+
+}
+
+.page_nav_open {
+    overflow-y: hidden;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 100%;
+    @include mq($m) {
+        // padding-right: 30px;
+        // padding-left: 30px;
+
+        max-width: 1170px;
+    }
+
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    &.lazy {
+        opacity: 0;
+
+    }
+
+    &:not(.initial) {
+        @include tr(opacity .3s);
+    }
+
+    &.initial,
+    &.loaded,
+    &.error {
+        opacity: 1;
+    }
+
+}
+
+
+img:not([src]):not([srcset]) {
+    visibility: hidden;
+}
+
+
+
+// .mfp-bg {
+//     background-color: rgba(26, 26, 26, 1);
+//     opacity: 1;
+// }
+
+// button.mfp-close,
+// button.mfp-arrow {
+//     top: 10px;
+//     right: 10px;
+//     font-size: 70px;
+// }

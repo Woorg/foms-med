@@ -1,0 +1,16 @@
+mixin cta(data)
+    section.cta
+        .cta__container.container
+            .cta__subscribe.subscribe.subscribe_second
+                h2.subscribe__title.title.title_second Зарегистрируйтесь
+                p.subscribe__text.text.text_big Мы - помогаем работать онлайн! Поможем разработать производительное ПО и удобные сервисы
+                form.subscribe__form.form.form_cta(action="")
+                    .form__row
+                        .form__field.form__field_email
+                            input.form__input(type="text", placeholder="Введите свой E-mail")
+                            != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'form__field-icon'})
+                        .form__field.form__field_submit_glow
+                            input.form__submit.button.button_large(type="submit", value="Зарегистрироваться")
+
+
+                    .form__note Пользуйтесь лучшим программным обеспечением!

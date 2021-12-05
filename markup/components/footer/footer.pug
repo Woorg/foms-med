@@ -1,0 +1,37 @@
+mixin footer(data)
+    footer.footer&attributes(attributes)
+        .footer__container.container
+            a.footer__logo(href="#top")
+                != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'footer__logo-icon'})
+
+            nav.footer__nav.nav.nav_secondary
+                ul.nav__list
+                    li.nav__item
+                        a.nav__link(href="#") Контакты
+                    li.nav__item
+                        a.nav__link(href="#") Оферта
+                    li.nav__item
+                        a.nav__link(href="#") Копирайт
+
+            .footer__form.form.form_footer
+                .form__row
+                    .form__field
+                        input.form__input(type="text", placeholder="Введите свой E-mail")
+                    button.form__submit.button.button_large(type="submit") Send
+
+
+            ul.footer__social.social
+
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'facebook-icon', className: 'social__icon'})
+
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'telegram-icon', className: 'social__icon'})
+
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'google-icon', className: 'social__icon'})
+
+            .footer__copyright OneDash © 2021

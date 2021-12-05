@@ -1,0 +1,47 @@
+
+mixin news(data)
+    section.news&attributes(attributes)
+        .news__container.container
+            h2.news__title.title.title_second Новости
+            .news__articles
+                article.news__article
+                    .news__article-in
+                        .news__meta
+                            a.news__category(href="#") Категория
+                            .news__meta-sep
+                            time.news__date(datetime="2001-05-15 19:00") 2 дня назад
+                        .news__article-title Тема новости в двух предложениях Тема новости в двух предложениях
+                        picture.news__image
+                            source(type="image/webp", data-srcset="static/img/content/news-img-1@2x.webp")
+                            source(type="image/png", data-srcset="static/img/content/news-img-1@2x.png")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-1@2x.png")
+
+                article.news__article
+                    .news__article-in
+                        .news__meta
+                            a.news__category(href="#") Marketing
+                            .news__meta-sep
+                            time.news__date(datetime="2001-05-15 19:00") 2 дня назад
+                        .news__article-title Тема новости в двух предложениях Тема новости в двух предложениях
+                        picture.news__image
+                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/png", data-srcset="static/img/content/news-img-2@2x.png")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.png")
+
+                .news__subscribe.subscribe
+                    .subscribe__in
+                        h3.subscribe__title.title.title_third Подпишитесь на обновления
+                        p.subscribe__text.text.text_medium Мы оповестим вас первым о новых сервисах и фишках!
+                        form.subscribe__form.form.form_subscribe(action="")
+                            .form__field.form__field_email
+                                input.form__input(type="text", placeholder="Введите свой Email")
+                                != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'form__field-icon'})
+                            input.form__submit.button.button_big(type="submit", value="Подписаться")
+
+                            .form__note.text.text_small Без спама. Только полезные новости.
+
+
+            picture.news__bg
+                source(type="image/webp", data-srcset="static/img/general/news-bg@2x.webp")
+                source(type="image/png", data-srcset="static/img/general/news-bg@2x.png")
+                img.lazy(src="", alt="Изображение", data-src="static/img/general/news-bg@2x.png")

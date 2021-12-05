@@ -1,0 +1,88 @@
+.feedback {
+    position: relative;
+    z-index: 1;
+    &__container {
+        padding-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mq($m) {
+            padding-top: $padding-section-half;
+            padding-bottom: $padding-section-half;
+        }
+    }
+
+    &__entry {
+        padding-top: 30px;
+        max-width: 510px;
+        width: 100%;
+        @include mq($m) {
+            padding-right: 30px;
+
+        }
+    }
+    &__title {
+        margin-bottom: 10px;
+        padding-right: 130px;
+        @include mq($s) {
+            padding-right: 100px;
+        }
+        @include mq($m) {
+            margin-bottom: 17px;
+            padding-right: 40px;
+
+        }
+    }
+
+    &__text {
+        padding-right: 50px;
+        color: rgba(255, 255, 255, .5);
+        @include mq($s) {
+            padding-right: 20px;
+        }
+        @include mq($m) {
+            padding-right: 90px;
+
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+        padding-left: 25px;
+        width: 100%;
+        @include mq($m) {
+            margin-top: 30px;
+            width: auto;
+        }
+    }
+
+    &__image {
+        position: relative;
+        order: -1;
+        @include mq($m) {
+            width: 584px;
+            height: 422px;
+            order: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &::after {
+
+            @include mq($m) {
+                position: absolute;
+                top: calc(100% - 350px);
+                left: calc(50% - 100px);
+                width: 922px;
+                height: 922px;
+                content: '';
+                background: url('../img/general/feedback-glow.png') 0 0 / cover no-repeat;
+                transform: translateX(-50%)
+
+            }
+        }
+    }
+}

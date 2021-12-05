@@ -1,0 +1,18 @@
+mixin about(data)
+    section.about
+        .about__container.container
+            article.about__entry
+                h2.about__title.title.title_second Персональная безопасность, на безлимитной скорости
+                p.about__text.text.text_big Высоко-скоростной VPN под все платформы. Большая сеть локаций, с мгновенным подключением и самым удобным интерфейсом. Уникальная база IP-адресов - Ваша приватная сеть для бизнеса.
+                a.about__more.button.button_large(href="#more") Подробнее
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'button__arrow'})
+
+            .about__video
+                video.about__video-object(preload='auto' loop muted playsinline poster='static/img/content/video-preview.webp')
+                    source(src='videos/earth_optimize.mp4' type='video/mp4')
+                    //- source(src='videos/earth_optimize.webm' type='video/webm')
+                    //- source(src='videos/earth_optimize.ogv' type='video/ogg')
+
+
+                button.about__video-button
+                    != pugHelpers.Icon.call(locals, {iconName: 'play-button-2', className: 'about__video-icon'})

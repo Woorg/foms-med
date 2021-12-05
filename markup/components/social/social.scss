@@ -1,0 +1,24 @@
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+
+    }
+
+    &__link {
+        color: inherit;
+        @include tr(.3s ease);
+
+        &:hover {
+            opacity: .8;
+            @include tr(.3s ease);
+
+        }
+
+    }
+
+    &__icon {
+
+    }
+}

@@ -1,0 +1,12 @@
+mixin nav(data)
+    nav.nav&attributes(attributes)
+
+        - var navList = data;
+
+        ul.nav__list
+
+            each item, index in navList
+
+                li(class=`nav__item ${itemClass}`)
+
+                    a.nav__link(href=item.href) #{item.title}

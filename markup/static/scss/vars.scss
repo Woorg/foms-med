@@ -1,0 +1,21 @@
+// File for scss-vars.
+
+$title-margin: 35px;
+
+$padding-section: 95px;
+$padding-section-half: 45px;
+
+$l: 1000px;
+$m: 728px;
+$s: 308px;
+
+
+$white: #ffffff;
+$blue: #345dee;
+$black: #000000;
+
+:root {
+    --white: #{$white};
+    --blue: #{$blue};
+    --black: #{$black};
+}

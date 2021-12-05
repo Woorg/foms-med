@@ -1,0 +1,39 @@
+.cta {
+    &__container {
+        position: relative;
+        z-index: 1;
+        padding-top: 165px;
+        padding-bottom: 50px;
+
+        @include mq($m) {
+            padding-top: 100px;
+            padding-bottom: 108px;
+
+        }
+
+    }
+
+    &__subscribe {
+        margin: auto;
+        width: 100%;
+        @include mq($m) {
+            max-width: 730px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        padding-right: 60px;
+    }
+
+    &__form {
+
+    }
+
+
+}

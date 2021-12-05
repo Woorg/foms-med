@@ -1,0 +1,51 @@
+.subscribe {
+
+    &__in {
+        border: solid 1px #1d2c6b;
+        padding: 40px 52px 50px 35px;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        margin-bottom: 19px;
+        color: rgba(255,255,255, .5);
+    }
+
+    &__form {
+
+    }
+
+}
+
+
+.subscribe_second {
+    .subscribe__title {
+        margin-bottom: 17px;
+        text-align: center;
+        @include mq($m) {
+            text-align: left;
+        }
+    }
+    .subscribe__text {
+        margin-bottom: 35px;
+        padding-right: 35px;
+        padding-left: 35px;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: -0.3px;
+        text-align: center;
+        @include mq($m) {
+            margin-bottom: 40px;
+            padding-right: 90px;
+            font-size: 18px;
+            line-height: 1.44;
+            letter-spacing: -0.3px;
+            text-align: left;
+        }
+    }
+}

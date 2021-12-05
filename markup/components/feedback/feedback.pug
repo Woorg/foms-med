@@ -1,0 +1,14 @@
+mixin feedback(data)
+    section.feedback
+        .feedback__container.container
+            .feedback__entry
+                h2.feedback__title.title.title_second Оставь обратную связь
+                .feedback__text.text.text_big
+                    p Оставьте обратную связь, чтобы мы могли улучшить продукт так, соласно вашей обратной связи
+                a.feedback__button.button.button_large(href="#") Оставить Фидбэк
+
+
+            picture.feedback__image
+                source(type="image/webp", data-srcset="static/img/general/feedback-img@2x.webp")
+                source(type="image/png", data-srcset="static/img/general/feedback-img@2x.png")
+                img.lazy(src="", alt="Изображение", data-src="static/img/general/feedback-img@2x.png")

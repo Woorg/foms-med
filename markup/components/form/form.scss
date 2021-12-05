@@ -1,0 +1,244 @@
+.form {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mq($m) {
+            margin-bottom: 20px;
+            flex-wrap: nowrap;
+        }
+
+    }
+    &__field {
+        margin-bottom: 17px;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+
+        @include mq($m) {
+            margin-right: 16px;
+            margin-bottom: 0;
+        }
+
+
+        &:last-child {
+            margin-bottom: 20px;
+            margin-right: 0;
+
+            @include mq($m) {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    &__field_email {
+        position: relative;
+        color: rgba(255,255,255, .5);
+        .form__input {
+            padding-right: 50px;
+        }
+
+    }
+
+    &__field_submit_glow {
+        position: relative;
+        &:after {
+            @include mq($m) {
+                z-index: -1;
+                position: absolute;
+                top: -465px;
+                right: -391px;
+                content: '';
+                width: 999px;
+                height: 780px;
+                background: url('../img/general/header-button-glow.png') 0 0 no-repeat;
+
+            }
+
+
+        }
+    }
+
+    &__field-icon {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%)
+    }
+
+    &__input {
+        @include resetbutton();
+        padding-right: 18px;
+        padding-left: 18px;
+        // max-width: 314px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        background-color: #121b3f;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.49;
+        letter-spacing: -0.2px;
+        text-align: left;
+        color: var(--white);
+        border-radius: 8px;
+        @include placeholder() {
+            color: rgba(255,255,255, .5);
+        }
+
+        @include mq($m) {
+            max-width: 314px;
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.4px;
+        }
+    }
+
+    &__submit {
+
+    }
+
+    &__confirm {
+
+        @include mq($m) {
+            padding-right: 60px;
+
+        }
+    }
+
+    &__note {
+        margin-top: 12px;
+        color: rgba(255,255,255, .5);
+    }
+}
+
+
+
+.form_subscribe {
+    .form__field {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .form__input,
+    .form__submit {
+        height: 50px;
+    }
+
+    .form__input {
+        font-size: 18px;
+        line-height: 1.44;
+        letter-spacing: -0.3px;
+        text-align: left;
+        @include placeholder() {
+            color: rgba(255,255,255, .5);
+        }
+    }
+
+    .form__submit {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+}
+
+
+.form_cta {
+    .form__field {
+        margin-bottom: 22px;
+        @include mq($m) {
+            margin-bottom: 17px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            @include mq($m) {
+                margin-bottom: 22px;
+
+            }
+        }
+
+    }
+
+    .form__field_email {
+        max-width: 358px;
+        color: #dfe4ea;
+        .form__field-icon {
+            position: absolute;
+            top: 50%;
+            right: auto;
+            left: 20px;
+            transform: translateY(-50%)
+        }
+    }
+
+    .form__field_submit_glow {
+
+        &:after {
+            @include mq($m) {
+                z-index: -1;
+                position: absolute;
+                top: -85px;
+                right: -60px;
+                content: '';
+                width: 540px;
+                height: 290px;
+                background: url('../img/general/register-glow.png') 0 0 no-repeat;
+
+            }
+
+        }
+    }
+
+    .form__input {
+        padding-left: 55px;
+        padding-right: 20px;
+        max-width: 100%;
+    }
+
+
+    .form__submit {
+        width: 100%;
+        height: 60px;
+        @include mq($m) {
+
+        }
+    }
+
+    .form__note {
+        padding-top: 20px;
+        display: none;
+        text-align: center;
+        @include mq($m) {
+            display: block;
+        }
+
+    }
+
+}
+
+.form_footer {
+    .form__row {
+        flex-wrap: nowrap;
+    }
+
+    .form__field {
+        margin-right: 15px;
+    }
+
+    .form__input {
+        max-width: 244px;
+        height: 50px;
+    }
+
+    .form__submit {
+        padding-right: 28px;
+        padding-left: 20px;
+    }
+}
