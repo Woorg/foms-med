@@ -20,15 +20,16 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         .page__wrapper
-            //- +header(header.main)
+            +header(header.main)
             main.page__main
+
+
                 //- +about()
                 //- +features()
                 //- +news().page__news
                 //- +feedback()
                 //- +cta()
         //- +footer().page__footer
-
 
         script(src='%=static=%js/separate-js/jquery.min.js' defer)
         script(src='%=static=%js/separate-js/bootstrap.bundle.min.js' defer)
