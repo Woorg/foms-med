@@ -1,16 +1,35 @@
+@import 'components/logo/logo.scss';
 @import 'components/header/header.scss';
 
 @import 'components/nav/nav.scss';
+@import 'components/subnav/subnav.scss';
+
+@import 'components/section-nav/section-nav.scss';
+
+@import 'components/side/side.scss';
+@import 'components/content/content.scss';
+
+@import 'components/side-nav/side-nav.scss';
+
+@import 'components/slider/slider.scss';
+
 @import 'components/social/social.scss';
-@import 'components/about/about.scss';
-@import 'components/features/features.scss';
+// @import 'components/about/about.scss';
+// @import 'components/features/features.scss';
+
 @import 'components/news/news.scss';
-@import 'components/subscribe/subscribe.scss';
+@import 'components/tabs/tabs.scss';
 
-@import 'components/feedback/feedback.scss';
-@import 'components/cta/cta.scss';
+@import 'components/map-organizations/map-organizations.scss';
+@import 'components/address/address.scss';
 
-@import 'components/form/form.scss';
+
+// @import 'components/subscribe/subscribe.scss';
+
+// @import 'components/feedback/feedback.scss';
+// @import 'components/cta/cta.scss';
+
+// @import 'components/form/form.scss';
 
 
 

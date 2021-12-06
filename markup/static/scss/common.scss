@@ -12,7 +12,7 @@ html, body {
     background: var(--white);
     color: var(--black);
     font-display: swap;
-    font-family: $inter;
+    font-family: $golos-text;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -25,33 +25,28 @@ html, body {
     }
 
     &__main {
-        z-index: 1;
-        position: relative;
-        background: #0C1431;
 
-        overflow: hidden;
-        &::after {
-
-            @include mq($m) {
-                z-index: -1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 2050px;
-                min-height: 2151px;
-                content: '';
-                background: url('../img/general/main-bg.png') 0 0 ;
-            }
-
-        }
     }
 
-    &__news {
-        display: none;
-        @include mq($m) {
-            display: block;
-        }
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
+
+    &__side {
+        margin-right: 8px;
+        max-width: 23.1%;
+        width: 100%;
+    }
+
+    &__content {
+        max-width: 76.3%;
+        width: 100%;
+    }
+
+
+
 
 }
 
@@ -62,14 +57,17 @@ html, body {
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     width: 100%;
     @include mq($m) {
+        padding-right: 30px;
+        padding-left: 30px;
         // padding-right: 30px;
         // padding-left: 30px;
 
-        max-width: 1170px;
+        max-width: 1274px;
+        // 1224
     }
 
 }
@@ -98,6 +96,17 @@ img {
 
 img:not([src]):not([srcset]) {
     visibility: hidden;
+}
+
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    @include tr(.3s ease);
+    &:hover {
+        color: currentColor;
+        text-decoration: none;
+    }
 }
 
 

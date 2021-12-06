@@ -10,12 +10,15 @@ mixin head(data)
     meta(name="HandheldFriendly", content="true")
 
     | <link rel="preload" href="%=static=%css/separate-css/bootstrap.min.css" as="style">
+    | <link rel="preload" href="%=static=%css/separate-css/tabby-ui.min.css" as="style">
+
     | <link rel="preload" href="%=static=%css/separate-css/swiper-bundle.min.css" as="style">
 
     | <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style">
 
     | <link rel="preload" href="%=static=%js/separate-js/jquery.min.js" as="script">
     | <link rel="preload" href="%=static=%js/separate-js/bootstrap.bundle.min.js" as="script">
+
     | <link rel="preload" href="%=static=%js/main%=hash=%%=min=%.js" as="script">
 
     | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,7 +39,7 @@ mixin head(data)
 
     | <link href="%=static=%css/separate-css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    //- | <link href="%=static=%css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css">
+    | <link href="%=static=%css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css">
     //- | <link href="%=static=%css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css">
     | <link href="%=static=%css/separate-css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
     | <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">

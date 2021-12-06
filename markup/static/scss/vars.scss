@@ -7,15 +7,20 @@ $padding-section-half: 45px;
 
 $l: 1000px;
 $m: 728px;
-$s: 308px;
+$s: 320px;
 
 
 $white: #ffffff;
-$blue: #345dee;
+$blue: #086de0;
 $black: #000000;
+$dark: #334756;
+$nav-link-color: #f2f2f2;
 
 :root {
     --white: #{$white};
     --blue: #{$blue};
     --black: #{$black};
+    --dark: #{$dark};
+    --nav-link-color: #{$nav-link-color};
+
 }

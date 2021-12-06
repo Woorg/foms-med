@@ -1,0 +1,48 @@
+mixin side-nav(data)
+    nav.side-nav
+        ul.side-nav__list
+            li.side-nav__item.side-nav__item_attention
+                a.side-nav__link(href="tel:+88002222905")
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Контакт-центр
+                        .side-nav__text 8-800-2222-905
+            li.side-nav__item.side-nav__item_attention
+                a.side-nav__link(href="tel:+88002222905")
+                    != pugHelpers.Icon.call(locals, {iconName: 'info-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Горячая линия
+                        .side-nav__text  8-800-2222-905
+            li.side-nav__item
+                a.side-nav__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'info-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Проверить полис ОМС
+
+            li.side-nav__item
+                a.side-nav__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'user-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Войти <br/>в личный кабинет
+            li.side-nav__item
+                a.side-nav__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'warning-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Это важно знать
+            li.side-nav__item
+                a.side-nav__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'doc-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Узнать о диспансеризации
+
+            li.side-nav__item
+                a.side-nav__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Задать вопрос
+
+            li.side-nav__item
+                a.side-nav__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'side-nav__icon'})
+                    .side-nav__entry
+                        .side-nav__title Направить обращение

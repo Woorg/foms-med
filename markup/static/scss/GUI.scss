@@ -3,154 +3,115 @@
 
 
 .title {
-    color: var(--white);
-    font-family: $inter;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 1.19;
-    letter-spacing: -1.3px;
+    color: #2c394b;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     text-align: left;
 
-    @include mq($m) {
-        font-size: 72px;
-        line-height: 1.11;
-        letter-spacing: -2.16px;
-    }
-
     &_second {
-        font-size: 28px;
-        line-height: 1.14;
-        letter-spacing: -1.2px;
+        font-size: 32px;
         @include mq($m) {
-            font-size: 56px;
-            letter-spacing: -2.4px;
 
         }
 
     }
 
-    &_third {
-        letter-spacing: -1.5px;
-        line-height: 1.22;
-        font-size: 36px;
-    }
+
 
 }
 
 .button {
     @include resetbutton();
-    padding-right: 30px;
-    padding-left: 36px;
-    height: 36px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-right: 24px;
+    padding-left: 24px;
+    height: 48px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    background-color: var(--blue);
+    background-color: var(--dark);
     color: var(--white);
     font-weight: 600;
+    font-size: 13px;
     text-decoration: none;
     text-align: center;
-    border-radius: 8px;
-
+    white-space: nowrap;
     @include tr(.3s ease);
 
     @include mq($s) {
-        padding-right: 30px;
-        padding-left: 20px;
-        height: 44px;
-        font-size: 18px;
 
+    }
+
+    &__text {
+        display: none;
+        font-family: $montserrat;
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 0.2px;
+    }
+
+    &__icon {
+        margin-right: 7px;
     }
 
     &__arrow {
-        margin-left: 14px;
 
     }
     &:hover {
-        @include tr(.3s ease);
-        background-color: darken($blue, 10);
+        background-color: darken($dark, 10);
         @include tr(.3s ease);
     }
 
 }
 
-.button_more {
-    position: relative;
-    padding-right: 40px;
-    padding-left: 0;
-    height: auto;
+
+.button_style_second {
+    border: solid 1px #086de0;
+    padding: 10px 30px;
     background: transparent;
-    opacity: 1;
 
-    &:after {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 32px;
-        height: 32px;
-        content: '';
-        background-color: #345dee;
-        border-radius: 50%;
-        transform: translateY(-50%);
+    &:hover {
+        background-color: var(--white);
+        @include tr(.3s ease);
     }
+}
 
-    .button__arrow {
-        z-index: 1;
-        position: absolute;
-        top: 50%;
-        right: 8px;
-        width: 15px;
-        height: 15px;
-        transform: translateY(-50%)
+.more {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: left;
+    text-decoration: none;
+    .more__icon {
+        fill: transparent;
     }
 
     &:hover {
         background: transparent;
         opacity: .9;
+        color: darken($blue, 20);
+        text-decoration: none;
+
     }
 
 }
 
 
-.button_transparent {
-    border: solid 2px var(--white);
-    height: 40px;
-    background: transparent;
-    border-radius: 8px;
-
+.phone {
+    display: inline-flex;
+    color: #ff4c29;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 19px;
+    text-decoration: none;
     &:hover {
-        border: solid 2px var(--white);
-        background: var(--white);
-        color: var(--black);
-        border-radius: 8px;
-
+        color: darken(#ff4c29, 10);
     }
-}
-
-.button_large {
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: -0.4px;
-    @include mq($m) {
-        font-size: 20px;
-        line-height: 1.4;
-        letter-spacing: -0.5px;
-
-    }
-
-}
-
-.button_big {
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: -0.4px;
-}
-
-.button_small {
-    font-size: 16px;
-    line-height: 1.38;
-    letter-spacing: -0.4px;
 }
 
 

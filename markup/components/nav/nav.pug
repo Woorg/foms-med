@@ -1,12 +1,35 @@
 mixin nav(data)
     nav.nav&attributes(attributes)
 
+        button.nav__trigger
+            != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'nav__close-icon'})
+            != pugHelpers.Icon.call(locals, {iconName: 'menu-icon',className: 'nav__menu-icon'})
+
         - var navList = data;
 
         ul.nav__list
 
             each item, index in navList
 
-                li(class=`nav__item ${itemClass}`)
+                - var subnavList = item.subnavList
+                - var itemClass = subnavList ? 'nav__item  nav__item_subnav' : 'nav__item';
+                - var itemClassMod = item.itemClassMod;
 
-                    a.nav__link(href=item.href) #{item.title}
+                li(class=`${itemClass} ${itemClassMod}`)
+
+                    a.nav__link(href=item.href)
+                        span.nav__link-text #{item.title}
+
+                    if subnavList
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-downdown-icon', className: 'nav__dropdown-icon'})
+
+                        ul.nav__list-sub.subnav
+                            each subnavItem in subnavList
+
+                                li.subnav__item
+                                    a.subnav__link(href=subnavItem.href) #{subnavItem.title}
+
+
+        a.nav__search(href="#")
+            != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'nav__search-icon'})

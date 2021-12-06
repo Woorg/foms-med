@@ -1,8 +1,14 @@
 import svg4everybody from 'svg4everybody';
 import header from '../../components/header/header';
+import sectionNavToggle from '../../components/section-nav/section-nav';
+import {slider} from '../../components/slider/slider';
+import {sliderVideo} from '../../components/slider/slider';
+
 import about from '../../components/about/about';
 
 import Nav from '../../components/nav/nav';
+
+import tabs from '../../components/tabs/tabs';
 
 import LazyLoad from 'vanilla-lazyload';
 
@@ -51,6 +57,22 @@ document.addEventListener('DOMContentLoaded', function (event) {
     */
 
     // new Nav();
+
+
+    sectionNavToggle();
+
+
+    slider('.slider');
+
+    sliderVideo();
+
+
+    /*
+        Tabs
+    */
+
+    tabs();
+
 
     /*
         About video

@@ -5,6 +5,12 @@ html(class="no-js", lang="ru")
 
     include ../components/header/header.pug
     include ../components/nav/nav.pug
+    include ../components/section-nav/section-nav.pug
+    include ../components/side-nav/side-nav.pug
+    include ../components/slider/slider.pug
+    include ../components/news/news.pug
+    include ../components/map-organizations/map-organizations.pug
+
     //- include ../components/about/about.pug
     //- include ../components/features/features.pug
     //- include ../components/news/news.pug
@@ -20,17 +26,20 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         .page__wrapper
-            +header(header.main)
-            main.page__main
+            +header()
+            main.page__main.container
+                +section-nav()
+                .page__row
+                    aside.side.page__side
+                        +side-nav()
 
+                    .content.page__content
+                        +slider()
+                        +news()
+                        +news-media()
+                +map-organizations()
+        +footer().page__footer
 
-                //- +about()
-                //- +features()
-                //- +news().page__news
-                //- +feedback()
-                //- +cta()
-        //- +footer().page__footer
-
-        script(src='%=static=%js/separate-js/jquery.min.js' defer)
-        script(src='%=static=%js/separate-js/bootstrap.bundle.min.js' defer)
+        //- script(src='%=static=%js/separate-js/jquery.min.js' defer)
+        //- script(src='%=static=%js/separate-js/bootstrap.bundle.min.js' defer)
         script(src='%=static=%js/main%=hash=%%=min=%.js' defer)

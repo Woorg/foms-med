@@ -1,0 +1,89 @@
+.slider {
+    padding-bottom: 20px;
+    overflow: hidden;
+    .swiper-slide {
+        position: relative;
+        height: 376px;
+        overflow: hidden;
+    }
+    &__item {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(204.82deg, rgba(0, 0, 0, 0) 15.81%, rgba(0, 0, 0, 0.4) 88.1%);
+        }
+    }
+
+    &__image {
+        position: relative;
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(204.82deg, rgba(0, 0, 0, 0) 15.81%, rgba(0, 0, 0, 0.4) 88.1%);
+        }
+        picture {
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    &__title {
+
+        position: absolute;
+        bottom: 32px;
+        left: 34px;
+        max-width: 540px;
+        color: var(--white);
+        font-size: 25px;
+        font-weight: bold;
+        line-height: normal;
+        text-align: left;
+        span {
+            color: #ff4c29;
+        }
+
+    }
+
+    &__video-button {
+        @include resetbutton();
+        z-index: 2;
+        position: absolute;
+        top: 154px;
+        left: 34px;
+        color: var(--white);
+    }
+
+    &__video-icon {
+        // color: var(--white);
+
+    }
+}

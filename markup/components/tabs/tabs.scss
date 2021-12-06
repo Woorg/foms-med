@@ -1,0 +1,99 @@
+.tabs {
+    &__nav {
+        margin-bottom: 0;
+        max-width: 100%;
+        width: 100%;
+        @include mq($s) {
+        }
+    }
+    &__nav-item {
+        @include mq($s) {
+        }
+
+    }
+
+    // &__nav-link
+
+    &__nav-icon {
+        opacity: 0;
+        @include tr( .3s ease);
+    }
+
+    &__tabs-w {
+        position: relative;
+    }
+    &__tab {
+        // animation: fadeInUp 300ms ease-in-out;
+        // transform-origin: top center;
+
+        animation: fadeInUp .3s ease;
+        @include tr( .3s ease);
+
+        &[hidden] {
+
+            // opacity: 0;
+            @include tr( .3s ease);
+
+        }
+    }
+}
+
+[role=tablist] {
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: overlay;
+    @include mq($s) {
+        overflow-x: unset;
+    }
+}
+
+[role=tab] {
+    border: none;
+
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    color: #334756;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    border-radius: 0;
+    @include tr(.3s ease);
+
+    @include mq($s) {
+    }
+
+    &:hover {
+        @include tr( .3s ease);
+    }
+}
+
+[role=tab][aria-selected=true],
+[role=tab]:hover:not([aria-selected=true]) {
+    border: none;
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    background-color: #ff4c29;
+    color: var(--white);
+    box-shadow: 16px 16px 24px 0 rgba(255, 76, 41, 0.15);
+    @include tr( .3s ease);
+
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

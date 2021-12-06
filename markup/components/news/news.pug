@@ -1,47 +1,108 @@
 
 mixin news(data)
     section.news&attributes(attributes)
-        .news__container.container
-            h2.news__title.title.title_second Новости
-            .news__articles
-                article.news__article
-                    .news__article-in
-                        .news__meta
-                            a.news__category(href="#") Категория
-                            .news__meta-sep
-                            time.news__date(datetime="2001-05-15 19:00") 2 дня назад
-                        .news__article-title Тема новости в двух предложениях Тема новости в двух предложениях
+        .news__top
+            h2.news__title.title.title_second Новости и уведомления
+            a.news__more.more(href="") Все новости
+                != pugHelpers.Icon.call(locals, {iconName: 'more-icon', className: 'more__icon'})
+
+
+        .news__articles
+            article.news__article
+                a.news__article-link(href="#")
+                    .news__image-w
                         picture.news__image
                             source(type="image/webp", data-srcset="static/img/content/news-img-1@2x.webp")
-                            source(type="image/png", data-srcset="static/img/content/news-img-1@2x.png")
-                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-1@2x.png")
-
-                article.news__article
-                    .news__article-in
+                            source(type="image/jpeg", data-srcset="static/img/content/news-img-1@2x.jpg")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-1@2x.jpg")
                         .news__meta
-                            a.news__category(href="#") Marketing
-                            .news__meta-sep
-                            time.news__date(datetime="2001-05-15 19:00") 2 дня назад
-                        .news__article-title Тема новости в двух предложениях Тема новости в двух предложениях
+                            time.news__date(datetime="08.11.2021")
+                                != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
+                                | 08.11.2021
+
+                    .news__entry
+                        .news__article-title Территориальный фонд  обязательного медицинского страхования разъясняет
+                        .news__article-text
+                            p В России 8 ноября вступил в силу приказ Минздрава о новой форме сертификата о вакцинации. Документ опубликован на портале правовой информации.
+                            p В сертификате будут указаны основные данные об обладателе, прививке, ревакцинации, наличии противопоказаний и сведения о перенесённом
+
+            article.news__article
+                a.news__article-link(href="#")
+                    .news__image-w
                         picture.news__image
                             source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/png", data-srcset="static/img/content/news-img-2@2x.png")
-                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.png")
+                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                        .news__meta
+                            time.news__date(datetime="08.11.2021")
+                                != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
+                                | 08.11.2021
 
-                .news__subscribe.subscribe
-                    .subscribe__in
-                        h3.subscribe__title.title.title_third Подпишитесь на обновления
-                        p.subscribe__text.text.text_medium Мы оповестим вас первым о новых сервисах и фишках!
-                        form.subscribe__form.form.form_subscribe(action="")
-                            .form__field.form__field_email
-                                input.form__input(type="text", placeholder="Введите свой Email")
-                                != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'form__field-icon'})
-                            input.form__submit.button.button_big(type="submit", value="Подписаться")
+                    .news__entry
+                        .news__article-title На портале «Госуслуги» предоставлена возможность пройти анонимный опрос
+                        .news__article-text
+                            p Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках
 
-                            .form__note.text.text_small Без спама. Только полезные новости.
+            article.news__article
+                a.news__article-link(href="#")
+                    .news__image-w
+                        picture.news__image
+                            source(type="image/webp", data-srcset="static/img/content/news-img-3@2x.webp")
+                            source(type="image/jpeg", data-srcset="static/img/content/news-img-3@2x.jpg")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-3@2x.jpg")
+                        .news__meta
+                            time.news__date(datetime="08.11.2021")
+                                != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
+                                | 08.11.2021
+
+                    .news__entry
+                        .news__article-title Чтобы лечиться по полису ОМС необходимо в течение месяца информировать страховую
+
+                        .news__article-text
+                            p На сайте ТФОМС СК функционирует «Личный кабинет застрахованного лица», войдя в который по логину и паролю портала «Госулуги» можно проверить инфомацию о себе в регистре застрахованных и даже сообщить об ошибке
 
 
-            picture.news__bg
-                source(type="image/webp", data-srcset="static/img/general/news-bg@2x.webp")
-                source(type="image/png", data-srcset="static/img/general/news-bg@2x.png")
-                img.lazy(src="", alt="Изображение", data-src="static/img/general/news-bg@2x.png")
+
+mixin news-media(data)
+    section.news.news_media&attributes(attributes)
+        .news__top
+            h2.news__title.title.title_second Материалы СМИ
+            a.news__more.more(href="") Все материалы
+                != pugHelpers.Icon.call(locals, {iconName: 'more-icon', className: 'more__icon'})
+
+        .news__articles
+            article.news__article
+                a.news__article-link(href="#")
+                    .news__image-w
+                        picture.news__image
+                            source(type="image/webp", data-srcset="static/img/content/news-img-4@2x.webp")
+                            source(type="image/jpeg", data-srcset="static/img/content/news-img-4@2x.jpg")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-4@2x.jpg")
+                        .news__meta
+                            time.news__date(datetime="08.11.2021")
+                                != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
+                                | 08.11.2021
+
+                    .news__entry
+                        .news__article-title Российский региональный еженедельник «МК-КАВКАЗ» 13.10.2021 № 42 «Помогут реабилитация и диспансеризация»
+
+                        .news__article-text
+                            p В России 8 ноября вступил в силу приказ Минздрава о новой форме сертификата о вакцинации. Документ опубликован на портале правовой информации.
+
+            article.news__article
+                a.news__article-link(href="#")
+                    .news__image-w
+                        picture.news__image
+                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy(src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                        .news__meta
+                            time.news__date(datetime="08.11.2021")
+                                != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
+                                | 08.11.2021
+
+                    .news__entry
+                        .news__article-title Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»
+
+                        .news__article-text
+                            p Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках

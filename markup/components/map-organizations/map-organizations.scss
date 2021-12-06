@@ -1,0 +1,61 @@
+.map-organizations {
+    position: relative;
+    background-color: #f6f6f6;
+    &:after {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: -1000px;
+        right: -1000px;
+        // width: 100%;
+        height: 100%;
+        content: '';
+        background-color: #f6f6f6;
+    }
+    &__container {
+        padding-top: 40px;
+        padding-bottom: 34px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        max-width: 467px;
+
+    }
+
+    &__tabs {
+
+    }
+
+    &__tabs-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__tabs-nav {
+
+    }
+
+
+    &__tab {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__addresses {
+        padding-top: 50px;
+    }
+
+    &__map {
+        margin-top: -135px;
+        max-width: 322px;
+        width: 100%;
+    }
+
+    // 322
+
+    // 802
+
+}

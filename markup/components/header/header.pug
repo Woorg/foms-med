@@ -1,67 +1,26 @@
 mixin header(data)
     header.header&attributes(attributes)
         .header__container.container
-            .header__top
-                a.header__logo(href="#")
-                    //- != pugHelpers.Icon.call(locals, {iconName: 'logo'})
-
-                button.header__nav-trigger
-                    != pugHelpers.Icon.call(locals, {iconName: 'menu-icon',className: 'header__nav-menu'})
-                    != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'header__nav-close'})
-
-                .header__nav-w
-
-                    +nav(nav.primaryList).header__nav.nav_primary
-
-                    a.header__call(href="tel:+9999999999")
-                        != pugHelpers.Icon.call(locals, {iconName: 'phone-icon',className: 'call__icon'})
-
-                    a.header__search(href="#")
-                        != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'call__icon'})
-
-                    .header__controls
-                        a.header__control.button.button_transparent.button_small(href="#") Оставить фидбэк
-                        a.header__control.button.button_transparent.button_small(href="#") Начать
+            .header__logo
+                a.logo(href="#")
+                    picture.header__logo-image
+                        source(type="image/webp", data-srcset="static/img/general/logo@2x.webp")
+                        source(type="image/png", data-srcset="static/img/general/logo@2x.png")
+                        img.lazy(src="", alt="Территориальный фонд обязательного медицинского страхования Республики Дагестан", data-src="static/img/general/logo@2x.png")
 
 
-            //- .header__body
+            .header__controls
 
-            //-     p.header__slogan Мы - помогаем работать онлайн!
+                a.header__special-link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'special-version-icon', className: 'header__special-icon'})
+                    | Для слабовидящих
 
-            //-     h1.header__title.title Разрабатываем производительное ПО и удобные сервисы
+                .header__contacts
+                    a.header__phone.phone(href="tel:88002222905") 8-800-2222-905
+                    a.header__contacts-link(href="#") Контакт-центр в сфере ОМС РД
 
-            //-     .header__form.form
-            //-         .form__row
-            //-             .form__field
-            //-                 input.form__input(type="text", placeholder="Введите свой E-mail")
-            //-             .form__field.form__field_submit_glow
-            //-                 button.form__submit.button.button_large(type="submit") Зарегистрироваться
-            //-                     != pugHelpers.Icon.call(locals, {iconName: 'arrow-right',className: 'button__arrow'})
+                a.header__control.button(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'user-2-icon', className: 'button__icon'})
+                    | Личный кабинет
 
-
-            //-         .form__confirm.text.text_small Нажимая на кнопку, вы подтверждаете, что согласны с нашими следующими
-            //-             a.form__confirm-link(href="#")  Положениями и Условиями
-
-            //-     a.header__video-button(href="#youtube-video")
-            //-         != pugHelpers.Icon.call(locals, {iconName: 'play-button',className: 'header__video-icon'})
-            //-         | Воспроизвести видео
-
-            //-     ul.header__social.social
-
-            //-         li.social__item
-            //-             a.social__link(href="#facebook")
-            //-                 != pugHelpers.Icon.call(locals, {iconName: 'facebook-icon', className: 'social__icon'})
-
-            //-         li.social__item
-            //-             a.social__link(href="#telegrarm")
-            //-                 != pugHelpers.Icon.call(locals, {iconName: 'telegram-icon', className: 'social__icon'})
-
-            //-         li.social__item
-            //-             a.social__link(href="#google")
-            //-                 != pugHelpers.Icon.call(locals, {iconName: 'google-icon', className: 'social__icon'})
-
-
-        picture.header__image
-            source(type="image/webp", data-srcset="static/img/general/header-earth.webp")
-            source(type="image/png", data-srcset="static/img/general/header-earth.png")
-            img.lazy(src="", alt="Изображение", data-src="static/img/general/header-earth.png")
+            +nav(nav.primaryList).header__nav.nav_primary
