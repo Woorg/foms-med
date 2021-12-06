@@ -1,0 +1,26 @@
+.poll {
+    &__title {
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: #667580;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    &__form {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+    }
+
+    &__field {
+        margin-bottom: 20px;
+    }
+}

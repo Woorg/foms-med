@@ -9,6 +9,7 @@ import about from '../../components/about/about';
 import Nav from '../../components/nav/nav';
 
 import tabs from '../../components/tabs/tabs';
+import {departments} from '../../components/departments/departments';
 
 import LazyLoad from 'vanilla-lazyload';
 
@@ -75,13 +76,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
     /*
-        About video
-     */
+        Departments
+    */
 
-    // about();
-
-
-
+    departments();
 
 
 });

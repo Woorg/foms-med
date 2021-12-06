@@ -10,6 +10,8 @@ html(class="no-js", lang="ru")
     include ../components/slider/slider.pug
     include ../components/news/news.pug
     include ../components/map-organizations/map-organizations.pug
+    include ../components/departments/departments.pug
+
 
     //- include ../components/about/about.pug
     //- include ../components/features/features.pug
@@ -38,6 +40,7 @@ html(class="no-js", lang="ru")
                         +news()
                         +news-media()
                 +map-organizations()
+                +departments()
         +footer().page__footer
 
         //- script(src='%=static=%js/separate-js/jquery.min.js' defer)

@@ -1,2 +1,43 @@
 mixin departments(data)
     .departments
+
+        .departments__container.container
+
+            .departments__slider
+                .swiper
+                    .swiper-wrapper
+
+                        .swiper-slide
+                            .departments__slide.departments__slide_1
+                                figure.departments__logo
+                                    picture
+                                        source(type='image/webp' data-srcset='static/img/general/dep-img-1@2x.webp')
+                                        source(type='image/png' data-srcset='static/img/general/dep-img-1@2x.png')
+                                        img.lazy(data-src='static/img/general/dep-img-1@2x.png' alt='')
+
+                        .swiper-slide
+                            .departments__slide.departments__slide_2
+                                figure.departments__logo
+                                    picture
+                                        source(type='image/webp' data-srcset='static/img/general/dep-img-2@2x.webp')
+                                        source(type='image/png' data-srcset='static/img/general/dep-img-2@2x.png')
+                                        img.lazy(data-src='static/img/general/dep-img-2@2x.png' alt='')
+
+                        .swiper-slide
+                            .departments__slide.departments__slide_3
+                                figure.departments__logo
+                                    picture
+                                        source(type='image/webp' data-srcset='static/img/general/dep-img-3@2x.webp')
+                                        source(type='image/png' data-srcset='static/img/general/dep-img-3@2x.png')
+                                        img.lazy(data-src='static/img/general/dep-img-3@2x.png' alt='')
+
+                        .swiper-slide
+                            .departments__slide.departments__slide_4
+                                figure.departments__logo
+                                    picture
+                                        source(type='image/webp' data-srcset='static/img/general/dep-img-4@2x.webp')
+                                        source(type='image/png' data-srcset='static/img/general/dep-img-4@2x.png')
+                                        img.lazy(data-src='static/img/general/dep-img-4@2x.png' alt='')
+
+
+                    .swiper-scrollbar

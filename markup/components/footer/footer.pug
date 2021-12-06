@@ -1,36 +1,83 @@
 mixin footer(data)
     footer.footer&attributes(attributes)
         .footer__container.container
-            a.footer__logo(href="#top")
+            .footer__col
+                .footer__logo
+                    a.logo.logo_style_second(href="#")
+                        picture.logo__image
+                            source(type="image/webp", data-srcset="static/img/general/logo@2x.webp")
+                            source(type="image/png", data-srcset="static/img/general/logo@2x.png")
+                            img.lazy(src="", alt="Территориальный фонд обязательного медицинского страхования Республики Дагестан", data-src="static/img/general/logo@2x.png")
 
-            nav.footer__nav.nav.nav_secondary
-                ul.nav__list
-                    li.nav__item
-                        a.nav__link(href="#") Контакты
-                    li.nav__item
-                        a.nav__link(href="#") Оферта
-                    li.nav__item
-                        a.nav__link(href="#") Копирайт
+                .footer__contacts
+                    a.footer__contact.footer__phone.phone.phone_style_second(href="tel:+88002222905")
+                        != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'phone__icon'})
+                        | 8-800-2222-905
+                    .footer__contact.footer__address 367008, г.Махачкала, ул.Ляхова, 47а
+                    a.footer__contact.footer_email(href="mailto:direct@fomsrd.ru") direct@fomsrd.ru
 
-            .footer__form.form.form_footer
-                .form__row
-                    .form__field
-                        input.form__input(type="text", placeholder="Введите свой E-mail")
-                    button.form__submit.button.button_large(type="submit") Send
+                    a.footer__map-link.more(href="#") Открыть карты
+                        != pugHelpers.Icon.call(locals, {iconName: 'more-icon', className: 'more__icon'})
 
 
-            //- ul.footer__social.social
+            .footer__col.footer__col_nav
+                nav.footer__nav.nav.nav_secondary
+                    .nav__title О Фонде
+                    ul.nav__list
+                        li.nav__item
+                            a.nav__link(href="#") Руководство фонда
+                        li.nav__item
+                            a.nav__link(href="#") Деятельность фонда
+                        li.nav__item
+                            a.nav__link(href="#") Защита прав
+                        li.nav__item
+                            a.nav__link(href="#") Карта сайта
 
-            //-     li.social__item
-            //-         a.social__link(href="#")
-            //-             != pugHelpers.Icon.call(locals, {iconName: 'facebook-icon', className: 'social__icon'})
+            .footer__col.footer__col_nav
+                nav.footer__nav.nav.nav_secondary
+                    .nav__title Новости
+                    ul.nav__list
+                        li.nav__item
+                            a.nav__link(href="#") Региональные
+                        li.nav__item
+                            a.nav__link(href="#") Федеральные
+                        li.nav__item
+                            a.nav__link(href="#") Уведомление
 
-            //-     li.social__item
-            //-         a.social__link(href="#")
-            //-             != pugHelpers.Icon.call(locals, {iconName: 'telegram-icon', className: 'social__icon'})
 
-            //-     li.social__item
-            //-         a.social__link(href="#")
-            //-             != pugHelpers.Icon.call(locals, {iconName: 'google-icon', className: 'social__icon'})
+            .footer__col.footer__col_poll
+                .footer__poll.poll
+                    .poll__title Опрос
+
+                    .poll__text Была ли полезной для Вас информация с нашего сайта?
+
+
+                    form.poll__form.form(action="")
+                        .poll__field.form__field.form-check
+                            input#exampleRadios1.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
+                            label.form__label.form-check-label(for='exampleRadios1') Да, мне помогли
+                        .poll__field.form__field.form-check
+                            input#exampleRadios2.form-check-input(type='radio' name='exampleRadios' value='option1' )
+                            label.form__label.form-check-label(for='exampleRadios2') Да, но не особо
+                        .poll__field.form__field.form-check
+                            input#exampleRadios3.form-check-input(type='radio' name='exampleRadios' value='option1' )
+                            label.form__label.form-check-label(for='exampleRadios3') Нет, мне не  нашел ничего
+
+                        button.button.button_style_third(type='submit') Голосовать
+
+            .footer__social.social
+                .social__title Мы в соц. Сетях
+                ul.social__list
+                    li.social__item
+                        a.social__link(href="#")
+                            != pugHelpers.Icon.call(locals, {iconName: 'facebook-icon', className: 'social__icon'})
+
+                    li.social__item
+                        a.social__link(href="#")
+                            != pugHelpers.Icon.call(locals, {iconName: 'twitter-icon', className: 'social__icon'})
+
+                    li.social__item
+                        a.social__link(href="#")
+                            != pugHelpers.Icon.call(locals, {iconName: 'instagram-icon', className: 'social__icon'})
 
             .footer__copyright OneDash © 2021

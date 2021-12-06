@@ -1,6 +1,6 @@
 .map-organizations {
     position: relative;
-    background-color: #f6f6f6;
+    background-color: var(--gray);
     &:after {
         z-index: -1;
         position: absolute;
@@ -10,7 +10,7 @@
         // width: 100%;
         height: 100%;
         content: '';
-        background-color: #f6f6f6;
+        background-color: var(--gray);
     }
     &__container {
         padding-top: 40px;

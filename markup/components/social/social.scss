@@ -1,13 +1,23 @@
 .social {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    &__title {
+        margin-bottom: 16px;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 1;
+    }
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
     &__item {
+        margin-left: 30px;
 
     }
 
     &__link {
-        color: inherit;
+        color: var(--black);
         @include tr(.3s ease);
 
         &:hover {

@@ -15,6 +15,9 @@ $blue: #086de0;
 $black: #000000;
 $dark: #334756;
 $nav-link-color: #f2f2f2;
+$gray: #f6f6f6;
+
+
 
 :root {
     --white: #{$white};
@@ -22,5 +25,6 @@ $nav-link-color: #f2f2f2;
     --black: #{$black};
     --dark: #{$dark};
     --nav-link-color: #{$nav-link-color};
+    --gray: #{$gray};
 
 }
