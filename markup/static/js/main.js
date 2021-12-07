@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         Section nav
     */
 
-    sectionNavToggle();
+    // sectionNavToggle();
 
 
     /*

@@ -1,6 +1,6 @@
 mixin section-nav(data)
     .section-nav
-        article.section-nav__item
+        article.section-nav__item.section-nav__item_1
             a.section-nav__link(href="#")
                 != pugHelpers.Icon.call(locals, {iconName: 'insured-persons-icon', className: 'section-nav__icon'})
                 span.section-nav__text Застрахованным <br/>лицам
@@ -8,7 +8,7 @@ mixin section-nav(data)
                     .button__text Перейти
                     != pugHelpers.Icon.call(locals, {iconName: 'arrow-right-icon', className: 'button__arrow'})
 
-        article.section-nav__item.section-nav__item_active
+        article.section-nav__item.section-nav__item_2.section-nav__item_active
             a.section-nav__link(href="#")
                 != pugHelpers.Icon.call(locals, {iconName: 'medical-icon', className: 'section-nav__icon'})
                 span.section-nav__text Медицинским <br/>организациям
@@ -16,7 +16,7 @@ mixin section-nav(data)
                     .button__text Перейти
                     != pugHelpers.Icon.call(locals, {iconName: 'arrow-right-icon', className: 'button__arrow'})
 
-        article.section-nav__item
+        article.section-nav__item.section-nav__item_3
             a.section-nav__link(href="#")
                 != pugHelpers.Icon.call(locals, {iconName: 'insurance-org-icon', className: 'section-nav__icon'})
                 span.section-nav__text Страховым <br/>организациям

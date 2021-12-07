@@ -1,48 +1,60 @@
 mixin side-nav(data)
     nav.side-nav
         ul.side-nav__list
-            li.side-nav__item.side-nav__item_attention
+            li.side-nav__item.side-nav__item_1.side-nav__item_attention
                 a.side-nav__link(href="tel:+88002222905")
                     != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Контакт-центр
                         .side-nav__text 8-800-2222-905
-            li.side-nav__item.side-nav__item_attention
+
+            li.side-nav__item.side-nav__item_2.side-nav__item_attention
                 a.side-nav__link(href="tel:+88002222905")
                     != pugHelpers.Icon.call(locals, {iconName: 'info-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Горячая линия
                         .side-nav__text  8-800-2222-905
-            li.side-nav__item
+
+            li.side-nav__item.side-nav__item_3
                 a.side-nav__link(href="#")
                     != pugHelpers.Icon.call(locals, {iconName: 'info-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Проверить полис <br/>ОМС
 
-            li.side-nav__item
+            li.side-nav__item.side-nav__item_4
                 a.side-nav__link(href="#")
                     != pugHelpers.Icon.call(locals, {iconName: 'user-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Войти <br/>в личный кабинет
-            li.side-nav__item
+
+            li.side-nav__item.side-nav__item_5
                 a.side-nav__link(href="#")
                     != pugHelpers.Icon.call(locals, {iconName: 'warning-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Это важно знать
-            li.side-nav__item
+
+            li.side-nav__item.side-nav__item_6
                 a.side-nav__link(href="#")
                     != pugHelpers.Icon.call(locals, {iconName: 'doc-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Узнать о <br/>диспансеризации
 
-            li.side-nav__item
+            li.side-nav__item.side-nav__item_7
                 a.side-nav__link(href="#")
                     != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Задать вопрос
 
-            li.side-nav__item
+            li.side-nav__item.side-nav__item_8
                 a.side-nav__link(href="#")
                     != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'side-nav__icon'})
+
                     .side-nav__entry
                         .side-nav__title Направить обращение

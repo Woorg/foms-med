@@ -19,6 +19,7 @@
     }
 
     &__input {
+        @include resetbutton();
         padding-top: 14px;
         padding-right: 15px;
         padding-bottom: 14px;
