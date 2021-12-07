@@ -9,12 +9,21 @@ mixin head(data)
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
     meta(name="HandheldFriendly", content="true")
 
-    | <link rel="preload" href="%=static=%css/separate-css/bootstrap.min.css" as="style">
-    | <link rel="preload" href="%=static=%css/separate-css/tabby-ui.min.css" as="style">
 
-    | <link rel="preload" href="%=static=%css/separate-css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="%=static=%css/separate-css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="%=static=%css/separate-css/bootstrap.min.css"></noscript>
 
-    | <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style">
+    <link rel="preload" href="%=static=%css/separate-css/tabby-ui.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="%=static=%css/separate-css/tabby-ui.min.css"></noscript>
+
+    <link rel="preload" href="%=static=%css/separate-css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="%=static=%css/separate-css/swiper-bundle.min.css"></noscript>
+
+    //- | <link rel="preload" href="%=static=%css/separate-css/tabby-ui.min.css" as="style">
+
+    //- | <link rel="preload" href="%=static=%css/separate-css/swiper-bundle.min.css" as="style">
+
+    //- | <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style">
 
     | <link rel="preload" href="%=static=%js/separate-js/jquery.min.js" as="script">
     | <link rel="preload" href="%=static=%js/separate-js/bootstrap.bundle.min.js" as="script">
@@ -37,12 +46,16 @@ mixin head(data)
     | <link rel="preload" href="%=static=%fonts/subset-Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
     | <link rel="preload" href="%=static=%fonts/zantroke-webfont.woff2" ae="font/woff2" crossorigin>
 
-    | <link href="%=static=%css/separate-css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    //- | <link href="%=static=%css/separate-css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    | <link href="%=static=%css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css">
+    //- | <link href="%=static=%css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css">
     //- | <link href="%=static=%css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css">
-    | <link href="%=static=%css/separate-css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
-    | <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">
+    //- | <link href="%=static=%css/separate-css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="%=static=%css/main%=hash=%%=min=%.css"></noscript>
+
+    //- | <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">
 
     if data.useSocialMetaTags
         meta(property="og:title", content="#{data.title}")
