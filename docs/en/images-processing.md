@@ -42,7 +42,7 @@ So we have to combine two approaches: SVG everywhere we can use it. For the rest
 
 ## Sprites inclusion
 
-Images that can not be rendered in SVG are copied to 'static/img/sprite/96dpi|192dpi|288dpi|384dpi'. 96dpi folder is for images for screens with dppx = 1, 192dpi folder is for images twice as large as the original, with the names of the originals. These images will be displayed on the screens with dppx = 2. And it's similar for other dppx.
+Images that can not be rendered in SVG are copied to 'static/img.lazy/sprite/96dpi|192dpi|288dpi|384dpi'. 96dpi folder is for images for screens with dppx = 1, 192dpi folder is for images twice as large as the original, with the names of the originals. These images will be displayed on the screens with dppx = 2. And it's similar for other dppx.
 
 Used screens are configured [in the tars-config](options.md#useimagesfordisplaywithdpi).
 
@@ -76,7 +76,7 @@ If you would like to insert images in HTML, you have to use the placeholder [`%=
 
 ```handlebars
 <div class="news__item">
-    <img src="%=static=%img/assets/componentName/sample-image-name.png" alt="">
+    <img.lazy src="%=static=%img.lazy/assets/componentName/sample-image-name.png" alt="">
 </div>
 ```
 
@@ -87,13 +87,13 @@ Nested directories are supported.
 
 ### Images for content
 
-They are in the folder (by default): `static/img/content/`. You should put images that you will use in the content area on the site into this folder, for example, on the news page. Nested directories are supported.
+They are in the folder (by default): `static/img.lazy/content/`. You should put images that you will use in the content area on the site into this folder, for example, on the news page. Nested directories are supported.
 
 Including images inside HTML:
 
 ```handlebars
 <div class="news__item">
-    <img src="%=static=%img/content/sample-image-name.jpg" alt="">
+    <img.lazy src="%=static=%img.lazy/content/sample-image-name.jpg" alt="">
 </div>
 ```
 
@@ -101,8 +101,8 @@ Including images inside HTML:
 
 ### Images for plugins
 
-They are in the folder (by default): `static/img/plugins/`. In this folder you should put images that are used in different plugins. Nested directories are supported.
+They are in the folder (by default): `static/img.lazy/plugins/`. In this folder you should put images that are used in different plugins. Nested directories are supported.
 
 ### General images
 
-They are in the folder (by default): `static/img/general/`. In this folder you should put images that are used for the whole project, such as the general background of the site. Nested directories are supported.
+They are in the folder (by default): `static/img.lazy/general/`. In this folder you should put images that are used for the whole project, such as the general background of the site. Nested directories are supported.

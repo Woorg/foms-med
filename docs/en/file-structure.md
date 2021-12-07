@@ -50,7 +50,7 @@ exampleComponent/                           # Component example
 
 Any component can be can be embedded into another component.
 
-All images from asstes will be moved to static/img/assets/component_name or static/img/assets/component_name/embedded_component_name, if current component is embedded into another. Images are files with extensions svg, png, jpg, jpeg, jpe, gif, tiff and bmp. Other files will be moved to components-assets (the name of folder is depend on option fs.componentsFolderName).
+All images from asstes will be moved to static/img.lazy/assets/component_name or static/img.lazy/assets/component_name/embedded_component_name, if current component is embedded into another. Images are files with extensions svg, png, jpg, jpeg, jpe, gif, tiff and bmp. Other files will be moved to components-assets (the name of folder is depend on option fs.componentsFolderName).
 
 The basic idea is to make the component as much isolated structure as possible. You can use the [BEM](https://ru.bem.info), [web components](http://webcomponents.org) (and their [realization from Google](https://www.polymer-project.org)), something else. You can do everything by old-fashioned way, all markup is in one component, but it is not recommended.  If we talk in BEM terms, each component is a block. There is an [excellent lecture](https://www.youtube.com/watch?v=pyAYbbDJjPo) on how to organize your code.
 
@@ -64,7 +64,7 @@ We assume that Scss was chosen as a css-preprocessor.
 ```
 static/                                     # Folder for static-files. You can choose the name for that folder in tars-config.js
     └── fonts/                              # Fonts (can contain subdirectories)
-    └── img/                                # Images. You can choose the name for that folder in tars-config.js
+    └── img.lazy/                                # Images. You can choose the name for that folder in tars-config.js
         └── content/                        # Images for content (can contain subdirectories)
         └── plugins/                        # Images for plugins (can contain subdirectories)
         └── general/                        # General images for project (can contain subdirectories)
@@ -79,8 +79,8 @@ static/                                     # Folder for static-files. You can c
         └── plugins/                        # js-plugins
         └── separate-js/                    # js-files, which must not be included in ready bundle
     └── misc/                               # General files, which will be moved to root directory of ready project — favicons, robots.txt and so on  (can contain subdirectories)
-    └── scss  
-        ├── entry/                          # Styles for entry points for css in case of manual css-processing More info [here](css-manual-processing.md).                
+    └── scss
+        ├── entry/                          # Styles for entry points for css in case of manual css-processing More info [here](css-manual-processing.md).
         └── etc/                            # Styles, which will be included at the end of the ready css-file (can contain subdirectories)
         └── libraries/                      # Styles for libraries (can contain subdirectories)
         └── plugins/                        # Styles for plugins (can contain subdirectories)
@@ -103,13 +103,13 @@ There will be two folders in the root after assembly of the project: dev and bui
 ```
 dev/
     └── static/                         # Folder for static-files. You can choose the name for that folder in tars-config.js
-        └── css/                        # Ready styles and styles for IE9 and 
+        └── css/                        # Ready styles and styles for IE9 and
         IE8, if support is turned on and styles from separate-css.
         └── components-assets/          # Static files for components.
-                └── exampleComponent/   
-        └── img/                        # Images for project
+                └── exampleComponent/
+        └── img.lazy/                        # Images for project
             └── assets/                 # Static files for components. Only images
-                └── exampleComponent/      
+                └── exampleComponent/
             └── content/                # Images for content
             └── plugins/                # Images for plugins
             └── svg-sprite/             # SVG-sprite
@@ -117,7 +117,7 @@ dev/
             └── rastered-svg-images/    # Raster svg-images for IE8
             └── minified-svg/           # Minifies svg-images
         └── js/                         # Ready main.js and separate js-files
-            └── separate-js/   
+            └── separate-js/
     └── temp/                           # Temp folder for components' data
     ├── Ready pages and misc-files
 ```

@@ -6,11 +6,11 @@ English description | <a href="README_RU.md">Описание на русско�
 
 # ![Tars](https://raw.githubusercontent.com/artem-malko/artwork/master/tars/logo.png)
 
-[![Downloads][downloads-image]][npm-url] [![Mac/Linux Build Status](https://img.shields.io/travis/tars/tars/master.svg?label=Mac%20OSX%20%26%20Linux&style=flat-square)](https://travis-ci.org/tars/tars) [![Windows Build status](https://img.shields.io/appveyor/ci/artem-malko/tars/master.svg?label=Windows&style=flat-square)](https://ci.appveyor.com/project/artem-malko/tars/branch/master) [![Gitter](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/tars/tars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Downloads][downloads-image]][npm-url] [![Mac/Linux Build Status](https://img.lazy.shields.io/travis/tars/tars/master.svg?label=Mac%20OSX%20%26%20Linux&style=flat-square)](https://travis-ci.org/tars/tars) [![Windows Build status](https://img.lazy.shields.io/appveyor/ci/artem-malko/tars/master.svg?label=Windows&style=flat-square)](https://ci.appveyor.com/project/artem-malko/tars/branch/master) [![Gitter](https://img.lazy.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/tars/tars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 TARS is a builder for modern frontend of any complexity, which is based on [Gulp.js](http://gulpjs.com/). It facilitates and accelerates process of web-development. TARS will be suitable for teams and individual developers. It solves the most routine cases associated with web-development and brings you more pleasure from work.
 
-TARS is a framework for gulp, including a set of gulp-tasks. It allows for easy expansion (creating new tasks) and customization (modification of existing tasks),  provides comfortable architecture for tasks and watchers storage in the project. 
+TARS is a framework for gulp, including a set of gulp-tasks. It allows for easy expansion (creating new tasks) and customization (modification of existing tasks),  provides comfortable architecture for tasks and watchers storage in the project.
 
 To bypass dependencies installation for every TARS project, [TARS-CLI](https://github.com/tars/tars-cli) was created. As such, TARS is not a npm-package by itself. This decision was made so that everyone could comfortably customize the builder for themselves. TARS-CLI is just a simple builder interface, which includes all dependencies for TARS.
 
@@ -86,7 +86,7 @@ npm install -g gulp
 npm install
 ```
 
-If not all of the dependencies have been installed, the last operation must be repeated. 
+If not all of the dependencies have been installed, the last operation must be repeated.
 
 After installing of all dependencies you need to open tars-config (detailed description of the options are [here](/docs/en/options.md)) and set up the project for yourself. In that config file, you can select the templater, css-preprocessor, using the notifications, folder names for different static and etc. After setting up the project, execute the following command:
 
@@ -94,10 +94,10 @@ After installing of all dependencies you need to open tars-config (detailed desc
 gulp init
 ```
 
-**Attention, [TARS-CLI](https://github.com/tars/tars-cli) is the preferred 
+**Attention, [TARS-CLI](https://github.com/tars/tars-cli) is the preferred
 way to work with TARS. It is faster and more comfortable to work with TARS-CLI. [Init command is available in TARS-CLI too](https://github.com/tars/tars-cli/blob/master/docs/en/commands.md#tars-init).**
 
-This command will create the basic file structure, download tasks for selected templater and css-preprocessor. 
+This command will create the basic file structure, download tasks for selected templater and css-preprocessor.
 Everything is ready, get to work! :)
 
 
@@ -159,5 +159,5 @@ If you have a question you can write in [gitter](https://gitter.im/tars/tars?utm
 
 Bugs and feature-request here: [issues](https://github.com/tars/tars/issues/new).
 
-[downloads-image]: http://img.shields.io/npm/dm/tars-cli.svg?style=flat-square
+[downloads-image]: http://img.lazy.shields.io/npm/dm/tars-cli.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/tars-cli

@@ -105,7 +105,15 @@
     }
 
     &__item_subnav {
-        padding-right: 27.5px;
+        @include padding-right(10px);
+
+        @include mq($medium) {
+            @include padding-right(15px);
+        }
+
+        @include mq($large) {
+            @include padding-right(27.5px);
+        }
 
         .nav__dropdown-icon {
             @include mq($medium) {
@@ -168,10 +176,10 @@
         @include tr(.3s ease);
 
         @include mq($medium) {
-            padding-top: 20px;
-            padding-right: 15px;
-            padding-bottom: 20px;
-            padding-left: 15px;
+            @include padding-top(20px);
+            @include padding-right(15px);
+            @include padding-bottom(20px);
+            @include padding-left(15px);
             width: auto;
             color: var(--nav-link-color);
             font-weight: normal;
@@ -179,8 +187,8 @@
         }
 
         @include mq($large) {
-            padding-right: 27.5px;
-            padding-left: 27.5px;
+            @include padding-right(27.5px);
+            @include padding-left(27.5px);
         }
 
 
@@ -230,12 +238,20 @@
         margin-left: auto;
     }
 
+
     &__search,
     &__user {
         margin-left: auto;
         display: inline-flex;
         align-items: center;
 
+    }
+
+    &__search {
+        @include resetbutton();
+        @include mq($medium) {
+            margin-left: 20px;
+        }
     }
 
     &__search-icon,
@@ -285,14 +301,17 @@
     .nav__title {
         margin-bottom: 8px;
         width: 100%;
-        font-size: 14px;
+        @include font-size(14px);
         font-weight: bold;
         line-height: 1.43;
         cursor: pointer;
         @include mq($medium) {
+            @include font-size(16px);
+        }
+        @include mq($large) {
             margin-bottom: 34px;
             font-weight: 600;
-            font-size: 20px;
+            @include font-size(20px);
             line-height: 1.2;
             cursor: auto;
         }
@@ -331,16 +350,19 @@
         padding-bottom: 5px;
         padding-left: 0;
         font-weight: normal;
-        font-size: 12px;
+        @include font-size(12px);
         line-height: 1.49;
         letter-spacing: -0.2px;
         color: #667580;
         text-transform: none;
-
         @include mq($medium) {
+            @include font-size(14px);
+        }
+
+        @include mq($large) {
             padding-top: 10px;
             padding-bottom: 10px;
-            font-size: 16px;
+            @include font-size(16px);
 
         }
 

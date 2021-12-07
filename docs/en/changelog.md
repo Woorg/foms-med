@@ -63,7 +63,7 @@ English description | <a href="../ru/changelog.md">Описание на рус�
 * You can configure gulp-plugins by using [plugins-config.js](plugins-options.md).
 * Jade recompilation became faster.
 * You can crate components inside another components.
-* All images from assets of component will be moved to static/img/assets. Images are files with extensions svg, png, jpg, jpeg, jpe, gif, tiff and bmp.
+* All images from assets of component will be moved to static/img.lazy/assets. Images are files with extensions svg, png, jpg, jpeg, jpe, gif, tiff and bmp.
 Other files will be moved to static/components-assets.
 * staticPrefix was removed from tars-config.
 * Option [generateStaticPath](options.md#generatestaticpath) was added.
@@ -119,7 +119,7 @@ rules: {
 ## Version 1.6.3
 
 * Bug with images minification has been fixed.
-* Taks minify-raster-img has been renamed to minify-images. SVG-images will be minified in that task.
+* Taks minify-raster-img.lazy has been renamed to minify-images. SVG-images will be minified in that task.
 * Docs fixup.
 
 ## Version 1.6.2

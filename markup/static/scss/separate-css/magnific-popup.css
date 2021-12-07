@@ -242,7 +242,7 @@ button::-moz-focus-inner {
     background: #000; }
 
 /* Main image in popup */
-img.mfp-img {
+img.lazy.mfp-img.lazy {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -301,18 +301,18 @@ img.mfp-img {
   /**
        * Remove all paddings around the image on small screen
        */
-  .mfp-img-mobile .mfp-image-holder {
+  .mfp-img.lazy-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0; }
-  .mfp-img-mobile img.mfp-img {
+  .mfp-img.lazy-mobile img.lazy.mfp-img.lazy {
     padding: 0; }
-  .mfp-img-mobile .mfp-figure:after {
+  .mfp-img.lazy-mobile .mfp-figure:after {
     top: 0;
     bottom: 0; }
-  .mfp-img-mobile .mfp-figure small {
+  .mfp-img.lazy-mobile .mfp-figure small {
     display: inline;
     margin-left: 5px; }
-  .mfp-img-mobile .mfp-bottom-bar {
+  .mfp-img.lazy-mobile .mfp-bottom-bar {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
     margin: 0;
@@ -320,12 +320,12 @@ img.mfp-img {
     padding: 3px 5px;
     position: fixed;
     box-sizing: border-box; }
-    .mfp-img-mobile .mfp-bottom-bar:empty {
+    .mfp-img.lazy-mobile .mfp-bottom-bar:empty {
       padding: 0; }
-  .mfp-img-mobile .mfp-counter {
+  .mfp-img.lazy-mobile .mfp-counter {
     right: 5px;
     top: 3px; }
-  .mfp-img-mobile .mfp-close {
+  .mfp-img.lazy-mobile .mfp-close {
     top: 0;
     right: 0;
     width: 35px;

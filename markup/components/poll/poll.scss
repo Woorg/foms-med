@@ -2,10 +2,13 @@
     &__title {
         margin-bottom: 5px;
         font-weight: 600;
-        font-size: 14px;
+        @include font-size(14px);
         line-height: 1.2;
         @include mq($medium) {
-            font-size: 20px;
+            @include font-size(16px);
+        }
+        @include mq($large) {
+            @include font-size(20px);
             text-transform: uppercase;
         }
     }
@@ -13,10 +16,13 @@
     &__text {
         color: #667580;
         font-weight: normal;
-        font-size: 12px;
+        @include font-size(12px);
         line-height: 1.4;
         @include mq($medium) {
-            font-size: 14px;
+            @include font-size(13px);
+        }
+        @include mq($large) {
+            @include font-size(14px);
         }
     }
 
@@ -31,9 +37,12 @@
     }
 
     &__field {
-        margin-bottom: 15px;
+        @include margin-bottom(10px);
         @include mq($medium) {
-            margin-bottom: 20px;
+            @include margin-bottom(15px);
+        }
+        @include mq($large) {
+            @include margin-bottom(20px);
         }
     }
 }

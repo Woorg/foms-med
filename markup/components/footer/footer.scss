@@ -107,25 +107,32 @@
 
     &__address {
         color: #334756;
-        font-size: 14px;
+        @include font-size(14px);
         font-weight: normal;
         line-height: 1.4;
         @include mq($medium) {
-            font-size: 16px;
+            @include font-size(15px);
+        }
+        @include mq($large) {
+            @include font-size(16px);
         }
     }
 
     &__email {
-        font-size: 14px;
+        @include font-size(14px);
         @include mq($medium) {
-            font-size: 16px;
+            @include font-size(15px);
+        }
+        @include mq($large) {
+            @include font-size(16px);
         }
     }
 
     &__map-link {
-        margin-top: 54px;
+        @include margin-top(25px);
         display: none;
         @include mq($medium) {
+            @include margin-top(54px);
             display: flex;
         }
     }
@@ -171,14 +178,18 @@
         width: 100%;
         color: #667580;
         font-weight: normal;
-        font-size: 12px;
+        @include font-size(12px);
         line-height: normal;
         text-align: center;
         order: 5;
         @include mq($medium) {
+            @include font-size(13px);
+        }
+
+        @include mq($large) {
             margin-top: 67px;
             order: 5;
-            font-size: 14px;
+            @include font-size(14px);
         }
 
         &:after {

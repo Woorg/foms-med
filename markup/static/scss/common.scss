@@ -86,7 +86,7 @@ html, body {
 
 
 
-img {
+img.lazy {
     max-width: 100%;
     height: auto;
     &.lazy {
@@ -107,7 +107,7 @@ img {
 }
 
 
-img:not([src]):not([srcset]) {
+img.lazy:not([src]):not([srcset]) {
     visibility: hidden;
 }
 

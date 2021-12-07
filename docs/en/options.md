@@ -16,7 +16,7 @@ Type: `Array`
 
 Default: `[]`
 
-Example: 
+Example:
 ````javascript
 postcss: [
         {
@@ -200,7 +200,7 @@ Also you can disable eslint for these files (lintJsCodeBeforeModules and lintJsC
 
 Type: `Object`
 
-Default: 
+Default:
 ```javascript
 sourcemaps: {
     js: {
@@ -366,7 +366,7 @@ The pixel density of different screens, which will be supported by your project.
 
 On the basis of this option, a folder for png images of different sizes for different screens is created. Read more in [images processing](images-processing.md) docs.
 
-This option can be changed at any time, but there is a couple of important points. If this option is changed after `gulp|tars init`, it is necessary to create (or delete) directories in the `static/img/sprite/` folder by hand. The format of the folder name - option value + dpi. For example, `192dpi`.
+This option can be changed at any time, but there is a couple of important points. If this option is changed after `gulp|tars init`, it is necessary to create (or delete) directories in the `static/img.lazy/sprite/` folder by hand. The format of the folder name - option value + dpi. For example, `192dpi`.
 
 ### fs
 
@@ -384,7 +384,7 @@ The name of the folder where static files of the the project will be. If you are
 
 Type: `String`
 
-Default: `'img'`
+Default: `'img.lazy'`
 
 The name of the folder where images of the project will be. Usually this folder has different names, so setting it is optional.
 

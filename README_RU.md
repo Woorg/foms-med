@@ -6,7 +6,7 @@
 
 # ![Tars](https://raw.githubusercontent.com/artem-malko/artwork/master/tars/logo.png)
 
-[![Downloads][downloads-image]][npm-url] [![Mac/Linux Build Status](https://img.shields.io/travis/tars/tars/master.svg?label=Mac%20OSX%20%26%20Linux&style=flat-square)](https://travis-ci.org/tars/tars) [![Windows Build status](https://img.shields.io/appveyor/ci/artem-malko/tars/master.svg?label=Windows&style=flat-square)](https://ci.appveyor.com/project/artem-malko/tars/branch/master) [![Gitter](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/tars/tars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Downloads][downloads-image]][npm-url] [![Mac/Linux Build Status](https://img.lazy.shields.io/travis/tars/tars/master.svg?label=Mac%20OSX%20%26%20Linux&style=flat-square)](https://travis-ci.org/tars/tars) [![Windows Build status](https://img.lazy.shields.io/appveyor/ci/artem-malko/tars/master.svg?label=Windows&style=flat-square)](https://ci.appveyor.com/project/artem-malko/tars/branch/master) [![Gitter](https://img.lazy.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/tars/tars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 TARS — сборщик frontend'а любой сложности, основанный на [Gulp](http://gulpjs.com/). Облегчает и ускоряет процесс разработки веб-сайтов/приложений, делая работу приятной и продуктивной.
 Подойдет как командам, так и отдельному разработчику. TARS решает большинство рутинных дел, связанных с веб-разработкой, чтобы вы получали больше удовольствия от работы.
@@ -117,7 +117,7 @@ gulp init
 `gulp` или `gulp build` — делает сборку проекта. Подключаются не минимизированные файлы. Тип сборки зависит от переданных ключей вместе с этой командой. Доступные ключи:
 
 * `--min` – в html подключаются минимизированные файлы.
-* `--release` – в html подключаются минимизированные файлы, в названии которых есть hash. Данный режим полезен, если вы напрямую выкладываете верстку на сервер. 
+* `--release` – в html подключаются минимизированные файлы, в названии которых есть hash. Данный режим полезен, если вы напрямую выкладываете верстку на сервер.
 
 `gulp dev` — инициализация сборщика в режиме разработки. Создается dev-версия проекта, без всех минификаций. Также запускает вотчеры за файлами проекта. Доступные ключи:
 
@@ -162,5 +162,5 @@ gulp init
 
 Баги и фича-реквесты сюда: [issues](https://github.com/tars/tars/issues/new).
 
-[downloads-image]: http://img.shields.io/npm/dm/tars-cli.svg?style=flat-square
+[downloads-image]: http://img.lazy.shields.io/npm/dm/tars-cli.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/tars-cli

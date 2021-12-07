@@ -8,7 +8,7 @@ mixin about(data)
                     != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'button__arrow'})
 
             .about__video
-                video.about__video-object(preload='auto' loop muted playsinline poster='static/img/content/video-preview.webp')
+                video.about__video-object(preload='auto' loop muted playsinline poster='static/img.lazy/content/video-preview.webp')
                     source(src='videos/earth_optimize.mp4' type='video/mp4')
                     //- source(src='videos/earth_optimize.webm' type='video/webm')
                     //- source(src='videos/earth_optimize.ogv' type='video/ogg')

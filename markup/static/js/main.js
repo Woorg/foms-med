@@ -9,6 +9,9 @@ import tabs from '../../components/tabs/tabs';
 import Nav from '../../components/nav/nav';
 
 import {departments} from '../../components/departments/departments';
+
+import {mapArea} from '../../components/map-area/map-area';
+
 import footerNavToggle from '../../components/footer/footer';
 import LazyLoad from 'vanilla-lazyload';
 
@@ -82,11 +85,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
     departments();
 
 
+    mapArea();
+
     /*
         Footer nav toggle
     */
 
     footerNavToggle();
+
+
 
 
 });

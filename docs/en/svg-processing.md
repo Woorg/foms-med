@@ -15,11 +15,11 @@ You cannot use symbols and SVG-sprite in one time. All options for working with 
 
 **Build for IE8 not supported in that workflow**
 
-In that workflow SVG-images will be combined into one SVG-file and every iscon will be represented as [SVG-symbol](https://developer.mozilla.org/ru/docs/Web/SVG/Element/symbol). You can reuse each icon, set colors and size from CSS in that case. You can get more info from [css-tricks](https://css-tricks.com/svg-symbol-good-choice-icons/). 
+In that workflow SVG-images will be combined into one SVG-file and every iscon will be represented as [SVG-symbol](https://developer.mozilla.org/ru/docs/Web/SVG/Element/symbol). You can reuse each icon, set colors and size from CSS in that case. You can get more info from [css-tricks](https://css-tricks.com/svg-symbol-good-choice-icons/).
 
-Images that will be included in such way must be in a folder (default path): 'static/img/svg/'. Nested directories are **not** supported.
+Images that will be included in such way must be in a folder (default path): 'static/img.lazy/svg/'. Nested directories are **not** supported.
 
-Symbols are created to use it in tempaltes (html|jade|hbs). In CSS you can change colors, size, add stroke and stroke width. You sholud use helpers for symbols using in templates and components. Helper creates HTML, add size's attributes and custom classname. 
+Symbols are created to use it in tempaltes (html|jade|hbs). In CSS you can change colors, size, add stroke and stroke width. You sholud use helpers for symbols using in templates and components. Helper creates HTML, add size's attributes and custom classname.
 
 Using in handlebars:
 ```handlebars
@@ -69,7 +69,7 @@ More info about symbols configuration you can get from [options docs](options.md
 
 SVG images are combined into the SVG-sprite.
 
-SVG-images in the release-version is minified and has release hash in the name. Images that will be included in such way must be in a folder (default path): 'static/img/svg/'. Nested directories are **not** supported.
+SVG-images in the release-version is minified and has release hash in the name. Images that will be included in such way must be in a folder (default path): 'static/img.lazy/svg/'. Nested directories are **not** supported.
 
 You can include image by using mixin (example on scss):
 ```scss
@@ -81,4 +81,3 @@ Attention, $svg-image-name is a **var**, that has the same name as the icon, whi
 `bg-svg` mixin will include SVG-sprite as a background, will set all necessary offsets and sizes into the CSS. In case of `--ie` and `--ie8` flags using sprite of rastered SVG-images will be created for IE8 automatically.
 
 You can not set color of SVG icon from CSS. So, it is necessary to create production-ready icon, with correct size and color.
-

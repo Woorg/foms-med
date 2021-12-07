@@ -13,7 +13,7 @@
 Если необходимо подключить файлы из директории static (картинки, js-файлы), то необходимо пользоваться плейсхолдером [%=static=% или \_\_static\_\_](options.md#staticprefix). Тогда подключение картинки в контенте будет выглядеть следующим образом (в примере используется Handlebars):
 
 ```html
-<img src="%=static=%img/content/example.jpg"/>
+<img.lazy src="%=static=%img.lazy/content/example.jpg"/>
 ```
 
 Для подключения картинки в CSS необходимо использовать тот же плейсхолдер – %=static=% или \_\_static\_\_. Данный плейсхолдер в CSS подставит значение из конфига [staticprefixforcss](options.md#staticprefixforcss).

@@ -13,7 +13,7 @@ If you don't want to compile a particular page, you can simply add the '_' at th
 If you need to include files from the static directory (images, js-files), you must use the placeholder [`%=static=%` or `__static__`](options.md#staticprefix). Then including of an image will be as in following example (in this example Handlebars is used):
 
 ```html
-<img src="%=static=%img/content/example.jpg"/>
+<img.lazy src="%=static=%img.lazy/content/example.jpg"/>
 ```
 
 To include image in CSS you need to use the same placeholder – `%=static=%`. This placeholder will be replaced with string from [staticprefixforcss](options.md#staticprefixforcss) from config.
@@ -211,7 +211,7 @@ component: {
     main: {
         title: 'Title of component',
         innerComponentData: function (fullData) {
-            // fullData is an object 
+            // fullData is an object
             // with all data of the application
             return fullData.componentName.componentType;
         }
