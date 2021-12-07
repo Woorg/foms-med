@@ -75,15 +75,16 @@
         @include padding-top(25px);
         width: 449px;
         height: 656px;
+        display: none;
 
         @include mq($medium) {
             @include padding-top(50px);
         }
 
-
         @include mq($large) {
             margin-top: -135px;
             padding-top: 0;
+            display: block;
         }
 
     }

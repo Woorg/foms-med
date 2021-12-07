@@ -1,3 +1,5 @@
+include ../search-form/search-form.pug
+
 mixin nav(data)
     nav.nav&attributes(attributes)
 
@@ -31,10 +33,19 @@ mixin nav(data)
                                 li.subnav__item
                                     a.subnav__link(href=subnavItem.href) #{subnavItem.title}
 
-
         .nav__controls
             button.nav__search
                 != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'nav__search-icon'})
+
+            form.nav__search-form.search-form(action="")
+                .search-form__field
+                    input.search-form__input(type="text", value="", placeholder="Поиск по сайту")
+
+                    != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'search-form__icon'})
+
+                    button.search-form__close
+                        != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'search-form__close-icon'})
+
 
 
             a.nav__user(href="#")

@@ -8,6 +8,9 @@ import tabs from '../../components/tabs/tabs';
 
 import Nav from '../../components/nav/nav';
 
+import SearchForm from '../../components/search-form/search-form';
+
+
 import {departments} from '../../components/departments/departments';
 
 import {mapArea} from '../../components/map-area/map-area';
@@ -53,6 +56,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     new Nav();
 
+    /*
+        Search form
+    */
+
+    new SearchForm();
+
+    /*
+        Section nav
+    */
 
     sectionNavToggle();
 
@@ -84,6 +96,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     departments();
 
+    /*
+        Map area
+    */
 
     mapArea();
 
@@ -92,8 +107,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     */
 
     footerNavToggle();
-
-
 
 
 });
