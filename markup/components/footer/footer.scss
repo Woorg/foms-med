@@ -84,6 +84,7 @@
         display: none;
         @include mq($medium) {
             // margin-bottom: 50px;
+            display: block;
 
         }
     }

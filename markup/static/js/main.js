@@ -1,14 +1,13 @@
 import svg4everybody from 'svg4everybody';
 import header from '../../components/header/header';
 import sectionNavToggle from '../../components/section-nav/section-nav';
-import {slider} from '../../components/slider/slider';
-import {sliderVideo} from '../../components/slider/slider';
+import {slider, sliderMob, sliderVideo, sliderVideoMob} from '../../components/slider/slider';
+import tabs from '../../components/tabs/tabs';
 
-import about from '../../components/about/about';
+// import about from '../../components/about/about';
 
 import Nav from '../../components/nav/nav';
 
-import tabs from '../../components/tabs/tabs';
 import {departments} from '../../components/departments/departments';
 import footerNavToggle from '../../components/footer/footer';
 import LazyLoad from 'vanilla-lazyload';
@@ -46,14 +45,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
     /*
-        Header video
-     */
-
-    // header();
-
-
-
-    /*
         Nav
     */
 
@@ -63,9 +54,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
     sectionNavToggle();
 
 
-    slider('.slider');
+    /*
+       Slider
+    */
+
 
     sliderVideo();
+
+    slider();
+
+    sliderMob();
+
+    sliderVideoMob();
 
 
     /*
@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     */
 
     departments();
+
 
     /*
         Footer nav toggle

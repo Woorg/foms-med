@@ -27,7 +27,10 @@
             font-size: 14px;
             line-height: 1.2;
             @include mq($medium) {
-                font-size: 22px;
+                @include font-size(18px);
+            }
+            @include mq($large) {
+                @include font-size(22px);
 
             }
         }
@@ -37,7 +40,10 @@
             font-size: 12px;
             line-height: 1.2;
             @include mq($medium) {
-                font-size: 18px;
+                @include font-size(16px);
+            }
+            @include mq($large) {
+                @include font-size(18px);
             }
         }
 
@@ -63,9 +69,17 @@
         text-decoration: none;
         @include tr(.3s ease);
 
-
-
         @include mq($medium) {
+            padding-right: 0;
+            @include padding-top(15px);
+            @include padding-right(15px);
+            @include padding-bottom(15px);
+            @include padding-left(15px);
+            height: 90px;
+
+        }
+
+        @include mq($large) {
             padding-right: 0;
             @include padding-top(18px);
             @include padding-bottom(18px);
@@ -93,11 +107,13 @@
 
     &__title {
         font-weight: 600;
-        font-size: 14px;
+        @include font-size(14px);
         line-height: 1.2;
         @include mq($medium) {
-            font-size: 18px;
-
+            @include font-size(15px);
+        }
+        @include mq($large) {
+            @include font-size(18px);
         }
 
 

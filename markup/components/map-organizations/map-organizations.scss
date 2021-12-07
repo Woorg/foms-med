@@ -2,7 +2,7 @@
     position: relative;
     background-color: var(--gray);
     display: none;
-    @include mq($medium) {
+    @include mq($small) {
         display: block;
     }
 
@@ -44,19 +44,47 @@
 
 
     &__tab {
+
+    }
+
+    &__tab-in {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
     }
 
     &__addresses {
-        padding-top: 50px;
+        @include padding-top(25px);
+        max-width: 500px;
+        @include mq($medium) {
+            @include padding-top(50px);
+        }
+    }
+
+    &__address {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__map {
-        margin-top: -135px;
+        margin-top: 0;
+        @include padding-top(25px);
         max-width: 322px;
         width: 100%;
+
+        @include mq($medium) {
+            @include padding-top(50px);
+        }
+
+
+        @include mq($large) {
+            margin-top: -135px;
+            padding-top: 0;
+        }
+
     }
 
     // 322

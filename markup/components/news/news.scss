@@ -99,6 +99,7 @@
         }
 
         img {
+            display: block;
             min-height: 138px;
             height: 100%;
             object-fit: cover;
@@ -147,13 +148,11 @@
 
         }
 
-
     }
 
     &__date-icon {
         margin-right: 6px;
     }
-
 
     &__entry {
         margin-left: 0;
@@ -161,9 +160,9 @@
             @include margin-left(15px)
         }
 
-        @include mq($medium) {
+        @include mq($large) {
             margin-top: -6px;
-            margin-left: 27px;
+            @include margin-left(27px);
         }
     }
 
@@ -175,8 +174,11 @@
         @include font-size(18px);
         line-height: 1.4;
         text-align: left;
-
         @include mq($medium) {
+            @include font-size(20px);
+        }
+
+        @include mq($large) {
             @include font-size(22px);
         }
 
@@ -185,11 +187,14 @@
     &__article-text {
         color: #7a7a7a;
         font-weight: normal;
-        font-size: 14px;
+        @include font-size(14px);
         line-height: 1.1;
         @include mq($medium) {
+            @include font-size(15px);
+        }
+        @include mq($large) {
             padding-right: 30px;
-            font-size: 16px;
+            @include font-size(16px);
         }
 
         p {

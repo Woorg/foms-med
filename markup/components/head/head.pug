@@ -10,8 +10,8 @@ mixin head(data)
     meta(name="HandheldFriendly", content="true")
 
 
-    <link rel="preload" href="%=static=%css/separate-css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="%=static=%css/separate-css/bootstrap.min.css"></noscript>
+    //- <link rel="preload" href="%=static=%css/separate-css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    //- <noscript><link rel="stylesheet" href="%=static=%css/separate-css/bootstrap.min.css"></noscript>
 
     <link rel="preload" href="%=static=%css/separate-css/tabby-ui.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="%=static=%css/separate-css/tabby-ui.min.css"></noscript>
@@ -25,26 +25,26 @@ mixin head(data)
 
     //- | <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style">
 
-    | <link rel="preload" href="%=static=%js/separate-js/jquery.min.js" as="script">
-    | <link rel="preload" href="%=static=%js/separate-js/bootstrap.bundle.min.js" as="script">
+    //- | <link rel="preload" href="%=static=%js/separate-js/jquery.min.js" as="script">
+    //- | <link rel="preload" href="%=static=%js/separate-js/bootstrap.bundle.min.js" as="script">
 
-    | <link rel="preload" href="%=static=%js/main%=hash=%%=min=%.js" as="script">
+    //- | <link rel="preload" href="%=static=%js/main%=hash=%%=min=%.js" as="script">
 
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-Black.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-Black.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/subset-Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    | <link rel="preload" href="%=static=%fonts/zantroke-webfont.woff2" ae="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-GolosText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-Black.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-Black.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/hinted-subset-Raleway-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/subset-Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    //- | <link rel="preload" href="%=static=%fonts/zantroke-webfont.woff2" ae="font/woff2" crossorigin>
 
     //- | <link href="%=static=%css/separate-css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
@@ -52,10 +52,10 @@ mixin head(data)
     //- | <link href="%=static=%css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css">
     //- | <link href="%=static=%css/separate-css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 
-    <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="%=static=%css/main%=hash=%%=min=%.css"></noscript>
+    //- <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    //- <noscript><link rel="stylesheet" href="%=static=%css/main%=hash=%%=min=%.css"></noscript>
 
-    //- | <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">
+    | <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">
 
     if data.useSocialMetaTags
         meta(property="og:title", content="#{data.title}")
