@@ -24,14 +24,21 @@
         }
         .side-nav__title {
             font-weight: bold;
-            font-size: 22px;
+            font-size: 14px;
             line-height: 1.2;
+            @include mq($medium) {
+                font-size: 22px;
+
+            }
         }
         .side-nav__text {
             margin-top: 6px;
-            font-size: 18px;
             font-weight: normal;
+            font-size: 12px;
             line-height: 1.2;
+            @include mq($medium) {
+                font-size: 18px;
+            }
         }
 
         &:hover {
@@ -43,33 +50,57 @@
     }
 
     &__link {
-        padding-top: 18px;
-        padding-right: 20px;
-        padding-bottom: 18px;
-        padding-left: 20px;
+        @include padding-top(10px);
+        @include padding-bottom(10px);
+        @include padding-right(20px);
+        @include padding-left(20px);
         display: flex;
         align-items: center;
         width: 100%;
-        height: 90px;
+        height: 50px;
         background-color: var(--dark);
         color: var(--white);
         text-decoration: none;
         @include tr(.3s ease);
 
+
+
+        @include mq($medium) {
+            padding-right: 0;
+            @include padding-top(18px);
+            @include padding-bottom(18px);
+            height: 90px;
+
+        }
+
     }
 
     &__icon {
+        width: 30px;
         flex-shrink: 0;
         color: #48667C;
+
+        @include mq($medium) {
+            width: 48px;
+        }
     }
     &__entry {
-        margin-left: 15px;
+        margin-left: 10px;
+        @include mq($medium) {
+            margin-left: 15px;
+        }
     }
 
     &__title {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.2;
+        @include mq($medium) {
+            font-size: 18px;
+
+        }
+
+
     }
 
     &__text {

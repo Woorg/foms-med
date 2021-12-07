@@ -3,11 +3,11 @@
         margin-bottom: 0;
         max-width: 100%;
         width: 100%;
-        @include mq($s) {
+        @include mq($small) {
         }
     }
     &__nav-item {
-        @include mq($s) {
+        @include mq($small) {
         }
 
     }
@@ -44,7 +44,7 @@
     justify-content: flex-start;
     align-items: center;
     overflow-x: overlay;
-    @include mq($s) {
+    @include mq($small) {
         overflow-x: unset;
     }
 }
@@ -63,7 +63,7 @@
     border-radius: 0;
     @include tr(.3s ease);
 
-    @include mq($s) {
+    @include mq($small) {
     }
 
     &:hover {

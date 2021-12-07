@@ -1,19 +1,30 @@
 .section-nav {
-    margin-right: -5px;
-    margin-left: -5px;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
     overflow: hidden;
+    @include mq($medium) {
+        margin-right: -5px;
+        margin-left: -5px;
+        flex-direction: row;
+    }
     &__item {
-        padding-right: 5px;
-        padding-left: 5px;
-        max-width: 33.3%;
+        margin-bottom: 5px;
         width: 100%;
-        height: 110px;
+        height: 91px;
         @include tr(.1s ease);
+
+        @include mq($medium) {
+            margin-bottom: 0;
+            padding-right: 5px;
+            padding-left: 5px;
+            max-width: 33.3%;
+            height: 110px;
+        }
+
         &:hover {
             // max-width: 35.7%;
             .section-nav__link {
@@ -35,8 +46,11 @@
     }
 
     &__item_active {
-        max-width: 35.7%;
         @include tr(.1s ease);
+
+        @include mq($large) {
+            max-width: 35.7%;
+        }
 
         .section-nav__link {
             background-color: #086de0;
@@ -46,12 +60,15 @@
         }
 
         .section-nav__button {
-            // margin-left: 20px;
             background: var(--white);
-        }
-        .button__text {
-            display: inline-flex;
-            color: #086de0;
+
+            .button__text {
+                display: none;
+                color: #086de0;
+                @include mq($large) {
+                    display: inline-flex;
+                }
+            }
         }
         .button__arrow {
             margin-left: 10px;
@@ -70,21 +87,35 @@
     }
 
     &__link {
-        padding-top: 30px;
-        @include padding-right(40px);
-        // padding-right: 40px;
-        padding-bottom: 30px;
-        // padding-left: 40px;
-        @include padding-left(35px);
+        padding-top: 21px;
+        padding-right: 14px;
+        padding-bottom: 21px;
+        padding-left: 14px;
         width: 100%;
         height: 100%;
         display: flex;
+        justify-content: flex-start;
         align-items: center;
         background-color: #edf1f3;
         color: #334756;
         text-decoration: none;
         cursor: pointer;
         @include tr(.1s ease);
+
+        @include mq($medium) {
+            @include padding-top(30px);
+            @include padding-right(15px);
+            @include padding-left(15px);
+            @include padding-bottom(30px);
+            justify-content: space-between;
+
+        }
+
+        @include mq($large) {
+            @include padding-right(30px);
+            @include padding-left(30px);
+        }
+
         &:hover {
 
         }
@@ -92,28 +123,57 @@
 
 
     &__icon {
+        width: 34px;
         flex-shrink: 0;
-
         color: #086de0;
+        @include mq($medium) {
+            width: 48px;
+        }
     }
 
     &__text {
-        margin-right: 20px;
-        margin-left: 20px;
+        @include margin-right(20px);
+        @include margin-left(20px);
         font-weight: 600;
-        font-size: 16px;
-        line-height: 1.5;
+        @include font-size(13px);
+        line-height: 1.85;
         letter-spacing: 0.1px;
         text-align: left;
+        @include mq($medium) {
+            @include font-size(16px);
+            line-height: 1.5;
+        }
     }
 
     &__button {
-        // margin-left: 20px;
         margin-left: auto;
         display: inline-flex;
         align-items: center;
-        height: 48px;
+        height: 30px;
 
+        @include mq($medium) {
+            height: 48px;
+        }
+
+        .button__text {
+            display: none;
+            @include mq($medium) {
+
+            }
+        }
+
+        .button__arrow {
+            margin-left: 0;
+            width: 17px;
+            @include mq($medium) {
+                margin-left: 10px;
+                width: 28px;
+            }
+        }
     }
+
+
+
+
 
 }

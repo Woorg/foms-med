@@ -1,10 +1,17 @@
 .slider {
     padding-bottom: 20px;
     overflow: hidden;
+    display: none;
+    @include mq($medium){
+        display: block;
+    }
     .swiper-slide {
         position: relative;
-        height: 376px;
+        height: 198px;
         overflow: hidden;
+        @include mq($medium){
+            height: 376px;
+        }
     }
     &__item {
         z-index: 1;
@@ -35,6 +42,7 @@
 
     &__image {
         position: relative;
+        height: 100%;
         &:after {
             position: absolute;
             top: 0;
@@ -59,14 +67,24 @@
     &__title {
 
         position: absolute;
-        bottom: 32px;
-        left: 34px;
-        max-width: 540px;
+        left: 16px;
+        bottom: 14px;
+        max-width: 240px;
         color: var(--white);
-        font-size: 25px;
+        font-size: 14px;
         font-weight: bold;
         line-height: normal;
         text-align: left;
+
+        @include mq($medium) {
+            bottom: 32px;
+            left: 34px;
+
+            max-width: 540px;
+            font-size: 25px;
+
+        }
+
         span {
             color: #ff4c29;
         }
@@ -77,13 +95,36 @@
         @include resetbutton();
         z-index: 2;
         position: absolute;
-        top: 154px;
-        left: 34px;
+        top: 50%;
+        left: 16px;
         color: var(--white);
+        transform: translateY(-50%);
+        @include mq($medium) {
+            top: 154px;
+            left: 34px;
+            transform: none
+
+        }
     }
 
     &__video-icon {
-        // color: var(--white);
+        width: 32px;
+        height: 41px;
+        @include mq($medium) {
+            width: 60px;
+            height: 76px;
 
+        }
     }
+}
+
+
+.slider_mob {
+    width: 100%;
+    display: block;
+    @include mq($medium){
+        display: none;
+    }
+
+
 }

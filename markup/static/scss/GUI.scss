@@ -12,8 +12,9 @@
     text-align: left;
 
     &_second {
-        font-size: 32px;
-        @include mq($m) {
+        @include font-size(22px);
+        @include mq($medium) {
+            @include font-size(32px);
 
         }
 
@@ -42,7 +43,7 @@
     white-space: nowrap;
     @include tr(.3s ease);
 
-    @include mq($s) {
+    @include mq($small) {
 
     }
 
@@ -71,8 +72,25 @@
 
 .button_style_second {
     border: solid 1px #086de0;
-    padding: 10px 30px;
+    @include padding-top(10px);
+    @include padding-right(30px);
+    @include padding-left(30px);
+    @include padding-bottom(10px);
+    // padding: 10px 30px;
     background: transparent;
+    height: 30px;
+    @include mq($medium) {
+        @include padding-right(15px);
+        @include padding-left(15px);
+
+        height: 48px;
+    }
+
+    @include mq($large) {
+        @include padding-right(30px);
+        @include padding-left(30px);
+    }
+
 
     &:hover {
         background-color: var(--white);
@@ -82,13 +100,21 @@
 
 .button_style_third {
     border: solid 1px #086de0;
-    padding-right: 36px;
-    padding-left: 36px;
+    padding-right: 28px;
+    padding-left: 28px;
+    height: 35px;
     background: transparent;
     color: var(--blue);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     letter-spacing: 0.2px;
+    @include mq($medium) {
+        padding-right: 36px;
+        padding-left: 36px;
+        height: 48px;
+        font-size: 14px;
+    }
+
     &:hover {
         background: var(--blue);
         color: var(--white);
@@ -98,6 +124,8 @@
 }
 
 .more {
+    display: inline-flex;
+    align-items: center;
     color: var(--blue);
     font-size: 16px;
     font-weight: normal;
@@ -146,6 +174,9 @@
     font-weight: normal;
     line-height: 1.4;
     color: var(--black);
+    @include mq($medium) {
+
+    }
     .phone__icon {
         margin-right: 12px;
 
@@ -215,7 +246,7 @@
         line-height: 1.49;
         letter-spacing: -0.2px;
 
-        @include mq($m) {
+        @include mq($medium) {
             font-size: 14px;
             line-height: 1.43;
             letter-spacing: -0.4px;

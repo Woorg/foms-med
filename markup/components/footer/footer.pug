@@ -1,7 +1,7 @@
 mixin footer(data)
     footer.footer&attributes(attributes)
         .footer__container.container
-            .footer__col
+            .footer__col.footer__col_first
                 .footer__logo
                     a.logo.logo_style_second(href="#")
                         picture.logo__image
@@ -14,15 +14,16 @@ mixin footer(data)
                         != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'phone__icon'})
                         | 8-800-2222-905
                     .footer__contact.footer__address 367008, г.Махачкала, ул.Ляхова, 47а
-                    a.footer__contact.footer_email(href="mailto:direct@fomsrd.ru") direct@fomsrd.ru
+                    a.footer__contact.footer__email(href="mailto:direct@fomsrd.ru") direct@fomsrd.ru
 
                     a.footer__map-link.more(href="#") Открыть карты
                         != pugHelpers.Icon.call(locals, {iconName: 'more-icon', className: 'more__icon'})
 
-
-            .footer__col.footer__col_nav
+            .footer__col.footer__col_nav.footer__col_nav_first.footer__col_nav_active
                 nav.footer__nav.nav.nav_secondary
                     .nav__title О Фонде
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-downdown-icon', className: 'nav__dropdown-icon'})
+
                     ul.nav__list
                         li.nav__item
                             a.nav__link(href="#") Руководство фонда
@@ -33,9 +34,10 @@ mixin footer(data)
                         li.nav__item
                             a.nav__link(href="#") Карта сайта
 
-            .footer__col.footer__col_nav
+            .footer__col.footer__col_nav.footer__col_nav_second
                 nav.footer__nav.nav.nav_secondary
                     .nav__title Новости
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-downdown-icon', className: 'nav__dropdown-icon'})
                     ul.nav__list
                         li.nav__item
                             a.nav__link(href="#") Региональные
@@ -43,7 +45,6 @@ mixin footer(data)
                             a.nav__link(href="#") Федеральные
                         li.nav__item
                             a.nav__link(href="#") Уведомление
-
 
             .footer__col.footer__col_poll
                 .footer__poll.poll
@@ -53,14 +54,14 @@ mixin footer(data)
 
 
                     form.poll__form.form(action="")
-                        .poll__field.form__field.form-check
-                            input#exampleRadios1.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
+                        .poll__field.form__field.form__field_radio.form-check
+                            input#exampleRadios1.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
                             label.form__label.form-check-label(for='exampleRadios1') Да, мне помогли
-                        .poll__field.form__field.form-check
-                            input#exampleRadios2.form-check-input(type='radio' name='exampleRadios' value='option1' )
+                        .poll__field.form__field.form__field_radio.form-check
+                            input#exampleRadios2.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' )
                             label.form__label.form-check-label(for='exampleRadios2') Да, но не особо
-                        .poll__field.form__field.form-check
-                            input#exampleRadios3.form-check-input(type='radio' name='exampleRadios' value='option1' )
+                        .poll__field.form__field.form__field_radio.form-check
+                            input#exampleRadios3.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' )
                             label.form__label.form-check-label(for='exampleRadios3') Нет, мне не  нашел ничего
 
                         button.button.button_style_third(type='submit') Голосовать
@@ -80,4 +81,4 @@ mixin footer(data)
                         a.social__link(href="#")
                             != pugHelpers.Icon.call(locals, {iconName: 'instagram-icon', className: 'social__icon'})
 
-            .footer__copyright OneDash © 2021
+            .footer__copyright Copyright © Территориальный фонд обязательного медицинского страхования Республики Дагестан. <br/>Все права защищены. Все материалы сайта доступны по лицензии: Creative Common Attribution 3.0

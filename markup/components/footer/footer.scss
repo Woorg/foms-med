@@ -4,41 +4,85 @@
     background: var(--gray);
 
     &__container {
-        padding-top: 74px;
-        padding-bottom: 33px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         color: #334756;
+        overflow: hidden;
 
-        @include mq($m) {
+        @include mq($medium) {
+            padding-top: 74px;
+            padding-bottom: 33px;
 
         }
 
     }
 
     &__col {
-        max-width: 328px;
-        max-width: 26.8%;
         width: 100%;
     }
 
+    &__col_first {
+        order: 4;
+        @include mq($medium) {
+            max-width: 26.8%;
+            order: 0;
+        }
+
+    }
     &__col_nav {
-        // max-width: 200px;
-        max-width: 16.3%;
         width: 100%;
+        @include mq($medium) {
+            max-width: 16.3%;
+        }
+    }
+
+    &__col_nav_active {
+        .nav_secondary {
+            .nav__dropdown-icon {
+                transform: rotate(-180deg);
+                @include tr(.3s ease);
+            }
+            .nav__list {
+                display: block;
+                @include mq($medium) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__col_nav_first {
+        order: 0;
+        @include mq($medium) {
+            order: 1;
+        }
+    }
+
+    &__col_nav_second {
+        order: 1;
+        @include mq($medium) {
+            order: 2;
+        }
     }
 
     &__col_poll {
         // max-width: 270px;
-        max-width: 22%;
         width: 100%;
+        order: 2;
+        @include mq($medium) {
+            max-width: 22%;
+            order: 3;
+        }
     }
 
     &__logo {
         margin-bottom: 22px;
-        @include mq($m) {
+        display: none;
+        @include mq($medium) {
             // margin-bottom: 50px;
 
         }
@@ -49,7 +93,11 @@
     }
 
     &__contact {
-        margin-bottom: 22px;
+        margin-bottom: 14px;
+        @include mq($medium) {
+            margin-bottom: 22px;
+
+        }
     }
 
     &__phone {
@@ -58,68 +106,94 @@
 
     &__address {
         color: #334756;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         line-height: 1.4;
+        @include mq($medium) {
+            font-size: 16px;
+        }
     }
 
     &__email {
-
+        font-size: 14px;
+        @include mq($medium) {
+            font-size: 16px;
+        }
     }
 
     &__map-link {
         margin-top: 54px;
-        display: flex;
+        display: none;
+        @include mq($medium) {
+            display: flex;
+        }
     }
 
     &__nav {
         margin-bottom: 15px;
         width: 100%;
-        @include mq($m) {
+        @include mq($medium) {
             margin-bottom: 0;
             width: auto;
         }
     }
 
+
+
     &__form {
 
-        @include mq($m) {
+        @include mq($medium) {
             display: none;
         }
     }
 
     &__social {
-        margin-left: auto;
-        max-width: 158px;
-        max-width: 13%;
-        @include mq($m) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        // max-width: 158px;
+        width: 100%;
+        order: 3;
+        @include mq($medium) {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            max-width: 13%;
+            order: 4;
         }
     }
 
     &__copyright {
         position: relative;
-        margin-top: 67px;
+        margin-top: 30px;
         padding-top: 22px;
         max-width: 100%;
         width: 100%;
         color: #667580;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 12px;
         line-height: normal;
         text-align: center;
-        text-align: center;
-        @include mq($m) {
+        order: 5;
+        @include mq($medium) {
+            margin-top: 67px;
+            order: 5;
+            font-size: 14px;
         }
 
         &:after {
             position: absolute;
             top: 0;
             left: 50%;
-            width: 650px;
+            max-width: 650px;
+            width: 100%;
             height: 1px;
-            background-color: #667580;;
+            background-color: #d9d9d9;
             content: '';
-            transform: translateX(-50%)
+            transform: translateX(-50%);
+
+            @include mq($medium) {
+                background-color: #667580;
+            }
         }
     }
 

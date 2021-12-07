@@ -20,9 +20,10 @@ mixin nav(data)
                     a.nav__link(href=item.href)
                         span.nav__link-text #{item.title}
 
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-downdown-icon', className: 'nav__dropdown-icon'})
+
                     if subnavList
 
-                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-downdown-icon', className: 'nav__dropdown-icon'})
 
                         ul.nav__list-sub.subnav
                             each subnavItem in subnavList
@@ -31,5 +32,14 @@ mixin nav(data)
                                     a.subnav__link(href=subnavItem.href) #{subnavItem.title}
 
 
-        a.nav__search(href="#")
-            != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'nav__search-icon'})
+        .nav__controls
+            a.nav__search(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'nav__search-icon'})
+
+
+            a.nav__user(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'user-2-icon',className: 'nav__user-icon'})
+                .nav__user-text Личный кабинет
+            a.nav__phone.phone(href="tel:88002222905")
+                != pugHelpers.Icon.call(locals, {iconName: 'phone-icon',className: 'phone__icon'})
+                | 8-800-2222-905

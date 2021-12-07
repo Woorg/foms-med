@@ -1,6 +1,11 @@
 .map-organizations {
     position: relative;
     background-color: var(--gray);
+    display: none;
+    @include mq($medium) {
+        display: block;
+    }
+
     &:after {
         z-index: -1;
         position: absolute;

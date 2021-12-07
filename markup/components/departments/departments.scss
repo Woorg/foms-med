@@ -1,47 +1,102 @@
 .departments {
     &__container {
-        padding-top: 60px;
-        padding-bottom: 53px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @include mq($medium) {
+            padding-top: 60px;
+            padding-bottom: 53px;
+
+        }
+
     }
     &__slider {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 929px;
         width: 100%;
+
+        @include mq($medium) {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 929px;
+        }
     }
 
     .swiper-wrapper {
+        margin-right: -10px;
+        margin-left: -10px;
         padding-bottom: 50px;
+        @include mq($medium) {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+        @include mq($large) {
+            margin-right: 0;
+            margin-left: 0;
+            padding-bottom: 0;
+        }
+
+    }
+
+    &__slide {
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 53px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include mq($medium) {
+            padding-right: 20px;
+            padding-left: 20px;
+            height: auto;
+        }
+        @include mq($large) {
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
 
     &__slide_1 {
         .departments__logo {
-            width: 170px;
-            // height: 53px;
+
+            @include mq($large) {
+                width: 170px;
+            }
         }
     }
 
     &__slide_2 {
         .departments__logo {
-            width: 186px;
-            // height: 53px;
+            @include mq($large) {
+                width: 186px;
+
+            }
         }
     }
 
     &__slide_3 {
         .departments__logo {
-            width: 142px;
+            // width: 142px;
+
+            @include mq($large) {
+                width: 142px;
+            }
         }
     }
 
     &__slide_4 {
         .departments__logo {
-            width: 200px;
+            @include mq($large) {
+                width: 200px;
+            }
         }
     }
 
     &__logo {
         margin-bottom: 0;
+        display: block;
+        height: 100%;
+        picture,
+        img {
+            height: 100%;
+        }
     }
 
 

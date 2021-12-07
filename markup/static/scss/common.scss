@@ -32,20 +32,49 @@ html, body {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        flex-direction: column;
+        @include mq($medium){
+            flex-direction: row;
+        }
     }
 
     &__side {
-        margin-right: 8px;
-        max-width: 23.1%;
         width: 100%;
+
+        @include mq($medium){
+            margin-right: 8px;
+            max-width: 23.1%;
+        }
     }
 
     &__content {
-        max-width: 76.3%;
         width: 100%;
+
+        @include mq($medium){
+            max-width: 76.3%;
+        }
+
     }
 
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+        min-width: 320px;
+        max-width: 100%;
+        @include mq($large) {
+            padding-right: 30px;
+            padding-left: 30px;
+            // padding-right: 30px;
+            // padding-left: 30px;
 
+            max-width: 1274px;
+            // 1224
+        }
+
+    }
 
 
 }
@@ -54,24 +83,7 @@ html, body {
     overflow-y: hidden;
 }
 
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-    min-width: 320px;
-    @include mq($m) {
-        padding-right: 30px;
-        padding-left: 30px;
-        // padding-right: 30px;
-        // padding-left: 30px;
 
-        max-width: 1274px;
-        // 1224
-    }
-
-}
 
 
 img {
