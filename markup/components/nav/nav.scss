@@ -12,6 +12,8 @@
     @include mq($medium) {
         padding-top: 0;
         padding-bottom: 0;
+        box-shadow: none;
+        border-radius: 0;
     }
 
     &:after {
@@ -304,6 +306,8 @@
     padding-top: 0;
     padding-bottom: 0;
     flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
     @include mq($medium) {
     }
 

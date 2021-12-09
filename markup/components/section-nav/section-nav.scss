@@ -10,7 +10,6 @@
     grid-template-areas:
         "section-nav__item_1 section-nav__item_2"
         "section-nav__item_3 section-nav__item_3";
-
     overflow: hidden;
 
     @include mq($medium) {
@@ -84,7 +83,14 @@
         }
 
         .section-nav__text {
+            @include margin-right(10px);
+            @include margin-left(10px);
             white-space: nowrap;
+
+            @include mq($medium) {
+                @include margin-right(20px);
+                @include margin-left(20px);
+            }
 
             br {
                 display: none;
@@ -94,6 +100,7 @@
             }
         }
         .section-nav__icon {
+            margin-bottom: 0;
             width: 30px;
             height: 24px;
 
@@ -129,6 +136,7 @@
             margin-top: -6px;
             @include mq($medium) {
                 margin-top: 0;
+
             }
         }
 
@@ -236,14 +244,16 @@
     }
 
     &__text {
-        @include margin-right(20px);
-        @include margin-left(20px);
+        // @include margin-right(10px);
+        // @include margin-left(10px);
         font-weight: 600;
         @include font-size(13px);
         line-height: 1.38;
         letter-spacing: 0.1px;
         text-align: center;
         @include mq($medium) {
+            @include margin-right(20px);
+            @include margin-left(20px);
             @include font-size(14px);
             text-align: left;
 

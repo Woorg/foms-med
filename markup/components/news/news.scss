@@ -75,9 +75,7 @@
 
         @include mq($medium) {
             min-height: 175px;
-
         }
-
     }
 
     &__image-w {
@@ -123,15 +121,14 @@
         padding-right: 0;
         display: block;
         background-color: transparent;
-        color: #334756;
+        color: #ff4c29;
         @include mq($medium) {
             display: none;
         }
 
         .news__date {
-            color: #334756;
+            color: #ff4c29;
         }
-
     }
 
     &__date {
@@ -145,9 +142,7 @@
         text-align: left;
         @include mq($medium) {
             @include font-size(13px);
-
         }
-
     }
 
     &__date-icon {
@@ -167,15 +162,27 @@
     }
 
     &__article-title {
-        margin-bottom: 8px;
-        padding-right: 50px;
+        margin: 0 auto;
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        height: 50px;
         color: #1c1c1c;
         font-weight: 600;
         @include font-size(18px);
-        line-height: 1.4;
         text-align: left;
+        line-height: 1.4;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
         @include mq($medium) {
+            margin-bottom: 8px;
+            padding-right: 50px;
+            height: auto;
             @include font-size(20px);
+            -webkit-line-clamp: 4;
         }
 
         @include mq($large) {
@@ -185,11 +192,13 @@
     }
 
     &__article-text {
+        display: none;
         color: #7a7a7a;
         font-weight: normal;
         @include font-size(14px);
         line-height: 1.1;
         @include mq($medium) {
+            display: block;
             @include font-size(15px);
         }
         @include mq($large) {
@@ -199,11 +208,9 @@
 
         p {
             margin-bottom: 16px;
-
             &:last-child {
                 margin-bottom: 0;
             }
-
         }
     }
 

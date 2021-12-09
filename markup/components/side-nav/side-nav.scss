@@ -1,7 +1,21 @@
 .side-nav {
 
     &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        gap: 5px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "side-nav__item_1 side-nav__item_1"
+            "side-nav__item_2 side-nav__item_2"
+            "side-nav__item_3 side-nav__item_4"
+            "side-nav__item_5 side-nav__item_6"
+            "side-nav__item_7 side-nav__item_8";
 
+        @include mq($medium) {
+            display: block;
+        }
     }
 
     &__item {
@@ -16,13 +30,28 @@
     }
 
     &__item_attention {
+        // height: 50px;
         .side-nav__link {
+            height: 50px;
+            flex-direction: row;
+            justify-content: flex-start;
             background-color: #ff4c29;
+            @include mq($medium) {
+                height: 100px;
+            }
+
+        }
+        .side-nav__entry {
+            margin-left: 10px;
+            @include mq($medium) {
+                margin-left: 15px;
+            }
         }
         .side-nav__icon {
             color: #C7371B;
         }
         .side-nav__title {
+            min-height: auto;
             font-weight: bold;
             font-size: 14px;
             line-height: 1.2;
@@ -55,17 +84,54 @@
 
     }
 
+    &__item_1 {
+        grid-area: side-nav__item_1;
+    }
+
+    &__item_2 {
+        grid-area: side-nav__item_2;
+    }
+
+    &__item_3 {
+        grid-area: side-nav__item_3;
+    }
+
+    &__item_4 {
+        grid-area: side-nav__item_4;
+    }
+
+    &__item_5 {
+        grid-area: side-nav__item_5;
+    }
+
+    &__item_6 {
+        grid-area: side-nav__item_6;
+    }
+
+    &__item_7 {
+        grid-area: side-nav__item_7;
+    }
+
+    &__item_8 {
+        grid-area: side-nav__item_8;
+    }
+
+
+
     &__link {
-        @include padding-top(10px);
-        @include padding-bottom(10px);
-        @include padding-right(20px);
-        @include padding-left(20px);
+        @include padding-top(14px);
+        @include padding-bottom(14px);
+        @include padding-right(14px);
+        @include padding-left(14px);
         display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         align-items: center;
         width: 100%;
-        height: 50px;
+        height: 100px;
         background-color: var(--dark);
         color: var(--white);
+        text-align: center;
         text-decoration: none;
         @include tr(.3s ease);
 
@@ -76,7 +142,9 @@
             @include padding-bottom(15px);
             @include padding-left(15px);
             height: 90px;
-
+            justify-content: flex-start;
+            flex-direction: row;
+            text-align: left;
         }
 
         @include mq($large) {
@@ -99,17 +167,22 @@
         }
     }
     &__entry {
-        margin-left: 10px;
+        // margin-left: 10px;
         @include mq($medium) {
             margin-left: 15px;
         }
     }
 
     &__title {
+        min-height: 32px;
+        display: flex;
+        align-items: center;
         font-weight: 600;
-        @include font-size(14px);
+        @include font-size(13px);
         line-height: 1.2;
         @include mq($medium) {
+            min-height: auto;
+            align-items: flex-start;
             @include font-size(15px);
         }
         @include mq($large) {

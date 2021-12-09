@@ -36,18 +36,31 @@
         }
     }
 
-    &__icon,
+    &__submit,
     &__close {
         position: absolute;
         top: 50%;
         color: #086DE0;
         transform: translateY(-50%)
     }
-    &__icon {
+    &__submit {
+        @include resetbutton();
         left: 15px;
         width: 24px;
         height: 24px;
+        opacity: 1;
+        @include tr(.3s ease);
+        &:hover {
+            opacity: .8;
+            @include tr(.3s ease);
 
+        }
+    }
+
+
+    &__icon {
+        width: 24px;
+        height: 24px;
     }
 
     &__close {
