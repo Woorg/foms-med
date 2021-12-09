@@ -123,10 +123,10 @@
         ],
         "no-use-before-define": 1,
         "no-with": 2,
-        "quotes": [
-            2,
-            "single"
-        ],
+        // "quotes": [
+        //     2,
+        //     "single"
+        // ],
         "radix": 2,
         "semi": [
             2,

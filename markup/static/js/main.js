@@ -18,6 +18,7 @@ import {mapArea} from '../../components/map-area/map-area';
 import footerNavToggle from '../../components/footer/footer';
 import LazyLoad from 'vanilla-lazyload';
 
+import {pageWidget} from '../../components/page-widget/page-widget';
 
 document.addEventListener('DOMContentLoaded', function (event) {
 
@@ -107,6 +108,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
     */
 
     footerNavToggle();
+
+    /*
+        Page widget
+    */
+
+    pageWidget([
+        'index'
+    ]);
 
 
 });

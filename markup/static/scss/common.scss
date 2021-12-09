@@ -18,10 +18,29 @@ html, body {
     line-height: 1.25;
 
     &__wrapper {
+        position: relative;
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: auto;
         overflow: hidden;
+    }
+
+    &__icon {
+        position: absolute;
+        display: none;
+        @include mq($medium) {
+            display: block;
+        }
+    }
+
+    &__icon_left {
+        top: 1486px;
+        left: 0;
+    }
+
+    &__icon_right {
+        top: 795px;
+        right: 0;
     }
 
     &__main {
@@ -46,6 +65,8 @@ html, body {
             max-width: 23.1%;
         }
     }
+
+
 
     &__content {
         width: 100%;

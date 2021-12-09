@@ -656,6 +656,7 @@ html, body {
 }
 
 .page__wrapper {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -664,6 +665,27 @@ html, body {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
   overflow: hidden;
+}
+
+.page__icon {
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .page__icon {
+    display: block;
+  }
+}
+
+.page__icon_left {
+  top: 1486px;
+  left: 0;
+}
+
+.page__icon_right {
+  top: 795px;
+  right: 0;
 }
 
 .page__row {
