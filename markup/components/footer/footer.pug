@@ -5,9 +5,9 @@ mixin footer(data)
                 .footer__logo
                     a.logo.logo_style_second(href="#")
                         picture.logo__image
-                            source(type="image/webp", data-srcset="static/img/general/logo.webp")
-                            source(type="image/png", data-srcset="static/img/general/logo.png")
-                            img.lazy.lazy(src="", alt="Территориальный фонд обязательного медицинского страхования Республики Дагестан", data-src="static/img/general/logo.png")
+                            source(type="image/webp", srcset="static/img/general/logo.webp", data-srcset="static/img/general/logo.webp")
+                            source(type="image/png", srcset="static/img/general/logo.png", data-srcset="static/img/general/logo.png")
+                            img.lazy.lazy(src="static/img/general/logo.png", alt="Территориальный фонд обязательного медицинского страхования Республики Дагестан", data-src="static/img/general/logo.png")
 
                 .footer__contacts
                     a.footer__contact.footer__phone.phone.phone_style_second(href="tel:+88002222905")
@@ -53,7 +53,7 @@ mixin footer(data)
                     .poll__text Была ли полезной для Вас информация с нашего сайта?
 
 
-                    form.poll__form.form(action="")
+                    form.poll__form.form
                         .poll__field.form__field.form__field_radio.form-check
                             input#exampleRadios1.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
                             label.form__label.form-check-label(for='exampleRadios1') Да, мне помогли
