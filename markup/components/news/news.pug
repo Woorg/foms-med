@@ -3,21 +3,21 @@ mixin news(data)
     section.news&attributes(attributes)
         h2.news__title.title.title_second Новости и уведомления
         .news__articles
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-1@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-1@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-1@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-1@2x.webp", data-srcset="static/img/content/news-img-1@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-1@2x.jpg", data-srcset="static/img/content/news-img-1@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-1@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-1@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 4 декабря
                         .news__article-title Территориальный фонд  обязательного медицинского страхования разъясняет
@@ -25,42 +25,42 @@ mixin news(data)
                             p В России 8 ноября вступил в силу приказ Минздрава о новой форме сертификата о вакцинации. Документ опубликован на портале правовой информации.
                             p В сертификате будут указаны основные данные об обладателе, прививке, ревакцинации, наличии противопоказаний и сведения о перенесённом
 
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-2@2x.webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-2@2x.jpg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-2@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
                         .news__article-title На портале «Госуслуги» предоставлена возможность пройти анонимный опрос
                         .news__article-text
                             p Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках
 
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-3@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-3@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-3@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-3@2x.webp", data-srcset="static/img/content/news-img-3@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-3@2x.jpg", data-srcset="static/img/content/news-img-3@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-3@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-3@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
                         .news__article-title Чтобы лечиться по полису ОМС необходимо в течение месяца информировать страховую
@@ -76,42 +76,42 @@ mixin news-media(data)
     section.news.news_media&attributes(attributes)
         h2.news__title.title.title_second Материалы СМИ
         .news__articles
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-4@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-4@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-4@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-4@2x.webp", data-srcset="static/img/content/news-img-4@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-4@2x.jpg", data-srcset="static/img/content/news-img-4@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-4@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-4@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 5 декабря
                         .news__article-title Российский региональный еженедельник «МК-КАВКАЗ» 13.10.2021 № 42 «Помогут реабилитация и диспансеризация»
                         .news__article-text
                             p В России 8 ноября вступил в силу приказ Минздрава о новой форме сертификата о вакцинации. Документ опубликован на портале правовой информации.
 
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-2@2x.webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-2@2x.jpg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-2@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 5 декабря
                         .news__article-title Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»
@@ -126,101 +126,101 @@ mixin news-separate(data)
     section.news.news_separate&attributes(attributes)
         h2.news__title.title.title_second Новости
         .news__articles
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-4@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-4@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-4@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-4@2x.webp", data-srcset="static/img/content/news-img-4@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-4@2x.jpg", data-srcset="static/img/content/news-img-4@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-4@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-4@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 5 декабря
                         .news__article-title Российский региональный еженедельник «МК-КАВКАЗ» 13.10.2021 № 42 «Помогут реабилитация и диспансеризация»
                         .news__article-text
                             p В России 8 ноября вступил в силу приказ Минздрава о новой форме сертификата о вакцинации. Документ опубликован на портале правовой информации.
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-2@2x.webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-2@2x.jpg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-2@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
                         .news__article-title Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»
                         .news__article-text
                             p Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-2@2x.webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-2@2x.jpg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-2@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
                         .news__article-title Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»
                         .news__article-text
                             p Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-2@2x.webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-2@2x.jpg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-2@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
                         .news__article-title Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»
                         .news__article-text
                             p Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках
-            article.news__article
+            .news__article
                 a.news__article-link(href="#")
                     .news__image-w
                         picture.news__image
-                            source(type="image/webp", data-srcset="static/img/content/news-img-2@2x.webp")
-                            source(type="image/jpeg", data-srcset="static/img/content/news-img-2@2x.jpg")
-                            img.lazy.lazy(width="257px" height="169px" src="", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
+                            source(type="image/webp", srcset="static/img/content/news-img-2@2x.webp", data-srcset="static/img/content/news-img-2@2x.webp")
+                            source(type="image/jpeg", srcset="static/img/content/news-img-2@2x.jpg", data-srcset="static/img/content/news-img-2@2x.jpg")
+                            img.lazy.lazy(width="257" height="169" src="static/img/content/news-img-2@2x.jpg", alt="Изображение", data-src="static/img/content/news-img-2@2x.jpg")
                         .news__meta
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
 
                     .news__entry
                         .news__meta.news__meta_mob
-                            time.news__date(datetime="08.11.2021")
+                            time.news__date(datetime="2001-05-15 19:00")
                                 != pugHelpers.Icon.call(locals, {iconName: 'calendar-icon', className: 'news__date-icon'})
                                 | 08.11.2021
                         .news__article-title Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»
