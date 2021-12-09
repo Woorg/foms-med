@@ -84,7 +84,7 @@ html, body {
         padding-right: 15px;
         padding-left: 15px;
         width: 100%;
-        // min-width: 320px;
+        min-width: 320px;
         max-width: 100%;
         @include mq($large) {
             padding-right: 30px;
