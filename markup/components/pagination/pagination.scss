@@ -1,0 +1,138 @@
+.pagination {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    border-radius: none;
+    @include mq($medium) {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    &__list {
+        margin-bottom: 0;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__item {
+        @include margin-left(20px);
+        display: flex;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            .page-item {
+                border-top-right-radius: none;
+                border-bottom-right-radius: none;
+            }
+        }
+    }
+
+    &__item_active {
+        .pagination__link {
+            background-color: #086de0;
+            color: var(--white);
+        }
+    }
+
+    &__item_prev {
+        .pagination__link {
+            border: 1px solid #BCBCBC;
+            @include padding-top(5px);
+            @include padding-right(7px);
+            @include padding-bottom(4px);
+            @include padding-left(7px);
+
+            @include mq($medium) {
+                @include padding-top(13px);
+                @include padding-right(14px);
+                @include padding-bottom(13px);
+                @include padding-left(14px);
+            }
+        }
+
+        .pagination__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__item_next {
+        .pagination__link {
+            border: 1px solid #BCBCBC;
+            @include padding-top(5px);
+            @include padding-right(7px);
+            @include padding-bottom(4px);
+            @include padding-left(7px);
+
+            @include mq($medium) {
+                @include padding-top(13px);
+                @include padding-right(14px);
+                @include padding-bottom(13px);
+                @include padding-left(14px);
+            }
+        }
+    }
+
+    &__item_disabled {
+        .pagination__link {
+            border: 1px solid #BCBCBC;
+            @include padding-top(5px);
+            @include padding-right(7px);
+            @include padding-bottom(4px);
+            @include padding-left(7px);
+
+            @include mq($medium) {
+                @include padding-top(13px);
+                @include padding-right(14px);
+                @include padding-bottom(13px);
+                @include padding-left(14px);
+            }
+
+            &:hover {
+                border: 1px solid #BCBCBC;
+                background-color: transparent;
+                color: var(--white);
+            }
+        }
+        .pagination__icon {
+            color: #BCBCBC;
+        }
+    }
+
+    &__link {
+        border: solid 1px #086de0;
+        margin-left: 0;
+        @include padding-top(12px);
+        @include padding-right(15px);
+        @include padding-bottom(12px);
+        @include padding-left(15px);
+        // height: 54px;
+        color: #086de0;
+        font-family: $inter-extra;
+        font-weight: 800;
+        font-size: 11px;
+        text-align: center;
+        line-height: 1;
+        border-radius: 4px;
+        @include mq($medium) {
+            border-radius: 6px;
+            @include padding-top(18px);
+            @include padding-right(20px);
+            @include padding-bottom(18px);
+            @include padding-left(20px);
+            font-size: 14px;
+        }
+        &:hover {
+            border: solid 1px #086de0;
+            background-color: #086de0;
+            color: var(--white);
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: transparent;
+    }
+}

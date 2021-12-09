@@ -74,21 +74,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
        Slider
     */
 
+    const $sliderDesktop = document.querySelector('.slider_desktop');
+    if ( $sliderDesktop ) {
+        slider();
+        sliderVideo();
+    }
 
-    sliderVideo();
-
-    slider();
-
-    sliderMob();
-
-    sliderVideoMob();
-
+    const $sliderMob = document.querySelector('.slider_mob');
+    if ( $sliderMob ) {
+        sliderMob();
+        sliderVideoMob();
+    }
 
     /*
         Tabs
     */
 
-    tabs();
+    const $mapOrganizationsTabs = document.querySelector('.map-organizations');
+
+    if ( $mapOrganizationsTabs) {
+        tabs();
+    }
 
 
     /*
@@ -114,7 +120,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     */
 
     pageWidget([
-        'index'
+        'index',
+        'news'
     ]);
 
 

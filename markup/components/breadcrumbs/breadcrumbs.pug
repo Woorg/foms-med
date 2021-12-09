@@ -1,0 +1,9 @@
+mixin breadcrumbs-news(data)
+
+    nav.breadcrumbs(aria-label='breadcrumb')
+        ol.breadcrumb.breadcrumbs__list
+            li.breadcrumb-item.breadcrumbs__item
+                a.breadcrumbs__link(href='#') Главная
+                != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'breadcrumbs__icon'})
+
+            li.breadcrumb-item.active.breadcrumbs__item.breadcrumbs__item_active(aria-current='page') Новости

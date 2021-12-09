@@ -22,10 +22,11 @@ html, body {
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: auto;
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     &__icon {
+        z-index: -1;
         position: absolute;
         display: none;
         @include mq($medium) {
@@ -67,11 +68,11 @@ html, body {
     }
 
 
-
     &__content {
         width: 100%;
 
         @include mq($medium){
+            @include padding-left(48px);
             max-width: 76.3%;
         }
 
@@ -83,7 +84,7 @@ html, body {
         padding-right: 15px;
         padding-left: 15px;
         width: 100%;
-        min-width: 320px;
+        // min-width: 320px;
         max-width: 100%;
         @include mq($large) {
             padding-right: 30px;
@@ -97,6 +98,33 @@ html, body {
 
     }
 
+}
+
+.page_inner {
+
+    .page__row {
+        padding-top: 32px;
+        overflow: hidden;
+    }
+
+    .page__side {
+        display: none;
+        @include mq($medium) {
+            display: block;
+        }
+    }
+}
+
+.page_news {
+
+    .page__icon_left {
+        top: 1042px;
+
+    }
+
+    .page__icon_right {
+        top: 272px;
+    }
 
 }
 

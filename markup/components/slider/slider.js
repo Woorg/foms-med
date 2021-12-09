@@ -1,10 +1,10 @@
 import Swiper, { Autoplay } from 'swiper';
 
 export function slider() {
-
-    const mySwiper = new Swiper('.slider_desktop .swiper', {
+    // const $sliderDesktop = document.querySelector('.slider_desktop');
+    // if ($sliderDesktop.length > 0) {
+    let mySwiper = new Swiper('.slider_desktop .swiper', {
         modules: [Autoplay],
-
         slidesPerView: 1,
         a11y: true,
         keyboardControl: true,
@@ -13,37 +13,33 @@ export function slider() {
             delay: 3000,
             pauseOnMouseEnter: true
         },
-
-
     });
-
+    // }
 }
-
 
 export function sliderMob() {
-
-    const mySwiper = new Swiper('.slider_mob .swiper', {
+    // const $sliderMob = document.querySelector('.slider_mob');
+    // if ($sliderMob.length > 0) {
+    let mySwiper = new Swiper('.slider_mob .swiper', {
         modules: [Autoplay],
-
         slidesPerView: 1,
         a11y: true,
         keyboardControl: true,
         grabCursor: true,
-        // preventClicks: true,
         autoplay: {
             delay: 3000,
             pauseOnMouseEnter: true
         },
-
     });
-
+    // }
 }
-
 
 export function sliderVideo() {
+    const $sliderDesktopVideo = document.querySelector('.slider_desktop .slider__video');
 
-    let video = document.querySelector('.slider_desktop .slider__video');
-    let circlePlayButton = document.querySelector('.slider_desktop .slider__video-button');
+    // if ($sliderDesktopVideo.length > 0) {
+    const video = document.querySelector('.slider_desktop .slider__video');
+    const circlePlayButton = document.querySelector('.slider_desktop .slider__video-button');
     function togglePlay() {
         if (video.paused || video.ended) {
             video.play();
@@ -51,8 +47,6 @@ export function sliderVideo() {
             video.pause();
         }
     }
-
-
     circlePlayButton.addEventListener('click', togglePlay);
     video.addEventListener('playing', function () {
         circlePlayButton.style.opacity = 0;
@@ -60,14 +54,14 @@ export function sliderVideo() {
     video.addEventListener('pause', function () {
         circlePlayButton.style.opacity = 1;
     });
-
+    // }
 }
 
-
 export function sliderVideoMob() {
-
-    let video = document.querySelector('.slider_mob .slider__video');
-    let circlePlayButton = document.querySelector('.slider_mob .slider__video-button');
+    const $sliderMobVideo = document.querySelector('.slider_mob .slider__video');
+    // if ( $sliderMobVideo.length > 0) {
+    const video = document.querySelector('.slider_mob .slider__video');
+    const circlePlayButton = document.querySelector('.slider_mob .slider__video-button');
     function togglePlay() {
         if (video.paused || video.ended) {
             video.play();
@@ -75,8 +69,6 @@ export function sliderVideoMob() {
             video.pause();
         }
     }
-
-
     circlePlayButton.addEventListener('click', togglePlay);
     video.addEventListener('playing', function () {
         circlePlayButton.style.opacity = 0;
@@ -84,5 +76,5 @@ export function sliderVideoMob() {
     video.addEventListener('pause', function () {
         circlePlayButton.style.opacity = 1;
     });
-
+    // }
 }

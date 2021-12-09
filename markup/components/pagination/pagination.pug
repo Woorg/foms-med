@@ -1,0 +1,17 @@
+mixin pagination(data)
+
+    nav.pagination(aria-label='Page navigation example')
+        ul.pagination__list
+            li.pagination__item.pagination__item_prev.pagination__item_disabled
+                a.pagination__link(href='#' tabindex='-1')
+                    != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'pagination__icon'})
+            li.pagination__item.pagination__item_active
+                a.pagination__link(href='#') 1
+            li.pagination__item
+                .pagination__sep
+                    != pugHelpers.Icon.call(locals, {iconName: 'pagination-sep',className: 'pagination__sep-icon'})
+            li.pagination__item
+                a.pagination__link(href='#') 24
+            li.pagination__item.pagination__item_next
+                a.pagination__link(href='#')
+                    != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'pagination__icon'})

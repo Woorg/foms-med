@@ -5,44 +5,37 @@ html(class="no-js", lang="ru")
 
     include ../components/header/header.pug
     include ../components/nav/nav.pug
-    include ../components/section-nav/section-nav.pug
+    //- include ../components/section-nav/section-nav.pug
     include ../components/side-nav/side-nav.pug
-    include ../components/slider/slider.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    include ../components/pagination/pagination.pug
+
+    //- include ../components/slider/slider.pug
     include ../components/news/news.pug
     include ../components/map-organizations/map-organizations.pug
     include ../components/departments/departments.pug
     //- include ../components/map-area/map-area.pug
 
-    //- include ../components/about/about.pug
-    //- include ../components/features/features.pug
-    //- include ../components/news/news.pug
-    //- include ../components/feedback/feedback.pug
-    //- include ../components/cta/cta.pug
-
-
     include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
-    body.page
+    body.page.page_inner.page_news
         |%=symbols=%
 
         .page__wrapper
             +header()
             main.page__main.container
-                +section-nav()
                 .page__row
-                    +slider().slider_mob
                     aside.side.page__side
                         +side-nav()
-
                     .content.page__content
-                        +slider().slider_desktop
-                        +news()
-                        +news-media()
+                        +breadcrumbs-news()
+                        +news-separate()
+                        +pagination()
 
-                +map-organizations()
                 +departments()
+
             != pugHelpers.Icon.call(locals, {iconName: 'page-left-icon', className: 'page__icon page__icon_left'})
 
             != pugHelpers.Icon.call(locals, {iconName: 'page-right-icon', className: 'page__icon page__icon_right'})

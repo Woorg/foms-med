@@ -2,6 +2,7 @@
     position: relative;
     z-index: 3;
     color: var(--white);
+    overflow: hidden;
     &__container {
         // padding-bottom: 20px;
         display: flex;

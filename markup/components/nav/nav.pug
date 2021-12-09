@@ -22,7 +22,7 @@ mixin nav(data)
                     a.nav__link(href=item.href)
                         span.nav__link-text #{item.title}
 
-                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-downdown-icon', className: 'nav__dropdown-icon'})
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-down-icon', className: 'nav__dropdown-icon'})
 
                     if subnavList
 

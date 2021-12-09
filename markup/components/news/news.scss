@@ -219,6 +219,32 @@
 
 .news_media {
     .news__article-title {
-        font-size: 18px;
+        @include font-size(18px);
+    }
+}
+
+.news_separate {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 0;
+    // overflow: hidden;
+    .news__article-title {
+        margin-bottom: 4px;
+        padding-right: 0;
+        height: 46px;
+        @include font-size(16px);
+
+        @include mq($medium) {
+            margin-bottom: 18px;
+            height: auto;
+            @include font-size(18px);
+
+        }
+    }
+    .news__article-text {
+        display: block;
+        @include mq($medium) {
+            @include font-size(15px);
+        }
     }
 }
