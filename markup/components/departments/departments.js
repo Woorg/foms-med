@@ -11,6 +11,8 @@ export function departments() {
         keyboardControl: true,
         grabCursor: true,
         preventClicks: true,
+        preloadImages: true,
+        lazy: true,
         // scrollbar
         scrollbar: {
             el: '.departments__slider .swiper-scrollbar',
@@ -19,7 +21,12 @@ export function departments() {
         breakpoints: {
             0: {
                 slidesPerView: 1.4,
-
+            },
+            321: {
+                slidesPerView: 1.4,
+            },
+            414: {
+                slidesPerView: 1.6,
             },
             640: {
                 slidesPerView: 3,

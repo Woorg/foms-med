@@ -1,5 +1,9 @@
 .departments {
+    margin-right: -15px;
     overflow: hidden;
+    @include mq($medium) {
+        margin-right: 0;
+    }
     &__container {
         padding-top: 25px;
         padding-bottom: 25px;

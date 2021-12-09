@@ -5,10 +5,13 @@ export function slider() {
     // if ($sliderDesktop.length > 0) {
     let mySwiper = new Swiper('.slider_desktop .swiper', {
         modules: [Autoplay],
+        // loop: true,
         slidesPerView: 1,
         a11y: true,
         keyboardControl: true,
         grabCursor: true,
+        preloadImages: true,
+        lazy: true,
         autoplay: {
             delay: 3000,
             pauseOnMouseEnter: true
@@ -22,10 +25,13 @@ export function sliderMob() {
     // if ($sliderMob.length > 0) {
     let mySwiper = new Swiper('.slider_mob .swiper', {
         modules: [Autoplay],
+        // loop: true,
         slidesPerView: 1,
         a11y: true,
         keyboardControl: true,
         grabCursor: true,
+        preloadImages: true,
+        lazy: true,
         autoplay: {
             delay: 3000,
             pauseOnMouseEnter: true
