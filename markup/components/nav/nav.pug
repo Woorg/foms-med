@@ -37,7 +37,7 @@ mixin nav(data)
             button.nav__search
                 != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'nav__search-icon'})
 
-            form.nav__search-form.search-form(action="")
+            form.nav__search-form.search-form
                 .search-form__field
                     input.search-form__input(type="text", value="", placeholder="Поиск по сайту")
 
@@ -46,7 +46,6 @@ mixin nav(data)
 
                     button.search-form__close
                         != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'search-form__close-icon'})
-
 
 
             a.nav__user(href="#")
