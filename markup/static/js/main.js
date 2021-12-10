@@ -122,7 +122,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     pageWidget([
         'index',
         'news',
-        'article'
+        'article',
+        'documents',
+        'about'
+
 
     ]);
 

@@ -1,5 +1,5 @@
 mixin breadcrumbs-news(data)
-    nav.breadcrumbs(aria-label='breadcrumb')
+    nav.breadcrumbs(aria-label='breadcrumb')&attributes(attributes)
         ol.breadcrumb.breadcrumbs__list
             li.breadcrumb-item.breadcrumbs__item
                 a.breadcrumbs__link(href='#') Главная
@@ -8,7 +8,7 @@ mixin breadcrumbs-news(data)
             li.breadcrumb-item.active.breadcrumbs__item.breadcrumbs__item_active(aria-current='page') Новости
 
 mixin breadcrumbs-article(data)
-    nav.breadcrumbs(aria-label='breadcrumb')
+    nav.breadcrumbs(aria-label='breadcrumb')&attributes(attributes)
         ol.breadcrumb.breadcrumbs__list
             li.breadcrumb-item.breadcrumbs__item
                 a.breadcrumbs__link(href='#') Главная
@@ -18,3 +18,15 @@ mixin breadcrumbs-article(data)
                 != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'breadcrumbs__icon'})
 
             li.breadcrumb-item.active.breadcrumbs__item.breadcrumbs__item_active(aria-current='page') Сердечный совет: людям с сердечно-сосудистыми заболеваниями стоит сделать
+
+mixin breadcrumbs-documents(data)
+    nav.breadcrumbs(aria-label='breadcrumb')&attributes(attributes)
+        ol.breadcrumb.breadcrumbs__list
+            li.breadcrumb-item.breadcrumbs__item
+                a.breadcrumbs__link(href='#') Главная
+                != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'breadcrumbs__icon'})
+            li.breadcrumb-item.breadcrumbs__item
+                a.breadcrumbs__link(href='#') Новости
+                != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'breadcrumbs__icon'})
+
+            li.breadcrumb-item.active.breadcrumbs__item.breadcrumbs__item_active(aria-current='page') Документы

@@ -100,6 +100,14 @@ html, body {
 }
 
 .page_inner {
+
+    .page__breadcrumbs {
+        margin-bottom: 13px;
+        @include mq($medium) {
+            margin-bottom: 20px;
+        }
+    }
+
     .page__content {
         @include mq($medium) {
             @include padding-left(48px);
@@ -132,7 +140,8 @@ html, body {
 
 }
 
-.page_article {
+.page_article,
+.page_documents {
     .page__content {
         @include padding-bottom(25px);
 
@@ -142,6 +151,20 @@ html, body {
         }
     }
 
+}
+
+.page_documents {
+
+    @include mq($medium) {
+        @include padding-bottom(50px);
+    }
+
+    .page__breadcrumbs {
+        margin-bottom: 53px;
+        @include mq($medium) {
+            margin-bottom: 36px;
+        }
+    }
 }
 
 .page_nav_open {

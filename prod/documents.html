@@ -28,7 +28,7 @@
         </script>
     </head>
 
-    <body class="page page_inner page_news">
+    <body class="page page_inner page_documents">
         <div class="page__wrapper">
             <header class="header">
                 <div class="header__container container">
@@ -276,179 +276,201 @@
                                     </svg>
 
                                 </li>
-                                <li class="breadcrumb-item active breadcrumbs__item breadcrumbs__item_active" aria-current="page">Новости</li>
+                                <li class="breadcrumb-item breadcrumbs__item"><a class="breadcrumbs__link" href="#">Новости</a>
+                                    <svg class="breadcrumbs__icon" width="24px" height="24px">
+                                        <use xlink:href="svg-symbolsaudalr.svg#more-icon"></use>
+                                    </svg>
+
+                                </li>
+                                <li class="breadcrumb-item active breadcrumbs__item breadcrumbs__item_active" aria-current="page">Документы</li>
                             </ol>
                         </nav>
-                        <section class="news news_separate">
-                            <h2 class="news__title title title_second">Новости</h2>
-                            <div class="news__articles">
-                                <div class="news__article">
-                                    <a class="news__article-link" href="#">
-                                        <div class="news__image-w">
-                                            <picture class="news__image">
-                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/content/news-img-4@2x.webp">
-                                                    <source type="image/jpeg" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/content/news-img-4@2x.jpg">
-                                                        <img class="lazy lazy" width="257" height="169" src="static/img/general/placeholder-image.png" alt="Изображение" data-src="static/img/content/news-img-4@2x.jpg">
+                        <div class="documents">
+                            <ul class="documents__list">
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
                                             </picture>
-                                            <div class="news__meta">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                        </div>
-                                        <div class="news__entry">
-                                            <div class="news__meta news__meta_mob">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    5 декабря
-                                                </time>
-                                            </div>
-                                            <div class="news__article-title">Российский региональный еженедельник «МК-КАВКАЗ» 13.10.2021 № 42 «Помогут реабилитация и диспансеризация»</div>
-                                            <div class="news__article-text">
-                                                <p>В России 8 ноября вступил в силу приказ Минздрава о новой форме сертификата о вакцинации. Документ опубликован на портале правовой информации.</p>
-                                            </div>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-pdf"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
                                         </div>
                                     </a>
-                                </div>
-                                <div class="news__article">
-                                    <a class="news__article-link" href="#">
-                                        <div class="news__image-w">
-                                            <picture class="news__image">
-                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/content/news-img-2@2x.webp">
-                                                    <source type="image/jpeg" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/content/news-img-2@2x.jpg">
-                                                        <img class="lazy lazy" width="257" height="169" src="static/img/general/placeholder-image.png" alt="Изображение" data-src="static/img/content/news-img-2@2x.jpg">
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
                                             </picture>
-                                            <div class="news__meta">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                        </div>
-                                        <div class="news__entry">
-                                            <div class="news__meta news__meta_mob">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                            <div class="news__article-title">Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»</div>
-                                            <div class="news__article-text">
-                                                <p>Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках</p>
-                                            </div>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-doc"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 24.04.2020 № 147-ФЗ «О внесении изменений в отдельные законодательные акты Российской Федерации по вопросам контроля за эффективностью и качеством осуществления переданных органам государственной
+                                                власти...»</div>
                                         </div>
                                     </a>
-                                </div>
-                                <div class="news__article">
-                                    <a class="news__article-link" href="#">
-                                        <div class="news__image-w">
-                                            <picture class="news__image">
-                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/content/news-img-2@2x.webp">
-                                                    <source type="image/jpeg" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/content/news-img-2@2x.jpg">
-                                                        <img class="lazy lazy" width="257" height="169" src="static/img/general/placeholder-image.png" alt="Изображение" data-src="static/img/content/news-img-2@2x.jpg">
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
                                             </picture>
-                                            <div class="news__meta">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                        </div>
-                                        <div class="news__entry">
-                                            <div class="news__meta news__meta_mob">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                            <div class="news__article-title">Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»</div>
-                                            <div class="news__article-text">
-                                                <p>Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках</p>
-                                            </div>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-doc"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
                                         </div>
                                     </a>
-                                </div>
-                                <div class="news__article">
-                                    <a class="news__article-link" href="#">
-                                        <div class="news__image-w">
-                                            <picture class="news__image">
-                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/content/news-img-2@2x.webp">
-                                                    <source type="image/jpeg" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/content/news-img-2@2x.jpg">
-                                                        <img class="lazy lazy" width="257" height="169" src="static/img/general/placeholder-image.png" alt="Изображение" data-src="static/img/content/news-img-2@2x.jpg">
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
                                             </picture>
-                                            <div class="news__meta">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                        </div>
-                                        <div class="news__entry">
-                                            <div class="news__meta news__meta_mob">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                            <div class="news__article-title">Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»</div>
-                                            <div class="news__article-text">
-                                                <p>Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках</p>
-                                            </div>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-pdf"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
                                         </div>
                                     </a>
-                                </div>
-                                <div class="news__article">
-                                    <a class="news__article-link" href="#">
-                                        <div class="news__image-w">
-                                            <picture class="news__image">
-                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/content/news-img-2@2x.webp">
-                                                    <source type="image/jpeg" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/content/news-img-2@2x.jpg">
-                                                        <img class="lazy lazy" width="257" height="169" src="static/img/general/placeholder-image.png" alt="Изображение" data-src="static/img/content/news-img-2@2x.jpg">
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
                                             </picture>
-                                            <div class="news__meta">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                        </div>
-                                        <div class="news__entry">
-                                            <div class="news__meta news__meta_mob">
-                                                <time class="news__date" datetime="2001-05-15 19:00">
-                                                    <svg class="news__date-icon" width="18px" height="18px">
-                                                        <use xlink:href="svg-symbolsaudalr.svg#calendar-icon"></use>
-                                                    </svg>
-                                                    08.11.2021
-                                                </time>
-                                            </div>
-                                            <div class="news__article-title">Профессиональное врачебное издание «Медицинская газета» 01.09.2021 № 34 «Качество, доступность, цифровизация: От чего зависит эффективность системы страхования»</div>
-                                            <div class="news__article-text">
-                                                <p>Анкетирование поможет выявить причины, почему многие граждане игнорируют возможность бесплатно пройти медицинский осмотр у врачей-специалистов и улучшить организацию диспансеризации в поликлиниках</p>
-                                            </div>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-pdf"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
                                         </div>
                                     </a>
-                                </div>
-                            </div>
-                        </section>
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
+                                            </picture>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-doc"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 28.12.2016 № 473-ФЗ «О внесении изменений в статьи 24 и 27 Федерального закона «Об обязательном медицинском страховании в Российской Федерации» и статью 2 Федерального закона «О размере
+                                                и порядке расчета тарифа страхового взноса...»</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
+                                            </picture>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-pdf"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
+                                            </picture>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-doc"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="documents__item">
+                                    <a class="documents__link" href="#document">
+                                        <figure class="documents__image">
+                                            <picture>
+                                                <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 300px)">
+                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/document-image-mob.webp" media="(max-width: 960px)">
+                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image-mob.png" media="(max-width: 300px)">
+                                                            <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/document-image.png" media="(max-width: 960px)">
+                                                                <img class="lazy" src="static/img/general/placeholder-image.png" alt="" data-src="static/img/general/document-image.png">
+                                            </picture>
+                                            <svg class="documents__badge" width="30px" height="18px">
+                                                <use xlink:href="svg-symbolsaudalr.svg#badge-xlx"></use>
+                                            </svg>
+
+                                        </figure>
+                                        <div class="documents__entry">
+                                            <div class="documents__title">Федеральный закон от 08.12.2020 № 430-ФЗ «О внесении изменений в Федеральный закон «Об обязательном медицинском страховании в Российской Федерации»</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                         <nav class="pagination" aria-label="Page navigation example">
                             <ul class="pagination__list">
                                 <li class="pagination__item pagination__item_prev pagination__item_disabled">
@@ -479,61 +501,6 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div>
-                </div>
-                <div class="departments">
-                    <div class="departments__container container">
-                        <div class="departments__slider">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="departments__slide departments__slide_1">
-                                            <figure class="departments__logo">
-                                                <picture>
-                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/dep-img-1.webp">
-                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/dep-img-1.png">
-                                                            <img class="lazy lazy" width="170" height="53" src="static/img/general/placeholder-image.png" data-src="static/img/general/dep-img-1.png" alt="">
-                                                </picture>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="departments__slide departments__slide_2">
-                                            <figure class="departments__logo">
-                                                <picture>
-                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/dep-img-2.webp">
-                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/dep-img-2.png">
-                                                            <img class="lazy lazy" width="182" height="53" src="static/img/general/placeholder-image.png" data-src="static/img/general/dep-img-2.png" alt="">
-                                                </picture>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="departments__slide departments__slide_3">
-                                            <figure class="departments__logo">
-                                                <picture>
-                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/dep-img-3.webp">
-                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/dep-img-3.png">
-                                                            <img class="lazy lazy" width="141" height="53" src="static/img/general/placeholder-image.png" data-src="static/img/general/dep-img-3.png" alt="">
-                                                </picture>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="departments__slide departments__slide_4">
-                                            <figure class="departments__logo">
-                                                <picture>
-                                                    <source type="image/webp" srcset="static/img/general/placeholder-image.webp" data-srcset="static/img/general/dep-img-4.webp">
-                                                        <source type="image/png" srcset="static/img/general/placeholder-image.png" data-srcset="static/img/general/dep-img-4.png">
-                                                            <img class="lazy lazy" width="199" height="53" src="static/img/general/placeholder-image.png" data-src="static/img/general/dep-img-4.png" alt="">
-                                                </picture>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-scrollbar"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </main>

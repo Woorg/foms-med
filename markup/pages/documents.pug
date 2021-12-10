@@ -11,7 +11,7 @@ html(class="no-js", lang="ru")
     include ../components/pagination/pagination.pug
 
     //- include ../components/slider/slider.pug
-    include ../components/article/article.pug
+    include ../components/documents/documents.pug
     //- include ../components/map-organizations/map-organizations.pug
     //- include ../components/departments/departments.pug
     //- include ../components/map-area/map-area.pug
@@ -20,7 +20,7 @@ html(class="no-js", lang="ru")
 
     head
         +head(head.defaults)
-    body.page.page_inner.page_article
+    body.page.page_inner.page_documents
         |%=symbols=%
 
         .page__wrapper
@@ -30,9 +30,9 @@ html(class="no-js", lang="ru")
                     aside.side.page__side
                         +side-nav()
                     .content.page__content
-                        +breadcrumbs-article().page__breadcrumbs
-                        +article()
-                        //- +pagination()
+                        +breadcrumbs-documents().page__breadcrumbs
+                        +documents()
+                        +pagination()
 
                 //- +departments()
 
