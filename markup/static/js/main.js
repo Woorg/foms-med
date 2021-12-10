@@ -125,8 +125,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'article',
         'documents',
         'about',
-        'check'
-
+        'policy-check',
 
     ]);
 

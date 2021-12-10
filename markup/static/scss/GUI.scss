@@ -91,7 +91,6 @@
         @include padding-left(30px);
     }
 
-
     &:hover {
         background-color: var(--white);
         @include tr(.3s ease);
@@ -118,6 +117,36 @@
     &:hover {
         background: var(--blue);
         color: var(--white);
+        @include tr(.3s ease);
+    }
+
+}
+
+.button_style_important {
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    height: 42px;
+    background-color: #ff4c29;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 16px 16px 24px 0 rgba(255, 76, 41, .15);
+
+    @include mq($medium) {
+        padding-bottom: 15px;
+        height: 57px;
+        color: #fff;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: normal;
+    }
+
+    &:hover {
+        background-color: darken(#ff4c29, 10);
+        box-shadow: none;
+
         @include tr(.3s ease);
     }
 
@@ -180,41 +209,30 @@
     }
 }
 
-// .slider-nav {
-//     @include resetbutton();
-//     position: absolute;
-//     top: calc(50% - 5px);
-//     width: 44px;
-//     height: 44px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background: var(--white);
-//     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-//     border-radius: 50%;
-//     @include tr( .3s ease);
-//     transform: translateY(-50%);
-//     &_next {
-//         right: 30px;
-//         transform: translateY(-50%) rotate(0deg);
+.list {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include mq($medium) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
-//     }
+    li {
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 2;
+        &:before {
+            font-weight: bold;
+            display: none;
+        }
 
-//     &_prev {
-//         left: 30px;
-//         transform: translateY(-50%) rotate(180deg);
-//     }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-//     &__icon {
+}
 
-//     }
-
-//     &:hover {
-//         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-//         @include tr( .3s ease);
-
-//     }
-// }
 
 .text {
     color: #000;
@@ -256,6 +274,16 @@
             color: darken(#086de0, 10);
 
         }
+
+        &.button_style_important {
+            @include margin-top(28px);
+            @include margin-bottom(30px);
+            color: #fff;
+            @include mq($medium) {
+                @include margin-top(28px);
+                @include margin-bottom(20px);
+            }
+        }
     }
 
 
@@ -282,6 +310,11 @@
             }
         }
 
+    }
+
+    b,
+    strong {
+        font-weight: bold;
     }
 
     em {
@@ -355,7 +388,8 @@
         }
 
         li {
-
+            margin-left: 10px;
+            line-height: 2;
             &:before {
                 @include margin-right(8px);
                 content: '-';
@@ -367,15 +401,42 @@
             }
         }
 
+        &.list {
+            margin-top: 0;
+            margin-bottom: 10px;
+            @include mq($medium) {
+                margin-top: 22px;
+                margin-bottom: 0;
+            }
+            li {
+                margin-left: 0;
+            }
+        }
     }
 
+    ol {
+        counter-reset: list;
+        li {
+            margin-left: 10px;
+            counter-increment: list;
+            line-height: 2;
+            &:before {
+                content: counter(list) '. ';
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
 
 }
 
 
 .text_style_second {
+    color: rgba(0, 0, 0, .7);
+
     p {
         margin-bottom: 40px;
+        color: rgba(0, 0, 0, .7);
         font-family: $golos-text;
         line-height: 2;
     }
