@@ -22,8 +22,7 @@
         }
     }
     &__item {
-        margin-left: 30px;
-
+        @include margin-left(30px);
         &:first-child {
             margin-left: 0;
         }
@@ -44,5 +43,16 @@
 
     &__icon {
 
+    }
+}
+
+
+.social_style_second {
+    display: flex;
+    .social__item {
+        @include margin-left(20px);
+        &:first-child {
+            margin-left: 0;
+        }
     }
 }

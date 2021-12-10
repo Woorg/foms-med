@@ -1,0 +1,104 @@
+.article {
+
+    &__title {
+        @include margin-bottom(32px);
+    }
+    &__image {
+        @include margin-bottom(56px);
+    }
+    &__row {
+        @include margin-top(24px);
+        @include margin-bottom(25px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__social {
+        justify-content: flex-start;
+        @include mq($medium) {
+            max-width: 50%;
+        }
+    }
+
+    &__author {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include font-size(14px);
+        font-weight: normal;
+        line-height: 1.86;
+        white-space: nowrap;
+        @include mq($medium) {
+            margin-top: 0;
+            @include margin-right(30px);
+        }
+    }
+    &__author-title {
+        display: none;
+        @include mq($medium) {
+            @include margin-right(8px);
+            display: block;
+        }
+    }
+
+    &__meta {
+        margin-top: 10px;
+        padding-top: 28px;
+        @include padding-right(11px);
+        padding-bottom: 28px;
+        @include padding-left(15px);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fafafa;
+        @include mq($medium) {
+            margin-top: 20px;
+            @include padding-right(37px);
+            @include padding-left(21px);
+
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        @include font-size(14px);
+        font-weight: normal;
+        line-height: 1.86;
+    }
+    &__date-title {
+        display: none;
+        @include mq($medium) {
+            display: block;
+        }
+    }
+    &__date-text {
+        @include mq($medium) {
+            @include  margin-left(8px);
+            font-weight: 600;
+        }
+    }
+
+    &__print {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include font-size(14px);
+        font-weight: normal;
+        line-height: 1.86;
+        @include tr(.3s ease);
+
+        &:hover {
+            color: lighten(#000000, 10);
+            @include tr(.3s ease);
+        }
+    }
+
+    &__print-icon {
+        @include margin-right(8px);
+    }
+
+}

@@ -121,7 +121,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     pageWidget([
         'index',
-        'news'
+        'news',
+        'article'
+
     ]);
 
 

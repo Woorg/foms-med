@@ -19,7 +19,7 @@ mixin footer(data)
                     a.footer__map-link.more(href="#") Открыть карты
                         != pugHelpers.Icon.call(locals, {iconName: 'more-icon', className: 'more__icon'})
 
-            .footer__col.footer__col_nav.footer__col_nav_first.footer__col_nav_active
+            .footer__col.footer__col_nav.footer__col_nav_first
                 nav.footer__nav.nav.nav_secondary
                     .nav__title О Фонде
                     != pugHelpers.Icon.call(locals, {iconName: 'arrow-down-icon', className: 'nav__dropdown-icon'})

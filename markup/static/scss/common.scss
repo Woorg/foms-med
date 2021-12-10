@@ -105,6 +105,16 @@ html, body {
             @include padding-left(48px);
         }
     }
+
+    .page__icon_left {
+        top: 1042px;
+
+    }
+
+    .page__icon_right {
+        top: 272px;
+    }
+
     .page__row {
         padding-top: 32px;
         overflow: hidden;
@@ -120,13 +130,16 @@ html, body {
 
 .page_news {
 
-    .page__icon_left {
-        top: 1042px;
+}
 
-    }
+.page_article {
+    .page__content {
+        @include padding-bottom(25px);
 
-    .page__icon_right {
-        top: 272px;
+        @include mq($medium) {
+            @include padding-bottom(50px);
+
+        }
     }
 
 }
@@ -134,8 +147,6 @@ html, body {
 .page_nav_open {
     overflow-y: hidden;
 }
-
-
 
 
 img.lazy {

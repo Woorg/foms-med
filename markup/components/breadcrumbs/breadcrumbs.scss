@@ -1,21 +1,26 @@
 .breadcrumbs {
-    // overflow: hidden;
+    margin-bottom: 13px;
+    @include mq($medium) {
+        margin-bottom: 20px;
+    }
     &__list {
         margin: 0;
         padding: 0;
+        max-width: 491px;
         background: transparent;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
 
     &__item {
         position: relative;
-        // padding-left: .5rem;
         padding-left: 0;
         display: flex;
         align-items: center;
+
         &:before {
             display: none;
         }
@@ -28,7 +33,12 @@
     }
 
     &__item_active {
+        max-width: 306px;
+        display: block;
         color: #a0aab1;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
     }
 
     &__icon {

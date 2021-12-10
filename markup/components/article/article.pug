@@ -1,0 +1,55 @@
+mixin article(data)
+    article.article.text
+        h1.article__title Сердечный совет: людям с сердечно-сосудистыми заболеваниями стоит сделать
+
+        figure.article__image
+            picture
+                source(type="image/webp", srcset="static/img/general/placeholder-image.webp", data-srcset="static/img/content/article-img.webp")
+                source(type="image/jpg", srcset="static/img/general/placeholder-image.png", data-srcset="static/img/content/article-img.jpg")
+                img.lazy.lazy(width="870" height="373" src="static/img/general/placeholder-image.png", alt="Сердечный совет: людям с сердечно-сосудистыми заболеваниями стоит сделать ", data-src="static/img/content/article-img.jpg")
+
+        p We are opening up our platform and inviting all builders to create the first plugins and widgets for FigJam. Check out our documentation to start building new plugins or republishing your existing Figma plugins for FigJam. You can also apply to be among the first users to create widgets.
+
+        p And to everyone that’s excited to use these community-built plugins and widgets: stay tuned—you’ll be able to add these to your jams soon.
+
+        hr
+
+        p Plugins can be tremendously powerful for automating individual workflows, like turning a CSV into a grid of sticky notes or adding tags to sticky notes to help with synthesis. But for a collaborative tool like FigJam, we knew builders would also want an API that could enable collaborative and interactive experiences—from voting, to polls, to on-canvas games. That’s why we’re also releasing an API for building custom interactive widgets that teams can drag and drop directly into their boards.
+
+        p Today we’re bringing our open platform to FigJam with those same principles in mind. And because FigJam is all about jamming together, we’re taking it one step further by making sure our platform supports more collaborative use cases.
+
+        blockquote
+            p “Lectus id in sed et, lorem ut. Scelerisque consectetur et quis proin velit aliquet. Enim, sit nibh adipiscing pulvinar risus mauris. Viverra malesuada nisi, nulla arcu, vitae tellus. Odio leo dignissim nisi condimentum semper leo donec egestas. Faucibus integer ante.”
+
+    .article__row
+        .article__social.social.social_style_second
+            ul.social__list
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'facebook-2-icon', className: 'social__icon'})
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'instagram-2-icon', className: 'social__icon'})
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'vk-icon', className: 'social__icon'})
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'youtube-icon', className: 'social__icon'})
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'twitter-2-icon', className: 'social__icon'})
+                li.social__item
+                    a.social__link(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'ok-icon', className: 'social__icon'})
+        .article__author
+            span.article__author-title Автор:
+            | Крансобородов А. А.
+
+        .article__meta
+            .article__date
+                .article__date-title Дата публикации:
+                time.article__date-text(datetime="2001-05-15 19:00") 05.04.2021
+            a.article__print(href="#print")
+                != pugHelpers.Icon.call(locals, {iconName: 'print-icon', className: 'article__print-icon'})
+                | Версия для печати
