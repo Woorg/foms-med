@@ -36,12 +36,12 @@ html, body {
 
     &__icon_left {
         top: 1486px;
-        left: 0;
+        left: -30px;
     }
 
     &__icon_right {
         top: 795px;
-        right: 0;
+        right: -10px;
     }
 
     &__main {
@@ -102,9 +102,9 @@ html, body {
 .page_inner {
 
     .page__breadcrumbs {
-        margin-bottom: 13px;
+        margin-bottom: 20px;
         @include mq($medium) {
-            margin-bottom: 20px;
+            margin-bottom: 32px;
         }
     }
 
@@ -160,9 +160,9 @@ html, body {
     }
 
     .page__breadcrumbs {
-        margin-bottom: 53px;
+        @include margin-bottom(53px);
         @include mq($medium) {
-            margin-bottom: 36px;
+            @include margin-bottom(36px);
         }
     }
 }
@@ -171,13 +171,11 @@ html, body {
     overflow-y: hidden;
 }
 
-
 img.lazy {
     max-width: 100%;
     height: auto;
     &.lazy {
         opacity: 0;
-
     }
 
     &:not(.initial) {
@@ -192,11 +190,9 @@ img.lazy {
 
 }
 
-
 img.lazy:not([src]):not([srcset]) {
     visibility: hidden;
 }
-
 
 a {
     color: currentColor;
@@ -207,8 +203,6 @@ a {
         text-decoration: none;
     }
 }
-
-
 
 // .mfp-bg {
 //     background-color: rgba(26, 26, 26, 1);

@@ -30,6 +30,10 @@
                 display: none;
             }
         }
+
+        &.active {
+            color: #a0aab1;
+        }
     }
 
     &__item_active {
@@ -60,7 +64,7 @@
         @include tr(.3 ease);
 
         &:hover {
-            color: lighten(#334756, 20);
+            color: lighten(#334756, 10);
             @include tr(.3 ease);
         }
     }

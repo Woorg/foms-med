@@ -597,14 +597,8 @@ pseudo:before, pseudo:after {
 
 @media (min-width: 960px) {
   .text h1 {
-    margin-bottom: calc(1.325rem + 0.9vw);
+    margin-bottom: 1.25rem;
     font-size: calc(1.325rem + 0.9vw);
-  }
-}
-
-@media (min-width: 960px) and (min-width: 1200px) {
-  .text h1 {
-    margin-bottom: 2rem;
   }
 }
 
@@ -631,8 +625,12 @@ pseudo:before, pseudo:after {
 }
 
 .text a {
-  color: #dfe4ea;
+  color: #086de0;
   text-decoration: none;
+}
+
+.text a:hover {
+  color: #0655af;
 }
 
 .text p {
@@ -785,6 +783,62 @@ pseudo:before, pseudo:after {
   line-height: 1.4;
 }
 
+.text ul {
+  margin-top: calc(1.375rem + 1.5vw);
+  margin-bottom: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  .text ul {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text ul {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .text ul {
+    margin-top: calc(1.375rem + 1.5vw);
+    margin-bottom: calc(1.375rem + 1.5vw);
+  }
+}
+
+@media (min-width: 960px) and (min-width: 1200px) {
+  .text ul {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 960px) and (min-width: 1200px) {
+  .text ul {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.text ul li:before {
+  margin-right: 0.5rem;
+  content: '-';
+  color: #086de0;
+}
+
+.text ul li:last-child {
+  margin-bottom: 0;
+}
+
+.text_style_second p {
+  margin-bottom: 40px;
+  font-family: "Golos Text", Helvetica, Arial, sans-serif;
+  line-height: 2;
+}
+
+.text_style_second a {
+  line-height: 2;
+}
+
 /* Common styles for current project */
 html, body {
   height: 100%;
@@ -835,12 +889,12 @@ html, body {
 
 .page__icon_left {
   top: 1486px;
-  left: 0;
+  left: -30px;
 }
 
 .page__icon_right {
   top: 795px;
-  right: 0;
+  right: -10px;
 }
 
 .page__row {
@@ -909,12 +963,12 @@ html, body {
 }
 
 .page_inner .page__breadcrumbs {
-  margin-bottom: 13px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 960px) {
   .page_inner .page__breadcrumbs {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
 }
 
@@ -992,12 +1046,24 @@ html, body {
 }
 
 .page_documents .page__breadcrumbs {
-  margin-bottom: 53px;
+  margin-bottom: calc(1.45625rem + 2.475vw);
+}
+
+@media (min-width: 1200px) {
+  .page_documents .page__breadcrumbs {
+    margin-bottom: 3.3125rem;
+  }
 }
 
 @media (min-width: 960px) {
   .page_documents .page__breadcrumbs {
-    margin-bottom: 36px;
+    margin-bottom: calc(1.35rem + 1.2vw);
+  }
+}
+
+@media (min-width: 960px) and (min-width: 1200px) {
+  .page_documents .page__breadcrumbs {
+    margin-bottom: 2.25rem;
   }
 }
 
@@ -2603,6 +2669,10 @@ a:hover {
   display: none;
 }
 
+.breadcrumbs__item.active {
+  color: #a0aab1;
+}
+
 .breadcrumbs__item_active {
   max-width: 306px;
   display: block;
@@ -2633,7 +2703,7 @@ a:hover {
 }
 
 .breadcrumbs__link:hover {
-  color: #597c96;
+  color: #466176;
   -webkit-transition: 0.3 ease;
   transition: 0.3 ease;
 }

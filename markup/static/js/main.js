@@ -124,7 +124,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'news',
         'article',
         'documents',
-        'about'
+        'about',
+        'check'
 
 
     ]);
