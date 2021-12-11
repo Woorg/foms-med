@@ -1,0 +1,31 @@
+mixin policy(data)
+    .policy
+        .policy__w
+            h1.policy__title.title.title_third Проверка полиса
+            p.policy__text Заполните все обязательные поля формы
+
+
+            form.policy__form.form.form_policy
+                .form__field
+                    label.form__label(for='last-name') Фамилия
+                    input#last-name.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='first-name') Имя
+                    input#first-name.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='patronymic') Отчество
+                    input#patronymic.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='document-series') Серия документа
+                    input#document-series.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='document-number') Номер документа
+                    input#document-number.form__input(type='text' placeholder='')
+                .form__field.form__field_datepicker
+                    label.form__label(for='date-of-birth') Дата рождения
+                    input#date-of-birth.form__input(type='text' placeholder='DD-MM-YYYY')
+                    != pugHelpers.Icon.call(locals, {iconName: 'datepicker-icon', className: 'form__icon'})
+
+                .form__row
+                    button.policy__form-button.button.button_form_invert(type='reset') Сбросить
+                    button.policy__form-button.button.button_form(type='submit') Отправить

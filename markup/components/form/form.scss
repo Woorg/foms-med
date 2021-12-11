@@ -10,8 +10,6 @@
 
     &__field_radio {
         position: relative;
-
-
         .form__label {
             position: relative;
             padding-left: 22px;
@@ -32,7 +30,22 @@
                 transform: translateY(-50%)
             }
         }
+    }
 
+    &__field_datepicker {
+        position: relative;
+
+        .form__icon {
+            position: absolute;
+            top: 50%;
+            right: 14px;
+            display: none;
+            transform: translateY(-50%);
+            pointer-events: none;
+            @include mq($medium) {
+                display: block;
+            }
+        }
 
     }
 
@@ -48,8 +61,6 @@
         @include mq($large) {
             @include font-size(16px);
         }
-
-
     }
 
     &__radio {
@@ -71,4 +82,63 @@
         }
     }
 
+}
+
+.form_policy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .form__field {
+        margin-bottom: 25px;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        @include mq($medium) {
+            margin-bottom: 34px;
+            justify-content: flex-end;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .form__field_datepicker {
+        .form__input {
+            @include mq($medium) {
+                padding-right: 54px;
+            }
+        }
+    }
+
+    .form__label {
+        margin-bottom: 10px;
+        width: 100%;
+        color: #000;
+        @include font-size(16px);
+        font-weight: normal;
+        line-height: 1.25;
+        @include mq($medium) {
+            margin-bottom: 0;
+            width: auto;
+            text-align: right;
+        }
+    }
+
+    .form__input {
+        @include resetbutton();
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100%;
+        height: 42px;
+        background-color: #fff;
+        color: rgba(0, 0, 0, 1);
+        border-radius: 4px;
+        @include placeholder() {
+            color: rgba(0, 0, 0, .5);
+        }
+        @include mq($medium) {
+            margin-left: 30px;
+            max-width: 586px;
+            flex-wrap: nowrap;
+        }
+    }
 }

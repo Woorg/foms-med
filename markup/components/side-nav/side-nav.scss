@@ -1,6 +1,7 @@
 .side-nav {
 
     &__list {
+        margin-bottom: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto auto;
@@ -115,8 +116,6 @@
     &__item_8 {
         grid-area: side-nav__item_8;
     }
-
-
 
     &__link {
         @include padding-top(14px);

@@ -102,9 +102,17 @@ html, body {
 .page_inner {
 
     .page__breadcrumbs {
-        margin-bottom: 20px;
+        margin-bottom: 38px;
         @include mq($medium) {
             margin-bottom: 32px;
+        }
+    }
+
+    .page__main {
+        margin-bottom: 40px;
+        @include mq($medium) {
+            margin-bottom: 40px;
+
         }
     }
 
@@ -160,7 +168,7 @@ html, body {
     }
 
     .page__breadcrumbs {
-        @include margin-bottom(53px);
+        @include margin-bottom(38px);
         @include mq($medium) {
             @include margin-bottom(36px);
         }

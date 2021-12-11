@@ -17,7 +17,8 @@
     "vanilla-lazyload": "^17.5.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "vanillajs-datepicker": "^1.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

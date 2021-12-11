@@ -1,0 +1,49 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head-datepicker/head-datepicker.pug
+
+    include ../components/header/header.pug
+    include ../components/nav/nav.pug
+    //- include ../components/section-nav/section-nav.pug
+    include ../components/side-nav/side-nav.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    //- include ../components/pagination/pagination.pug
+
+    //- include ../components/slider/slider.pug
+    //- include ../components/article/article.pug
+    include ../components/policy/policy.pug
+
+    //- include ../components/map-organizations/map-organizations.pug
+    //- include ../components/departments/departments.pug
+    //- include ../components/map-area/map-area.pug
+
+    include ../components/footer/footer.pug
+
+    head
+        +head-datepicker(head.defaults)
+    body.page.page_inner.page_article
+        |%=symbols=%
+
+        .page__wrapper
+            +header()
+            main.page__main.container
+                .page__row
+                    aside.side.page__side
+                        +side-nav()
+                    .content.page__content
+                        +breadcrumbs-article().page__breadcrumbs
+                        +policy()
+                        //- +article-policy-check()
+                        //- +pagination()
+
+                //- +departments()
+
+            //- != pugHelpers.Icon.call(locals, {iconName: 'page-left-icon', className: 'page__icon page__icon_left'})
+            != pugHelpers.Icon.call(locals, {iconName: 'page-right-icon', className: 'page__icon page__icon_right'})
+
+        +footer().page__footer
+
+        script(src='%=static=%js/separate-js/jquery.min.js' defer)
+        //- script(src='%=static=%js/separate-js/bootstrap.bundle.min.js' defer)
+        script(src='%=static=%js/main%=hash=%%=min=%.js' defer)

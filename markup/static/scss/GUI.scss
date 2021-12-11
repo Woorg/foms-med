@@ -17,10 +17,18 @@
             @include font-size(32px);
 
         }
-
     }
 
+    &_third {
+        margin-bottom: 0;
+        color: #334756;
+        @include font-size(24px);
+        line-height: 1.5;
 
+        @include mq($medium) {
+            @include font-size(24px);
+        }
+    }
 
 }
 
@@ -62,6 +70,7 @@
     &__arrow {
 
     }
+
     &:hover {
         background-color: darken($dark, 10);
         @include tr(.3s ease);
@@ -121,6 +130,39 @@
     }
 
 }
+
+.button_form,
+.button_form_invert {
+    border: solid 1px #086de0;
+    height: 50px;
+    background: var(--blue);
+    color: var(--white);
+    letter-spacing: 0;
+    font-weight: normal;
+    @include font-size(16px);
+    @include mq($medium) {
+
+    }
+
+    &:hover {
+        background: darken($blue, 10);
+
+    }
+}
+
+.button_form_invert {
+    background: transparent;
+    color: var(--blue);
+    @include mq($medium) {
+
+    }
+
+    &:hover {
+        background: var(--blue);
+        color: var(--white);
+    }
+}
+
 
 .button_style_important {
     padding-top: 14px;

@@ -20,6 +20,8 @@ import LazyLoad from 'vanilla-lazyload';
 
 import {pageWidget} from '../../components/page-widget/page-widget';
 
+import datepicker from '../../components/datepicker/datepicker';
+
 document.addEventListener('DOMContentLoaded', function (event) {
 
     svg4everybody();
@@ -109,6 +111,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     mapArea();
 
+
+    /*
+        Datepicker
+    */
+
+    datepicker();
+
+
     /*
         Footer nav toggle
     */
@@ -126,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'documents',
         'about',
         'policy-check',
+        'policy-check-1',
+
 
     ]);
 

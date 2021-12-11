@@ -26,7 +26,6 @@ mixin nav(data)
 
                     if subnavList
 
-
                         ul.nav__list-sub.subnav
                             each subnavItem in subnavList
 
@@ -44,7 +43,7 @@ mixin nav(data)
                     button.search-form__submit(type="submit")
                         != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'search-form__icon'})
 
-                    button.search-form__close
+                    button.search-form__close(type="button")
                         != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'search-form__close-icon'})
 
 

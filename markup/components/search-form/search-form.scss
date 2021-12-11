@@ -30,6 +30,8 @@
         color: ligten(#021515, 50);
         @include font-size(14px);
         font-weight: normal;
+
+
         box-shadow: 0 6px 15px 0 rgba(2, 21, 21, 0.05);
         @include mq($medium) {
             @include font-size(16px);
@@ -38,6 +40,7 @@
 
     &__submit,
     &__close {
+        z-index: 2;
         position: absolute;
         top: 50%;
         color: #086DE0;
@@ -49,6 +52,7 @@
         width: 24px;
         height: 24px;
         opacity: 1;
+
         @include tr(.3s ease);
         &:hover {
             opacity: .8;
@@ -68,7 +72,8 @@
         position: absolute;
         right: 15px;
         width: 24px;
-        height: 24px;
+        // width: 50px;
+        height: 100%;
 
     }
 }

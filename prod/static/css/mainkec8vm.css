@@ -378,6 +378,31 @@ pseudo:before, pseudo:after {
   }
 }
 
+.title_third {
+  margin-bottom: 0;
+  color: #334756;
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: 1.5;
+}
+
+@media (min-width: 1200px) {
+  .title_third {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .title_third {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+}
+
+@media (min-width: 960px) and (min-width: 1200px) {
+  .title_third {
+    font-size: 1.5rem;
+  }
+}
+
 .button {
   border: none;
   background: transparent;
@@ -505,6 +530,32 @@ pseudo:before, pseudo:after {
   color: var(--white);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+.button_form,
+.button_form_invert {
+  border: solid 1px #086de0;
+  height: 50px;
+  background: var(--blue);
+  color: var(--white);
+  letter-spacing: 0;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.button_form:hover,
+.button_form_invert:hover {
+  background: #0655af;
+}
+
+.button_form_invert {
+  background: transparent;
+  color: var(--blue);
+}
+
+.button_form_invert:hover {
+  background: var(--blue);
+  color: var(--white);
 }
 
 .button_style_important {
@@ -1101,12 +1152,22 @@ html, body {
 }
 
 .page_inner .page__breadcrumbs {
-  margin-bottom: 20px;
+  margin-bottom: 38px;
 }
 
 @media (min-width: 960px) {
   .page_inner .page__breadcrumbs {
     margin-bottom: 32px;
+  }
+}
+
+.page_inner .page__main {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 960px) {
+  .page_inner .page__main {
+    margin-bottom: 40px;
   }
 }
 
@@ -1184,12 +1245,12 @@ html, body {
 }
 
 .page_documents .page__breadcrumbs {
-  margin-bottom: calc(1.45625rem + 2.475vw);
+  margin-bottom: calc(1.3625rem + 1.35vw);
 }
 
 @media (min-width: 1200px) {
   .page_documents .page__breadcrumbs {
-    margin-bottom: 3.3125rem;
+    margin-bottom: 2.375rem;
   }
 }
 
@@ -2514,6 +2575,7 @@ a:hover {
 }
 
 .side-nav__list {
+  margin-bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -4713,6 +4775,62 @@ a:hover {
   transition: 0.3s ease;
 }
 
+.datepicker-cell.today.focused:not(.selected),
+.datepicker-cell.today:not(.selected) {
+  background-color: #086DE0;
+}
+
+.policy__w {
+  padding-top: 15px;
+  padding-right: 0.625rem;
+  padding-bottom: 24px;
+  padding-left: 0.625rem;
+  background-color: #edf1f3;
+}
+
+@media (min-width: 960px) {
+  .policy__w {
+    padding-right: calc(1.3rem + 0.6vw);
+    padding-left: calc(1.3rem + 0.6vw);
+  }
+}
+
+@media (min-width: 960px) and (min-width: 1200px) {
+  .policy__w {
+    padding-right: 1.75rem;
+  }
+}
+
+@media (min-width: 960px) and (min-width: 1200px) {
+  .policy__w {
+    padding-left: 1.75rem;
+  }
+}
+
+.policy__text {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.policy__form {
+  margin-top: 25px;
+}
+
+@media (min-width: 960px) {
+  .policy__form {
+    margin-top: 34px;
+  }
+}
+
+.policy__form-button {
+  margin-left: 8px;
+}
+
+.policy__form-button:first-child {
+  margin-left: 0;
+}
+
 .form__field {
   padding-left: 0;
   display: -webkit-box;
@@ -4744,6 +4862,26 @@ a:hover {
   border-radius: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.form__field_datepicker {
+  position: relative;
+}
+
+.form__field_datepicker .form__icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  display: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media (min-width: 960px) {
+  .form__field_datepicker .form__icon {
+    display: block;
+  }
 }
 
 .form__label {
@@ -4780,6 +4918,107 @@ a:hover {
   width: 17px;
   height: 17px;
   background: url("../img/general/radio-check.svg") 0 0/cover no-repeat;
+}
+
+.form_policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.form_policy .form__field {
+  margin-bottom: 25px;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 960px) {
+  .form_policy .form__field {
+    margin-bottom: 34px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 960px) {
+  .form_policy .form__field_datepicker .form__input {
+    padding-right: 54px;
+  }
+}
+
+.form_policy .form__label {
+  margin-bottom: 10px;
+  width: 100%;
+  color: #000;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+@media (min-width: 960px) {
+  .form_policy .form__label {
+    margin-bottom: 0;
+    width: auto;
+    text-align: right;
+  }
+}
+
+.form_policy .form__input {
+  border: none;
+  background: transparent;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 42px;
+  background-color: #fff;
+  color: black;
+  border-radius: 4px;
+}
+
+.form_policy .form__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form_policy .form__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form_policy .form__input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form_policy .form__input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form_policy .form__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 960px) {
+  .form_policy .form__input {
+    margin-left: 30px;
+    max-width: 586px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .poll__title {
@@ -4905,6 +5144,7 @@ a:hover {
 }
 
 .search-form__submit, .search-form__close {
+  z-index: 2;
   position: absolute;
   top: 50%;
   color: #086DE0;
@@ -4940,7 +5180,7 @@ a:hover {
   position: absolute;
   right: 15px;
   width: 24px;
-  height: 24px;
+  height: 100%;
 }
 
 .search-form_open {
