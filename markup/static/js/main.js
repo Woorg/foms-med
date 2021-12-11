@@ -138,6 +138,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'about',
         'policy-check',
         'policy-check-1',
+        'policy-valid',
+        'policy-invalid',
+
 
     ]);
 

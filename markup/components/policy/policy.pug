@@ -3,8 +3,115 @@ mixin policy(data)
         .policy__w
             h1.policy__title.title.title_third Проверка полиса
             p.policy__text Заполните все обязательные поля формы
+            form.policy__form.form.form_policy
+                .form__field
+                    label.form__label(for='last-name') Фамилия
+                    input#last-name.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='first-name') Имя
+                    input#first-name.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='patronymic') Отчество
+                    input#patronymic.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='document-series') Серия документа
+                    input#document-series.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='document-number') Номер документа
+                    input#document-number.form__input(type='text' placeholder='')
+                .form__field.form__field_datepicker
+                    label.form__label(for='date-of-birth') Дата рождения
+                    input#date-of-birth.form__input(type='text' placeholder='DD-MM-YYYY')
+                    != pugHelpers.Icon.call(locals, {iconName: 'datepicker-icon', className: 'form__icon'})
+
+                .form__row
+                    button.policy__form-button.button.button_form_invert(type='reset') Сбросить
+                    button.policy__form-button.button.button_form(type='submit') Отправить
+
+mixin policy-valid(data)
+    .policy
+        .policy__result
+            dl.policy__list
+                .policy__list-item
+                    dt.policy__term ЕНП
+                    dd.policy__desc 0552010821000073
+                .policy__list-item
+                    dt.policy__term Статус
+                    dd.policy__desc Действующий
+                .policy__list-item
+                    dt.policy__term СМО
+                    dd.policy__desc Макс-М
+                .policy__list-item
+                    dt.policy__term Регион
+                    dd.policy__desc Дагестан
+                .policy__list-item
+                    dt.policy__term Полис
+                    dd.policy__desc 0552010821000073
+                .policy__list-item
+                    dt.policy__term Дата начала
+                    dd.policy__desc 08.02.2021
+                .policy__list-item.policy__list-item_end
+                    dt.policy__term Дата окончания
+                    dd.policy__desc Действующий
+
+        .policy__w
+            h1.policy__title.title.title_third Проверка полиса
+            p.policy__text Заполните все обязательные поля формы
+            form.policy__form.form.form_policy
+                .form__field
+                    label.form__label(for='last-name') Фамилия
+                    input#last-name.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='first-name') Имя
+                    input#first-name.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='patronymic') Отчество
+                    input#patronymic.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='document-series') Серия документа
+                    input#document-series.form__input(type='text' placeholder='')
+                .form__field
+                    label.form__label(for='document-number') Номер документа
+                    input#document-number.form__input(type='text' placeholder='')
+                .form__field.form__field_datepicker
+                    label.form__label(for='date-of-birth') Дата рождения
+                    input#date-of-birth.form__input(type='text' placeholder='DD-MM-YYYY')
+                    != pugHelpers.Icon.call(locals, {iconName: 'datepicker-icon', className: 'form__icon'})
+
+                .form__row
+                    button.policy__form-button.button.button_form_invert(type='reset') Сбросить
+                    button.policy__form-button.button.button_form(type='submit') Отправить
 
 
+mixin policy-invalid(data)
+    .policy
+        .policy__result.policy__result_invalid
+            dl.policy__list
+                .policy__list-item
+                    dt.policy__term ЕНП
+                    dd.policy__desc 0552010821000073
+                .policy__list-item
+                    dt.policy__term Статус
+                    dd.policy__desc Действующий
+                .policy__list-item
+                    dt.policy__term СМО
+                    dd.policy__desc Макс-М
+                .policy__list-item
+                    dt.policy__term Регион
+                    dd.policy__desc Дагестан
+                .policy__list-item
+                    dt.policy__term Полис
+                    dd.policy__desc 0552010821000073
+                .policy__list-item
+                    dt.policy__term Дата начала
+                    dd.policy__desc 08.02.2021
+                .policy__list-item.policy__list-item_end
+                    dt.policy__term Дата окончания
+                    dd.policy__desc Закончен
+
+        .policy__w
+            h1.policy__title.title.title_third Проверка полиса
+            p.policy__text Заполните все обязательные поля формы
             form.policy__form.form.form_policy
                 .form__field
                     label.form__label(for='last-name') Фамилия

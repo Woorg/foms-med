@@ -1,5 +1,73 @@
 .policy {
 
+    &__result {
+        margin-bottom: 12px;
+        padding-top: 18px;
+        @include padding-right(24px);
+        padding-bottom: 18px;
+        @include padding-left(24px);
+        background-color: #e7f4e8;
+
+        @include mq($medium) {
+            margin-bottom: 22px;
+        }
+
+        .policy__list-item_end {
+            color: #2B7220;
+        }
+    }
+
+    &__result_invalid {
+        background-color: #F4E9E7;
+        color: #000;
+
+        .policy__list-item_end {
+            color: #722e20;
+        }
+    }
+
+    &__list {
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    &__list-item {
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include font-size(14px);
+        line-height: 1.2;
+        @include mq($medium) {
+            margin-bottom: 23px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list-item_end {
+        @include font-size(16px);
+        flex-wrap: wrap;
+        .policy__term {
+            width: 100%;
+            @include mq($small) {
+                width: auto;
+            }
+        }
+    }
+
+    &__term {
+        @include margin-right(5px);
+        font-weight: bold;
+    }
+
+    &__desc {
+        margin-bottom: 0;
+    }
 
     &__w {
         padding-top: 15px;

@@ -287,30 +287,81 @@
                                 <li class="breadcrumb-item active breadcrumbs__item breadcrumbs__item_active" aria-current="page">Сердечный совет: людям с сердечно-сосудистыми заболеваниями стоит сделать</li>
                             </ol>
                         </nav>
-                        <article class="article text text_style_second">
-                            <h1 class="article__title">О фонде</h1>
-                            <p>Территориальный фонд обязательного медицинского страхования Республики Дагестан - юридическое лицо, созданное Республикой Дагестан в организационно-правовой форме государственного социального фонда, некоммерческая организация,
-                                не имеющая членства и созданная для осуществления государственных функций в целях обеспечения реализации прав граждан на обязательное медицинское страхование и управления средствами бюджета территориального фонда обязательного
-                                медицинского страхования. Функции и полномочия учредителя в отношении Территориального фонда ОМС осуществляются высшим органом исполнительной власти – Правительством Республики Дагестан.</p>
-                            <p>Положение о территориальном фонде обязательного медицинского страхования утверждается высшим органами исполнительной власти - Правительством Республики Дагестан в соответствии с требованиями к уставу государственных социальных
-                                фондов субъектов Российской Федерации, утверждаемыми Правительством Российской Федерации.</p>
-                            <p>Органами управления Территориального фонда обязательного медицинского страхования Республики Дагестан являются Правление территориального фонда обязательного медицинского страхования Республики Дагестан и директор территориального
-                                фонда обязательного медицинского страхования Республики Дагестан.</p>
-                            <p>ТФОМС РД создан Постановлением Президиума Верховного Совета Республики Дагестан от 24 июня 1993 г. "О Республиканском фонде обязательного медицинского страхования граждан в Республике Дагестан". В настоящее время действует
-                                на основании положения, утвержденного Постановлением Правительства Республики Дагестан от 7 июля 2011 года № 227, и имеет в своей структуре 10 филиалов.</p>
-                            <p>В страховом поле Республики Дагестан функционирует одна страховая медицинская организация</p>
-                            <ul>
-                                <li><a href="#">Перечень основных нормативных документов, регламентирующих деятельность ТФОМС РД на 17 января 2020 года</a>
-                                </li>
-                            </ul>
-                        </article>
+                        <div class="policy">
+                            <div class="policy__result policy__result_invalid">
+                                <dl class="policy__list">
+                                    <div class="policy__list-item">
+                                        <dt class="policy__term">ЕНП</dt>
+                                        <dd class="policy__desc">0552010821000073</dd>
+                                    </div>
+                                    <div class="policy__list-item">
+                                        <dt class="policy__term">Статус</dt>
+                                        <dd class="policy__desc">Действующий</dd>
+                                    </div>
+                                    <div class="policy__list-item">
+                                        <dt class="policy__term">СМО</dt>
+                                        <dd class="policy__desc">Макс-М</dd>
+                                    </div>
+                                    <div class="policy__list-item">
+                                        <dt class="policy__term">Регион</dt>
+                                        <dd class="policy__desc">Дагестан</dd>
+                                    </div>
+                                    <div class="policy__list-item">
+                                        <dt class="policy__term">Полис</dt>
+                                        <dd class="policy__desc">0552010821000073</dd>
+                                    </div>
+                                    <div class="policy__list-item">
+                                        <dt class="policy__term">Дата начала</dt>
+                                        <dd class="policy__desc">08.02.2021</dd>
+                                    </div>
+                                    <div class="policy__list-item policy__list-item_end">
+                                        <dt class="policy__term">Дата окончания</dt>
+                                        <dd class="policy__desc">Закончен</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="policy__w">
+                                <h1 class="policy__title title title_third">Проверка полиса</h1>
+                                <p class="policy__text">Заполните все обязательные поля формы</p>
+                                <form class="policy__form form form_policy">
+                                    <div class="form__field">
+                                        <label class="form__label" for="last-name">Фамилия</label>
+                                        <input class="form__input" id="last-name" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__field">
+                                        <label class="form__label" for="first-name">Имя</label>
+                                        <input class="form__input" id="first-name" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__field">
+                                        <label class="form__label" for="patronymic">Отчество</label>
+                                        <input class="form__input" id="patronymic" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__field">
+                                        <label class="form__label" for="document-series">Серия документа</label>
+                                        <input class="form__input" id="document-series" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__field">
+                                        <label class="form__label" for="document-number">Номер документа</label>
+                                        <input class="form__input" id="document-number" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__field form__field_datepicker">
+                                        <label class="form__label" for="date-of-birth">Дата рождения</label>
+                                        <input class="form__input" id="date-of-birth" type="text" placeholder="DD-MM-YYYY">
+                                        <svg class="form__icon" width="24px" height="24px">
+                                            <use xlink:href="svg-symbolsmvbd3.svg#datepicker-icon"></use>
+                                        </svg>
+
+                                    </div>
+                                    <div class="form__row">
+                                        <button class="policy__form-button button button_form_invert" type="reset">Сбросить</button>
+                                        <button class="policy__form-button button button_form" type="submit">Отправить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
-            <svg class="page__icon page__icon_left" width="184px" height="89px">
-                <use xlink:href="svg-symbolsmvbd3.svg#page-left-icon"></use>
-            </svg>
-
             <svg class="page__icon page__icon_right" width="110px" height="89px">
                 <use xlink:href="svg-symbolsmvbd3.svg#page-right-icon"></use>
             </svg>
