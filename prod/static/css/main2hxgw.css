@@ -4975,6 +4975,7 @@ a:hover {
 @media (min-width: 960px) {
   .form_policy .form__label {
     margin-bottom: 0;
+    min-width: 160px;
     width: auto;
     text-align: right;
   }

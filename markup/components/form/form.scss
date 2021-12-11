@@ -118,6 +118,7 @@
         line-height: 1.25;
         @include mq($medium) {
             margin-bottom: 0;
+            min-width: 160px;
             width: auto;
             text-align: right;
         }

@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         tabs();
     }
 
-
     /*
         Departments
     */
@@ -111,13 +110,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     mapArea();
 
-
     /*
         Datepicker
     */
 
-    datepicker();
+    const $datepickerField = document.querySelector('.form__field_datepicker input');
 
+    if ( $datepickerField ) {
+        datepicker();
+    }
 
     /*
         Footer nav toggle
@@ -137,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'about',
         'policy-check',
         'policy-check-1',
-
 
     ]);
 

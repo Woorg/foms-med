@@ -25,7 +25,7 @@ mixin head(data)
     //-  <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     //- <noscript><link rel="stylesheet" href="%=static=%css/main%=hash=%%=min=%.css"></noscript>
 
-
+    | <link rel="preload" href="%=static=%css/separate-css/datepicker.min.css" as="style">
     | <link rel="preload" href="%=static=%css/separate-css/tabby-ui.min.css" as="style">
     | <link rel="preload" href="%=static=%css/separate-css/swiper-bundle.min.css" as="style">
     | <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style">
@@ -40,6 +40,7 @@ mixin head(data)
     //- <link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     //- <noscript><link rel="stylesheet" href="%=static=%css/main%=hash=%%=min=%.css"></noscript>
 
+    | <link href="%=static=%css/separate-css/datepicker.min.css" rel="stylesheet" type="text/css">
     | <link href="%=static=%css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css">
     | <link href="%=static=%css/separate-css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
     | <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">

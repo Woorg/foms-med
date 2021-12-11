@@ -1,7 +1,7 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../components/head-datepicker/head-datepicker.pug
+    include ../components/head/head.pug
 
     include ../components/header/header.pug
     include ../components/nav/nav.pug
@@ -21,7 +21,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
 
     head
-        +head-datepicker(head.defaults)
+        +head(head.defaults)
     body.page.page_inner.page_article
         |%=symbols=%
 
