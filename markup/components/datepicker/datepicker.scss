@@ -1,4 +1,125 @@
+.datepicker-picker {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 16px 32px 2px rgba(97, 97, 97, 0.1), 0 8px 16px 2px rgba(97, 97, 97, 0.1);
+    @include mq($small) {
+        padding-right: 16px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+    }
+    span {
+        color: #000;
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+.datepicker-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 19px;
+}
+
+.datepicker-controls {
+    .button {
+        @include resetbutton();
+        padding-right: 0;
+        padding-left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        &:hover {
+
+        }
+        &.view-switch {
+            border-radius: 0;
+            color: #086de0;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.33;
+            &:hover {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.datepicker-main {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.days-of-week,
+.datepicker-grid {
+    max-width: 270px;
+    width: 100%;
+    @include mq($medium) {
+        max-width: 336px;
+
+    }
+}
+
+.datepicker-view .dow {
+    border: 1px solid transparent;
+    color: #818181;
+    font-weight: 500;
+}
+.datepicker-view .days .datepicker-cell,
+.datepicker-view .dow {
+    border: solid 1px transparent;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    height: auto;
+    line-height: 1;
+    @include mq($small) {
+        padding-top: 15px;
+        padding-right: 12px;
+        padding-left: 12px;
+        padding-bottom: 15px;
+    }
+    &.selected,
+    &.focused {
+        border: solid 1px #1672ec;
+
+    }
+}
+
 .datepicker-cell.today.focused:not(.selected),
 .datepicker-cell.today:not(.selected) {
-    background-color: #086DE0;
+    border: solid 1px #1672ec;
+    background-color: rgba(197, 220, 250, 0.5);
+    color: #1672ec;
+}
+
+.datepicker-view .days .datepicker-cell.selected,
+.datepicker-view .days .datepicker-cell.focused,
+.datepicker-view .dow.selected,
+.datepicker-view .dow.focused {
+    border: solid 1px #1672ec;
+    border-radius: 50%;
+    background-color: rgba(197, 220, 250, 0.5);
+    color: #1672ec;
+}
+
+.datepicker-cell.today:not(.selected):not(.disabled) {
+    color: #1672ec;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.datepicker-cell:not(.disabled):hover {
+    border-radius: 50%;
+    background-color: rgba(197, 220, 250, 0.5);
+    color: #1672ec;
+
+    &.month,
+    &.year,
+    &.decade {
+        border-radius: 0;
+    }
 }

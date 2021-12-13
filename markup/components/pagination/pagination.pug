@@ -3,7 +3,7 @@ mixin pagination(data)
     nav.pagination(aria-label='Page navigation example')
         ul.pagination__list
             li.pagination__item.pagination__item_prev.pagination__item_disabled
-                a.pagination__link(href='#' tabindex='-1')
+                a.pagination__link(href='#' tabindex='-1' disabled)
                     != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'pagination__icon'})
             li.pagination__item.pagination__item_active
                 a.pagination__link(href='#') 1

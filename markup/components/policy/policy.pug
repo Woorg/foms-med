@@ -21,8 +21,7 @@ mixin policy(data)
                     input#document-number.form__input(type='text' placeholder='')
                 .form__field.form__field_datepicker
                     label.form__label(for='date-of-birth') Дата рождения
-                    input#date-of-birth.form__input(type='text' placeholder='DD-MM-YYYY')
-                    != pugHelpers.Icon.call(locals, {iconName: 'datepicker-icon', className: 'form__icon'})
+                    input#date-of-birth.form__input.form__datepicker(type='text' placeholder='DD-MM-YYYY')
 
                 .form__row
                     button.policy__form-button.button.button_form_invert(type='reset') Сбросить
@@ -75,8 +74,7 @@ mixin policy-valid(data)
                     input#document-number.form__input(type='text' placeholder='')
                 .form__field.form__field_datepicker
                     label.form__label(for='date-of-birth') Дата рождения
-                    input#date-of-birth.form__input(type='text' placeholder='DD-MM-YYYY')
-                    != pugHelpers.Icon.call(locals, {iconName: 'datepicker-icon', className: 'form__icon'})
+                    input#date-of-birth.form__input.form__datepicker(type='text' placeholder='DD-MM-YYYY')
 
                 .form__row
                     button.policy__form-button.button.button_form_invert(type='reset') Сбросить
@@ -130,8 +128,7 @@ mixin policy-invalid(data)
                     input#document-number.form__input(type='text' placeholder='')
                 .form__field.form__field_datepicker
                     label.form__label(for='date-of-birth') Дата рождения
-                    input#date-of-birth.form__input(type='text' placeholder='DD-MM-YYYY')
-                    != pugHelpers.Icon.call(locals, {iconName: 'datepicker-icon', className: 'form__icon'})
+                    input#date-of-birth.form__input.form__datepicker(type='text' placeholder='DD-MM-YYYY')
 
                 .form__row
                     button.policy__form-button.button.button_form_invert(type='reset') Сбросить

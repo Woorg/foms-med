@@ -1,0 +1,219 @@
+include ../pagination/pagination
+
+mixin elements(data)
+    .elements
+        .elements__row
+            .elements__col.elements__col_wide
+                .elements__block.elements__block_inputs
+                    .elements__block-title Input
+
+                    form.form.form_default.form_need_validate(novalidate)
+                        .form__field
+                            label.form__label(for='validation01') Input caption (normal)
+                            input#validation01.form__input.form-control.is-default(type='text' value='Default input' required='')
+                            //- .valid-feedback Looks good!
+
+                        .form__field
+                            label.form__label(for='validation02') Input caption (error)
+                            input#validation02.form__input.form-control.is-invalid(type='text' value='Error' required='')
+                            //- .valid-feedback Looks good!
+
+                        .form__field
+                            label.form__label(for='validation02') Input caption (succes)
+                            input#validation02.form__input.form-control.is-valid(type='text' value='Confirmed' required='')
+                            //- .valid-feedback Looks good!
+
+                        .form__field
+                            label.form__label(for='validation02') Input caption (disabled)
+                            input#validation02.form__input.form-control(type='text' value='Default input' disabled)
+                            //- .valid-feedback Looks good!
+
+                .elements__block.elements__block_selects
+                    .elements__block-title Select
+
+                    form.form.form_default.form_need_validate
+
+                        .form__field.form__field_select
+                            label.form__label(for='select01') Select caption (normal)
+                            select#select01.form__select.selectpicker(multiple='multiple' aria-label='Выберите')
+                                option(value='1' selected) Option 1
+                                option(value='2' selected) Option 2
+                                option(value='3') Option 3
+                                option(value='4') Option 4
+
+                        .form__field.form__field_select
+                            label.form__label(for='select01') Select caption (normal)
+                            select#select01.form__select.selectpicker(multiple='multiple' aria-label='Выберите' disabled)
+                                option(value='1' ) Option 1
+                                option(value='2' ) Option 2
+                                option(value='3') Option 3
+                                option(value='4') Option 4
+
+                .elements__block.elements__block_datepicker
+                    .elements__block-title Datepicker
+
+                    form.form.form_default.form_need_validate
+                        .form__field.form__field_datepicker
+                            label.form__label(for='datepicker1') Datepicker caption (normal)
+                            input#datepicker1.form__input.form__datepicker(type='text' name='date' placeholder='20-10-2021')
+
+                        .form__field.form__field_datepicker
+                            label.form__label(for='datepicker2') Datepicker caption (active)
+                            input#datepicker2.form__input.form__datepicker(type='text' name='date1' placeholder='DD-MM-YYYY')
+
+                        .form__field.form__field_datepicker
+                            label.form__label(for='datepicker3') Datepicker caption (disabled)
+                            input.form__input.form__datepicker(type='text' name='date2' placeholder='DD-MM-YYYY' disabled)
+
+
+                .elements__block.elements__block_checkboxes
+                    .elements__block-title Checkboxes
+
+                    ul.elements__block-list
+                        li.elements__block-item
+                            .elements__item-text Checkbox caption (checked)
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_checkbox
+                                    input#checkbox.form__checkbox(type='checkbox' name='checkbox' required checked)
+                                    label.form__label(for='checkbox') Выбранно
+
+                        li.elements__block-item
+                            .elements__item-text Chekbox caption (enabled)
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_checkbox
+                                    input#checkbox1.form__checkbox(type='checkbox' name='checkbox1' required)
+                                    label.form__label(for='checkbox1') Невыбранно
+
+                        li.elements__block-item
+                            .elements__item-text Chekbox caption (disabled)
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_checkbox
+                                    input#checkbox2.form__checkbox(type='checkbox' name='checkbox2' required disabled)
+                                    label.form__label(for='checkbox2') Неактивно
+
+                        li.elements__block-item
+                            .elements__item-text Chekbox caption (cheked-disabled)
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_checkbox
+                                    input#checkbox3.form__checkbox(type='checkbox' name='checkbox3' required checked disabled)
+                                    label.form__label(for='checkbox3') Выбранно
+
+                .elements__block.elements__block_radio
+                    .elements__block-title Radio button
+
+                    ul.elements__block-list
+                        li.elements__block-item
+                            .elements__item-text Radio button (checked)
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_radio
+                                    input#radio.form__radio(type='radio' name='radio' checked)
+                                    label.form__label(for='radio') Да
+
+                        li.elements__block-item
+                            .elements__item-text Radio button
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_radio
+                                    input#radio1.form__radio(type='radio' name='radio' )
+                                    label.form__label(for='radio1') Нет
+
+                        li.elements__block-item
+                            .elements__item-text Radio button(disabled)
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_radio
+                                    input#radio2.form__radio(type='radio' name='radio' disabled)
+                                    label.form__label(for='radio2') Нет
+
+                        li.elements__block-item
+                            .elements__item-text Radio button (checked-disabled)
+
+                            form.form.form_default.form_need_validate
+                                .form__field.form__field_radio
+                                    input#radio3.form__radio(type='radio' name='radio' checked disabled)
+                                    label.form__label(for='radio3')  Да
+
+
+
+
+
+
+
+            .elements__col
+
+
+                .elements__block.elements__block_buttons.elements__block_buttons_filled
+                    .elements__block-title Button filled
+
+                    ul.elements__block-list
+                        li.elements__block-item
+                            button.button.button_filled(type="button") Написать
+
+                            .elements__item-text Normal
+
+                        li.elements__block-item
+                            button.button.button_filled.button_hover(type="button") Написать
+
+                            .elements__item-text Hover
+
+                        li.elements__block-item
+                            button.button.button_filled(type="button" disabled) Написать
+
+                            .elements__item-text Disabled
+
+
+                .elements__block.elements__block_buttons.elements__block_buttons_stroke
+                    .elements__block-title Button stroke
+
+                    ul.elements__block-list
+                        li.elements__block-item
+                            button.button.button_stroke(type="button") Сбросить
+                            .elements__item-text Normal
+
+                        li.elements__block-item
+                            button.button.button_stroke.button_hover(type="button") Сбросить
+                            .elements__item-text Hover
+
+                        li.elements__block-item
+                            button.button.button_stroke(type="button" disabled) Сбросить
+                            .elements__item-text Disabled
+
+
+                .elements__block.elements__block_pagination
+                    .elements__block-title Arrows interaction
+
+                    +pagination()
+
+                .elements__block.elements__block_links
+                    .elements__block-title Text links
+
+                    ul.elements__block-list
+                        li.elements__block-item
+                            a.link-text(href="#") О МИНИСТЕРСТВЕ
+
+                        li.elements__block-item
+                            a.link-text.link-text_hover(href="#") О МИНИСТЕРСТВЕ
+
+
+                .elements__block.elements__block_dropdowns
+                    .elements__block-title Text links
+
+                    ul.elements__block-list
+                        li.elements__block-item
+                            .btn-group
+                                button.button.button_ghost.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-expanded='false') Large button
+                                .dropdown-menu
+                                    button.dropdown-item(type='button') Action
+                                    button.dropdown-item(type='button') Another action
+                                    button.dropdown-item(type='button') Something else here
+
+                            .btn-group
+                                button.button.button_ghost.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-expanded='false') Large button
+                                .dropdown-menu
+                                    button.dropdown-item(type='button') Action
+                                    button.dropdown-item(type='button') Another action
+                                    button.dropdown-item(type='button') Something else here

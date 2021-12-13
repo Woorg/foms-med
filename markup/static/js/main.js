@@ -22,6 +22,12 @@ import {pageWidget} from '../../components/page-widget/page-widget';
 
 import datepicker from '../../components/datepicker/datepicker';
 
+import select from '../../components/select/select';
+
+
+import {validateElements} from '../../components/elements/elements';
+
+
 document.addEventListener('DOMContentLoaded', function (event) {
 
     svg4everybody();
@@ -114,10 +120,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
         Datepicker
     */
 
-    const $datepickerField = document.querySelector('.form__field_datepicker input');
-
+    const $datepickerField = document.querySelector('.form__datepicker');
     if ( $datepickerField ) {
         datepicker();
+    }
+
+    //     Object.assign(Datepicker.locales, ru);
+
+    //     const elem = document.querySelector('.input[name="date"]');
+
+    //     const datepicker = new Datepicker(elem, {
+    //         autohide: false,
+    //         format: 'dd/mm/yyyy',
+    //         language: 'ru',
+    //         todayHighlight: true,
+    //     });
+    // }
+
+    /*
+        Selectpicker
+    */
+
+    const $selectpickerField = document.querySelector('.selectpicker');
+
+    if ( $selectpickerField ) {
+        select();
     }
 
     /*
@@ -125,6 +152,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     */
 
     footerNavToggle();
+
+    /*
+        Validate elements
+    */
+
+    const $formNeedValidate = document.querySelector('.form_need_validate');
+
+    if ( $formNeedValidate ) {
+        validateElements();
+    }
 
     /*
         Page widget
@@ -140,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'policy-check-1',
         'policy-valid',
         'policy-invalid',
-
+        'universal'
 
     ]);
 
