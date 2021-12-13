@@ -49,6 +49,7 @@ html, body {
     }
 
     &__row {
+        position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -56,6 +57,9 @@ html, body {
         @include mq($medium){
             flex-direction: row;
         }
+
+
+
     }
 
     &__side {
@@ -133,7 +137,27 @@ html, body {
 
     .page__row {
         padding-top: 32px;
-        overflow: hidden;
+        // overflow: hidden;
+
+        &:after {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            content: '';
+            max-width: 267px;
+            width: 100%;
+            height: 2px;
+            background-color: #edf1f3;
+            transform: translateX(-50%);
+
+            @include mq($medium) {
+                top: calc(100% + 5px);
+                height: 4px;
+
+            }
+
+        }
+
     }
 
     .page__side {
@@ -145,7 +169,12 @@ html, body {
 }
 
 .page_news {
-
+    .page__row {
+        padding-top: 32px;
+        &:after {
+            display: none;
+        }
+    }
 }
 
 .page_article,

@@ -1,2 +1,72 @@
 mixin contacts(data)
     .contacts
+        .contacts__text.text.text_contacts
+            h1 Контакты
+
+            p <strong>Уважаемые посетители сайта!</strong>
+
+            p <strong>Если у вас возникли проблемы при получении медицинской помощи в лечебных учреждениях республики или за ее пределами, обращайтесь к нам - будем рады вам помочь.</strong>
+
+            p <strong>Наши контактные данные:</strong>
+
+            p Полное наименование организации: <br/>Территориальный фонд обязательного медицинского страхования Республики Дагестан
+
+        ul.contacts__list
+            li.contacts__item
+                != pugHelpers.Icon.call(locals, {iconName: 'contacts-address', className: 'contacts__icon'})
+
+                .contacts__entry
+                    .contacts__entry-title Юридический адрес:
+                    .contacts__entry-text 367008, г.Махачкала, ул.Ляхова, 47а
+
+            li.contacts__item
+                != pugHelpers.Icon.call(locals, {iconName: 'contacts-address', className: 'contacts__icon'})
+
+                .contacts__entry
+                    .contacts__entry-title Почтовый адрес:
+                    .contacts__entry-text 367008, г.Махачкала, ул.Ляхова, 47а
+
+            li.contacts__item
+                != pugHelpers.Icon.call(locals, {iconName: 'contacts-phone', className: 'contacts__icon'})
+
+                .contacts__entry
+                    .contacts__entry-title Телефон:
+                    .contacts__entry-text (8722)-68-03-04
+
+            li.contacts__item
+                != pugHelpers.Icon.call(locals, {iconName: 'contacts-phone', className: 'contacts__icon'})
+
+                .contacts__entry
+                    .contacts__entry-title Факс:
+                    .contacts__entry-text (8722)-67-03-41
+
+            li.contacts__item.contacts__item_email
+                != pugHelpers.Icon.call(locals, {iconName: 'contacts-email', className: 'contacts__icon'})
+
+                .contacts__entry
+                    .contacts__entry-title E-mail:
+                    a.contacts__entry-text(href="mailto:direct@fomsrd.ru")  direct@fomsrd.ru
+
+            li.contacts__item
+                != pugHelpers.Icon.call(locals, {iconName: 'contacts-phone', className: 'contacts__icon'})
+
+                .contacts__entry
+                    .contacts__entry-title Горячая линия:
+                    .contacts__entry-text 8-800-2222-905
+
+        .contacts__map
+            .contacts__map-entry
+                .contacts__map-title Территориальный фонд обязательного медицинского страхования Республики Дагестан
+
+                ul.contacts__map-contacts
+                    li.contacts__map-item Адрес: <br/>
+                        .contacts__map-value Республика Дагестан, г. Махачкала, 367008, г.Махачкала, ул.Ляхова, 47а
+
+                    li.contacts__map-item Телефон: <br/>
+                        .contacts__map-value (8722)-68-03-04
+
+                    li.contacts__map-item E-mail: <br/>
+                        a.contacts__map-value(href="mailto:direct@fomsrd.ru")  direct@fomsrd.ru
+
+
+            #map.contacts__map-object

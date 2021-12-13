@@ -1,0 +1,110 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head-contacts/head-contacts.pug
+
+    include ../components/header/header.pug
+    include ../components/nav/nav.pug
+    //- include ../components/section-nav/section-nav.pug
+    include ../components/side-nav/side-nav.pug
+    include ../components/breadcrumbs/breadcrumbs.pug
+    include ../components/pagination/pagination.pug
+
+    include ../components/contacts/contacts.pug
+
+    //- include ../components/slider/slider.pug
+    //- include ../components/article/article.pug
+    //- include ../components/map-organizations/map-organizations.pug
+    //- include ../components/departments/departments.pug
+    //- include ../components/map-area/map-area.pug
+
+    include ../components/footer/footer.pug
+
+    head
+        +head-contacts(head.defaults)
+    body.page.page_inner.page_article
+        |%=symbols=%
+
+        .page__wrapper
+            +header()
+            main.page__main.container
+                .page__row
+                    aside.side.page__side
+                        +side-nav()
+                    .content.page__content
+                        +breadcrumbs-article().page__breadcrumbs
+                        +contacts()
+                        //- +pagination()
+
+                //- +departments()
+
+            != pugHelpers.Icon.call(locals, {iconName: 'page-left-icon', className: 'page__icon page__icon_left'})
+            != pugHelpers.Icon.call(locals, {iconName: 'page-right-icon', className: 'page__icon page__icon_right'})
+
+        +footer().page__footer
+
+        | <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=bb464330-8cef-4e03-8266-71f7542a88c9" type="text/javascript"></script>
+        script(src='//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous' defer)
+        script(src='//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF' crossorigin='anonymous' defer)
+        //- script(src='%=static=%js/separate-js/bootstrap.bundle.min.js' defer)
+        script(src='%=static=%js/main%=hash=%%=min=%.js' defer)
+
+        script.
+            ymaps.ready(function () {
+
+                var myMap = new ymaps.Map('map', {
+                        center: [42.976240, 47.491019],
+                        zoom: 16,
+                        controls: []
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    });
+
+
+                    //- myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    //-     hintContent: '',
+                    //-     balloonContent: ''
+                    //- }, {
+                    //-     iconLayout: 'default#image',
+                    //-     iconImageHref: 'static/img/general/map-marker.svg',
+                    //-     iconImageSize: [70, 70],
+                    //-     iconImageOffset: [-35, -35]
+                    //- });
+
+                //- myMap.controls.remove('zoomControl');
+
+                ymaps.geocode("г.Махачкала, ул.Ляхова, 47А").then(function (res) {
+                    var coord = res.geoObjects.get(0).geometry.getCoordinates();
+                    var myPlacemark = new ymaps.Placemark(coord, {}, {
+                        iconLayout: 'default#image',
+                        iconImageHref: "static/img/general/map-marker.svg",
+                        iconImageSize: [70, 70],
+                        iconImageOffset: [-35, -35]
+                    });
+                    myMap.geoObjects.add(myPlacemark);
+                    myMap.setCenter(coord);
+
+                    // Сдвиг центра карты вправо
+                    var newcoord = myMap.getGlobalPixelCenter();
+                    newcoord[0] -= 300;
+                    newcoord[1] += 150;
+
+                    function onResizeMap() {
+                        if ($(window).width() > '992') {
+                            myMap.setGlobalPixelCenter(newcoord);
+                        }
+                        else {
+                            myMap.setCenter(coord);
+                        }
+                    }
+
+                    onResizeMap();
+
+                    window.onresize = function () {
+                        onResizeMap();
+                    };
+
+
+                });
+
+            });
