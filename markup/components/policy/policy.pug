@@ -133,3 +133,79 @@ mixin policy-invalid(data)
                 .form__row
                     button.policy__form-button.button.button_form_invert(type='reset') Сбросить
                     button.policy__form-button.button.button_form(type='submit') Отправить
+
+
+mixin policy-question(data)
+    .policy
+
+        .policy__w
+            h1.policy__title.title.title_third Напишите нам
+            p.policy__text Заполните все обязательные поля формы, и наши сотрудники, ответят вам в кротчайший срок
+            form.policy__form.form.form_policy.form_default
+                .form__row
+                    .form__field
+                        label.form__label(for='your-name') Ваши ФИО
+                        input#your-name.form__input(type='text' placeholder='')
+                .form__row
+                    .form__field
+                        label.form__label(for='email') E-mail для связи
+                        input#email.form__input(type='text' placeholder='')
+                .form__row
+                    .form__field
+                        label.form__label(for='phone') Телефон
+                        input#phone.form__input(type='text' placeholder='')
+
+                .form__row
+                    .form__field
+                        label.form__label(for='subject') Тема обращения
+                        select#subject.form__select-simple
+                            option(selected) Выберите тему
+                            option(value='1') One
+                            option(value='2') Two
+                            option(value='3') Three
+
+                .form__row
+                    .form__field
+                        label.form__label(for='recipient') Получатель обращения
+                        select#recipient.form__select-simple
+                            option(selected) Выберите получателя
+                            option(value='1') One
+                            option(value='2') Two
+                            option(value='3') Three
+
+                .form__row
+                    .form__field.form__field_datepicker
+                        label.form__label(for='date') Дата
+                        input#date.form__input.form__datepicker(type='text' placeholder='DD-MM-YYYY')
+
+                .form__row
+                    .form__row-title Опции
+                    .form__group.form__group_check
+                        .form__field.form__field_checkbox
+                            input#checkbox1.form__checkbox(type='checkbox' name='checkbox1' value='some1' checked)
+                            label.form__label(for='checkbox1') Выбранно
+                        .form__field.form__field_checkbox
+                            input#checkbox2.form__checkbox(type='checkbox' name='checkbox2' value='some2' )
+                            label.form__label(for='checkbox2') Невыбранно
+                        .form__field.form__field_checkbox
+                            input#checkbox3.form__checkbox(type='checkbox' name='checkbox3' value='some3' disabled)
+                            label.form__label(for='checkbox3') Неактивно
+
+                .form__row
+                    .form__row-title Опции
+                    .form__group.form__group_check
+                        .form__field.form__field_radio
+                            input#radio1.form__radio(type='radio' name='some' value='some1' checked)
+                            label.form__label(for='radio1')  Да
+                        .form__field.form__field_radio
+                            input#radio2.form__radio(type='radio' name='some' value='some2' )
+                            label.form__label(for='radio2') Нет
+
+                .form__row
+                    .form__field.form__field_textarea
+                        label.form__label(for='message') Обращение
+                        textarea#message.form__textarea(name='message' placeholder='')
+
+                .form__row.form__row_buttons
+                    button.policy__form-button.button.button_stroke(type='reset') Сбросить
+                    button.policy__form-button.button.button_filled(type='submit') Написать

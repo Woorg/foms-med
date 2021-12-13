@@ -110,7 +110,7 @@ mixin elements(data)
 
                             form.form.form_default.form_need_validate
                                 .form__field.form__field_radio
-                                    input#radio.form__radio(type='radio' name='radio' checked)
+                                    input#radio.form__radio(type='radio' name='some' value='some' required checked)
                                     label.form__label(for='radio') Да
 
                         li.elements__block-item
@@ -118,7 +118,7 @@ mixin elements(data)
 
                             form.form.form_default.form_need_validate
                                 .form__field.form__field_radio
-                                    input#radio1.form__radio(type='radio' name='radio' )
+                                    input#radio1.form__radio(type='radio' name='some' value='some1' )
                                     label.form__label(for='radio1') Нет
 
                         li.elements__block-item
@@ -126,7 +126,7 @@ mixin elements(data)
 
                             form.form.form_default.form_need_validate
                                 .form__field.form__field_radio
-                                    input#radio2.form__radio(type='radio' name='radio' disabled)
+                                    input#radio2.form__radio(type='radio' name='some' value='some2' disabled)
                                     label.form__label(for='radio2') Нет
 
                         li.elements__block-item
@@ -134,12 +134,8 @@ mixin elements(data)
 
                             form.form.form_default.form_need_validate
                                 .form__field.form__field_radio
-                                    input#radio3.form__radio(type='radio' name='radio' checked disabled)
+                                    input#radio3.form__radio(type='radio' name='some' value='some3' checked disabled)
                                     label.form__label(for='radio3')  Да
-
-
-
-
 
 
 
