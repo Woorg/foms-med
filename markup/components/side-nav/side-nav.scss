@@ -5,7 +5,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto auto;
-        gap: 5px 10px;
+        gap: 5px 5px;
         grid-auto-flow: row;
         grid-template-areas:
             "side-nav__item_1 side-nav__item_1"
@@ -20,7 +20,12 @@
     }
 
     &__item {
-        margin-bottom: 5px;
+        margin-bottom: 0;
+
+        @include mq($medium) {
+            margin-bottom: 5px;
+
+        }
         &:hover {
             .side-nav__link {
                 background-color: darken(#334756, 10);
@@ -31,6 +36,10 @@
     }
 
     &__item_attention {
+        margin-bottom: 0;
+        @include mq($medium) {
+            margin-bottom: 5px;
+        }
         // height: 50px;
         .side-nav__link {
             height: 50px;
@@ -38,14 +47,14 @@
             justify-content: flex-start;
             background-color: #ff4c29;
             @include mq($medium) {
-                height: 100px;
+                height: 90px;
             }
 
         }
         .side-nav__entry {
             margin-left: 10px;
             @include mq($medium) {
-                margin-left: 15px;
+                margin-left: 22px;
             }
         }
         .side-nav__icon {
@@ -91,6 +100,20 @@
 
     &__item_2 {
         grid-area: side-nav__item_2;
+        margin-bottom: 2px;
+
+        @include mq($medium) {
+            margin-bottom: 5px;
+        }
+
+        .side-nav__link {
+            height: 53px;
+
+            @include mq($medium) {
+                height: 90px;
+            }
+
+        }
     }
 
     &__item_3 {
@@ -139,7 +162,7 @@
             @include padding-top(15px);
             @include padding-right(15px);
             @include padding-bottom(15px);
-            @include padding-left(15px);
+            @include padding-left(20px);
             height: 90px;
             justify-content: flex-start;
             flex-direction: row;
@@ -148,8 +171,8 @@
 
         @include mq($large) {
             padding-right: 0;
-            @include padding-top(18px);
-            @include padding-bottom(18px);
+            @include padding-top(15px);
+            @include padding-bottom(15px);
             height: 90px;
 
         }
@@ -168,7 +191,7 @@
     &__entry {
         // margin-left: 10px;
         @include mq($medium) {
-            margin-left: 15px;
+            margin-left: 20px;
         }
     }
 

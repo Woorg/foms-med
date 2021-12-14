@@ -1,10 +1,11 @@
 .poll {
     &__title {
-        margin-bottom: 5px;
+        margin-bottom: 13px;
         font-weight: 600;
         @include font-size(14px);
         line-height: 1.2;
         @include mq($medium) {
+            margin-bottom: 5px;
             @include font-size(16px);
         }
         @include mq($large) {
@@ -14,11 +15,13 @@
     }
 
     &__text {
+        padding-right: 60px;
         color: #667580;
         font-weight: normal;
         @include font-size(12px);
         line-height: 1.4;
         @include mq($medium) {
+            padding-right: 0;
             @include font-size(13px);
         }
         @include mq($large) {
@@ -37,12 +40,29 @@
     }
 
     &__field {
-        @include margin-bottom(10px);
+        @include margin-bottom(13px);
         @include mq($medium) {
             @include margin-bottom(15px);
         }
         @include mq($large) {
             @include margin-bottom(20px);
+        }
+    }
+
+    &__button {
+        margin-top: 7px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 32px;
+        padding-left: 28px;
+        height: 36px;
+        font-size: 12px;
+        @include mq($medium) {
+            padding-right: 32px;
+            padding-left: 32px;
+            height: 42px;
+            font-size: 15px;
+
         }
     }
 }

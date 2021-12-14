@@ -52,19 +52,18 @@ mixin footer(data)
 
                     .poll__text Была ли полезной для Вас информация с нашего сайта?
 
-
                     form.poll__form.form
-                        .poll__field.form__field.form__field_radio.form-check
-                            input#exampleRadios1.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
+                        .poll__field.form__field.form__field_radio
+                            input#exampleRadios1.form__radio(type='radio' name='exampleRadios' value='option1' checked='')
                             label.form__label.form-check-label(for='exampleRadios1') Да, мне помогли
-                        .poll__field.form__field.form__field_radio.form-check
-                            input#exampleRadios2.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' )
+                        .poll__field.form__field.form__field_radio
+                            input#exampleRadios2.form__radio(type='radio' name='exampleRadios' value='option1' )
                             label.form__label.form-check-label(for='exampleRadios2') Да, но не особо
-                        .poll__field.form__field.form__field_radio.form-check
-                            input#exampleRadios3.form__radio.form-check-input(type='radio' name='exampleRadios' value='option1' )
+                        .poll__field.form__field.form__field_radio
+                            input#exampleRadios3.form__radio(type='radio' name='exampleRadios' value='option1' )
                             label.form__label.form-check-label(for='exampleRadios3') Нет, мне не  нашел ничего
 
-                        button.button.button_style_third(type='submit') Голосовать
+                        button.poll__button.button.button_stroke(type='submit') Голосовать
 
             .footer__social.social
                 .social__title Мы в соц. Сетях

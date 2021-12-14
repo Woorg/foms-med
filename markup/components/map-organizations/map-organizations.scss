@@ -2,7 +2,7 @@
     position: relative;
     background-color: var(--gray);
     display: none;
-    @include mq($medium) {
+    @include mq($large) {
         display: block;
     }
 
@@ -17,13 +17,15 @@
         content: '';
         background-color: var(--gray);
     }
-    &__container {
+    .map-organizations__container {
         padding-top: 40px;
+        padding-right: 0;
+        padding-left: 0;
         padding-bottom: 34px;
     }
 
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         max-width: 467px;
 
     }
@@ -58,7 +60,7 @@
         @include padding-top(25px);
         max-width: 500px;
         @include mq($medium) {
-            @include padding-top(50px);
+            @include padding-top(44px);
         }
     }
 
@@ -82,7 +84,7 @@
         }
 
         @include mq($large) {
-            margin-top: -135px;
+            margin-top: -155px;
             padding-top: 0;
             display: block;
         }

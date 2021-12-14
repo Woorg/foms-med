@@ -6,9 +6,11 @@
     }
     &__container {
         padding-top: 25px;
+        padding-left: 0;
         padding-bottom: 25px;
         @include mq($medium) {
             padding-top: 60px;
+            padding-left: 30px;
             padding-bottom: 53px;
 
         }
@@ -20,14 +22,14 @@
         @include mq($medium) {
             margin-right: auto;
             margin-left: auto;
-            max-width: 929px;
+            max-width: 986px;
         }
     }
 
     .swiper-wrapper {
         margin-right: -10px;
         margin-left: -10px;
-        @include padding-bottom(35px);
+        // @include padding-bottom(35px);
         @include mq($medium) {
             margin-right: -20px;
             margin-left: -20px;

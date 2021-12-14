@@ -12,7 +12,7 @@
     text-align: left;
 
     &_second {
-        @include font-size(22px);
+        font-size: 22px;
         @include mq($medium) {
             @include font-size(32px);
 
@@ -52,7 +52,8 @@
     @include tr(.3s ease);
 
     @include mq($small) {
-
+        padding-right: 18px;
+        padding-left: 18px;
     }
 
     &__text {
@@ -81,10 +82,10 @@
 
 .button_style_second {
     border: solid 1px #086de0;
-    @include padding-top(10px);
+    @include padding-top(4px);
     @include padding-right(30px);
     @include padding-left(30px);
-    @include padding-bottom(10px);
+    @include padding-bottom(4px);
     // padding: 10px 30px;
     background: transparent;
     height: 30px;
@@ -92,12 +93,13 @@
         @include padding-right(15px);
         @include padding-left(15px);
 
-        height: 48px;
+        height: 40px;
     }
 
     @include mq($large) {
-        @include padding-right(30px);
-        @include padding-left(30px);
+        @include padding-right(22px);
+        @include padding-left(22px);
+
     }
 
     &:hover {
@@ -351,7 +353,7 @@
         @include margin-left(20px);
         fill: transparent;
         @include mq($medium) {
-            @include margin-left(10px);
+            @include margin-left(20px);
         }
     }
 
@@ -425,6 +427,8 @@
     }
     .phone__icon {
         margin-right: 12px;
+        width: 26px;
+        height: 26px;
     }
 }
 

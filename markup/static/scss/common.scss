@@ -29,23 +29,46 @@ html, body {
         z-index: -1;
         position: absolute;
         display: none;
-        @include mq($medium) {
+        @include mq($large) {
             display: block;
         }
     }
 
     &__icon_left {
-        top: 1486px;
-        left: -30px;
+        top: 1490px;
+        left: -6px;
     }
 
     &__icon_right {
-        top: 795px;
-        right: -10px;
+        top: 800px;
+        right: -8px;
     }
 
     &__main {
+        position: relative;
+        padding-bottom: 36px;
+        @include mq($medium) {
+            padding-bottom: 54px;
+        }
 
+        &:after {
+            position: absolute;
+            top: calc(100% - 24px);
+            left: 50%;
+            content: '';
+            max-width: 267px;
+            width: 100%;
+            height: 1px;
+            background-color: #edf1f3;
+            transform: translateX(-50%);
+
+            @include mq($medium) {
+                top: calc(100% - 56px);
+                height: 4px;
+
+            }
+
+        }
     }
 
     &__row {
@@ -67,7 +90,8 @@ html, body {
 
         @include mq($medium){
             margin-right: 8px;
-            max-width: 23.1%;
+            max-width: 23.4%;
+
         }
     }
 
@@ -75,8 +99,8 @@ html, body {
         width: 100%;
 
         @include mq($medium){
-            @include padding-left(10px);
-            max-width: 76.3%;
+            // @include padding-left(10px);
+            max-width: 75.9%;
         }
 
     }
