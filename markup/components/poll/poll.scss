@@ -58,6 +58,7 @@
         height: 36px;
         font-size: 12px;
         @include mq($medium) {
+            margin-top: 0;
             padding-right: 32px;
             padding-left: 32px;
             height: 42px;

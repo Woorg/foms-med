@@ -4,20 +4,27 @@
     justify-content: center;
     border-radius: none;
     @include mq($medium) {
-        margin-top: 70px;
-        margin-bottom: 70px;
+        margin-top: 45px;
+        // margin-right: -122px;
+        margin-bottom: 65px;
+        // padding-left: 122px;
     }
     &__list {
         margin-bottom: 0;
         height: 54px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: flex-end;
     }
 
     &__item {
-        @include margin-left(20px);
+        margin-left: 20px;
         display: flex;
+
+        @include mq($medium) {
+            @include margin-left(18px);
+        }
+
         &:first-child {
             margin-left: 0;
         }
@@ -60,9 +67,9 @@
     &__item_next {
         .pagination__link {
             border: 1px solid #BCBCBC;
-            @include padding-top(5px);
+            @include padding-top(6px);
             @include padding-right(7px);
-            @include padding-bottom(4px);
+            @include padding-bottom(6px);
             @include padding-left(7px);
 
             @include mq($medium) {
@@ -77,9 +84,9 @@
     &__item_disabled {
         .pagination__link {
             border: 1px solid #BCBCBC;
-            @include padding-top(5px);
+            @include padding-top(6px);
             @include padding-right(7px);
-            @include padding-bottom(4px);
+            @include padding-bottom(6px);
             @include padding-left(7px);
 
             @include mq($medium) {
@@ -104,10 +111,11 @@
         border: solid 1px #086de0;
         margin-left: 0;
         @include padding-top(12px);
-        @include padding-right(15px);
+        @include padding-right(13px);
         @include padding-bottom(12px);
-        @include padding-left(15px);
+        @include padding-left(13px);
         // height: 54px;
+        min-width: 37px;
         color: #086de0;
         font-family: $inter-extra;
         font-weight: 800;
@@ -118,9 +126,10 @@
         @include mq($medium) {
             border-radius: 6px;
             @include padding-top(18px);
-            @include padding-right(20px);
+            @include padding-right(17px);
             @include padding-bottom(18px);
-            @include padding-left(20px);
+            @include padding-left(17px);
+            min-width: 54px;
             font-size: 14px;
         }
         &:hover {
@@ -128,6 +137,9 @@
             background-color: #086de0;
             color: var(--white);
         }
+    }
+
+    &__sep {
     }
 
     &__icon {

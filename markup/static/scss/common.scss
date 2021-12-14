@@ -130,29 +130,28 @@ html, body {
 .page_inner {
 
     .page__breadcrumbs {
-        margin-bottom: 38px;
+        margin-bottom: 21px;
         @include mq($medium) {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
     }
 
     .page__main {
-        margin-bottom: 40px;
-        @include mq($medium) {
-            margin-bottom: 40px;
+        // margin-bottom: 40px;
+        // @include mq($medium) {
+        //     margin-bottom: 40px;
 
-        }
+        // }
     }
 
     .page__content {
         @include mq($medium) {
-            @include padding-left(48px);
+            @include padding-left(40px);
         }
     }
 
     .page__icon_left {
-        top: 1042px;
-
+        top: 1002px;
     }
 
     .page__icon_right {
@@ -161,26 +160,23 @@ html, body {
 
     .page__row {
         padding-top: 32px;
-        // overflow: hidden;
+        // &:after {
+        //     position: absolute;
+        //     top: calc(100% + 10px);
+        //     left: 50%;
+        //     content: '';
+        //     max-width: 267px;
+        //     width: 100%;
+        //     height: 2px;
+        //     background-color: #edf1f3;
+        //     transform: translateX(-50%);
 
-        &:after {
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 50%;
-            content: '';
-            max-width: 267px;
-            width: 100%;
-            height: 2px;
-            background-color: #edf1f3;
-            transform: translateX(-50%);
+        //     @include mq($medium) {
+        //         top: calc(100% + 5px);
+        //         height: 4px;
 
-            @include mq($medium) {
-                top: calc(100% + 5px);
-                height: 4px;
-
-            }
-
-        }
+        //     }
+        // }
 
     }
 

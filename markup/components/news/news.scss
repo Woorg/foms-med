@@ -258,6 +258,31 @@
     padding-top: 0;
     padding-bottom: 0px;
     padding-left: 0;
+    @include mq($medium) {
+        padding-left: 5px;
+    }
+
+    .news__title {
+        margin-bottom: 19px;
+        @include mq($medium) {
+            margin-bottom: 27px;
+        }
+    }
+
+    .news__article {
+        @include mq($medium) {
+            margin-bottom: 23px;
+        }
+
+        &:nth-child(n+3) {
+            display: block;
+        }
+
+    }
+
+    .news__image-w {
+        max-width: 29.3%;
+    }
     // overflow: hidden;
     .news__article-title {
         margin-bottom: 4px;
