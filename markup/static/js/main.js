@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'policy-invalid',
         'question',
         'contacts',
+        'management',
         'universal'
 
     ]);
