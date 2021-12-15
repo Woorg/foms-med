@@ -31,7 +31,6 @@
         color: ligten(#021515, 50);
         @include font-size(14px);
         font-weight: normal;
-        // box-shadow: 0 6px 15px 0 rgba(2, 21, 21, 0.05);
         @include mq($medium) {
             padding-left: 84px;
             @include font-size(18px);
@@ -48,11 +47,9 @@
     }
     &__submit {
         @include resetbutton();
-        // left: 15px;
         left: 0;
         width: 50px;
         height: 100%;
-        // opacity: 1;
         color: #086DE0;
         @include tr(.3s ease);
         &:hover {
@@ -98,7 +95,6 @@
             height: 28px;
         }
     }
-
 }
 
 .search-form_separate {
@@ -110,8 +106,10 @@
     height: 55px;
     opacity: 1;
     visibility: visible;
+    box-shadow: none;
 
     .search-form__input {
+        padding-right: 16px;
         padding-left: 44px;
         color: #818c8b;
         font-family: $montserrat;
@@ -119,10 +117,12 @@
     }
     .search-form__submit {
         left: 0;
+        // padding-top: 0;
+        padding-left: 0;
+        // padding-bottom: 0;
         width: 48px;
         height: 55px;
         color: #818C8B;
-        // cursor: pointer;
         &:hover {
             color: darken(#818C8B, 20);
             opacity: 1;
@@ -130,14 +130,15 @@
     }
 
     .search-form__icon {
-        // width: 32px;
-        // height: 32px;
+        width: 24px;
+        height: 24px;
+        @include mq($medium) {
+        }
     }
 
     .search-form__submit {
         color: #818c8b;
     }
-
 }
 
 .search-form_open {

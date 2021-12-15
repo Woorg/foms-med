@@ -1896,8 +1896,15 @@ a:hover {
 
 .logo img.lazy {
   display: block;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 960px) {
+  .logo img.lazy {
+    height: auto;
+  }
 }
 
 .logo_style_second {
@@ -1908,7 +1915,6 @@ a:hover {
 @media (min-width: 960px) {
   .logo_style_second {
     width: 274px;
-    height: 70px;
   }
 }
 
@@ -5988,7 +5994,6 @@ a:hover {
   .not-found {
     padding-top: 168px;
     padding-bottom: 168px;
-    height: 100vh;
   }
 }
 
@@ -6007,7 +6012,7 @@ a:hover {
 }
 
 .not-found__text {
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   color: #2d4642;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -6017,6 +6022,7 @@ a:hover {
 
 @media (min-width: 960px) {
   .not-found__text {
+    margin-bottom: 45px;
     font-size: 1.125rem;
   }
 }
@@ -6050,9 +6056,14 @@ a:hover {
 }
 
 .not-found__search {
-  position: relative;
-  left: 5px;
-  margin-top: 33px;
+  margin-top: 30px;
+}
+
+@media (min-width: 960px) {
+  .not-found__search {
+    position: relative;
+    left: 5px;
+  }
 }
 
 .form__row {
@@ -7124,9 +7135,12 @@ a:hover {
   height: 55px;
   opacity: 1;
   visibility: visible;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .search-form_separate .search-form__input {
+  padding-right: 16px;
   padding-left: 44px;
   color: #818c8b;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -7135,6 +7149,7 @@ a:hover {
 
 .search-form_separate .search-form__submit {
   left: 0;
+  padding-left: 0;
   width: 48px;
   height: 55px;
   color: #818C8B;
@@ -7143,6 +7158,11 @@ a:hover {
 .search-form_separate .search-form__submit:hover {
   color: #505757;
   opacity: 1;
+}
+
+.search-form_separate .search-form__icon {
+  width: 24px;
+  height: 24px;
 }
 
 .search-form_separate .search-form__submit {

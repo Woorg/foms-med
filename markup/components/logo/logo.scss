@@ -13,8 +13,11 @@
 
     img.lazy {
         display: block;
-        // height: 100%;
+        height: 100%;
         object-fit: cover;
+        @include mq($medium) {
+            height: auto;
+        }
     }
 
 }
@@ -24,6 +27,5 @@
     height: 70px;
     @include mq($medium) {
         width: 274px;
-        height: 70px;
     }
 }
