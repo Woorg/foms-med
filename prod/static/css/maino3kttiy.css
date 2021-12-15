@@ -2280,8 +2280,15 @@ a:hover {
 .nav__search-form {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -15px;
+  right: -15px;
+}
+
+@media (min-width: 960px) {
+  .nav__search-form {
+    right: 0;
+    left: 0;
+  }
 }
 
 .nav__user {
@@ -6974,7 +6981,7 @@ a:hover {
 
 .search-form {
   top: -100%;
-  width: 100%;
+  width: auto;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6990,6 +6997,7 @@ a:hover {
 
 @media (min-width: 960px) {
   .search-form {
+    border: solid 1px #d9d9d9;
     height: 100%;
     border-radius: 0;
     -webkit-box-shadow: none;
@@ -7011,7 +7019,7 @@ a:hover {
   border: none;
   background-color: transparent;
   padding-top: 14px;
-  padding-right: 15px;
+  padding-right: 44px;
   padding-bottom: 14px;
   padding-left: 52px;
   width: 100%;
@@ -7024,7 +7032,8 @@ a:hover {
 
 @media (min-width: 960px) {
   .search-form__input {
-    font-size: 1rem;
+    padding-left: 84px;
+    font-size: 1.125rem;
   }
 }
 
@@ -7040,18 +7049,25 @@ a:hover {
 .search-form__submit {
   border: none;
   background-color: transparent;
-  left: 15px;
-  width: 24px;
-  height: 24px;
-  opacity: 1;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  color: #086DE0;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .search-form__submit:hover {
-  opacity: .8;
+  color: #043d7e;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+@media (min-width: 960px) {
+  .search-form__submit {
+    padding-left: 27px;
+    width: 64px;
+  }
 }
 
 .search-form__icon {
@@ -7059,13 +7075,44 @@ a:hover {
   height: 24px;
 }
 
+@media (min-width: 960px) {
+  .search-form__icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
 .search-form__close {
   border: none;
   background-color: transparent;
   position: absolute;
-  right: 15px;
-  width: 24px;
+  right: 0;
+  width: 50px;
   height: 100%;
+  color: #086DE0;
+}
+
+@media (min-width: 960px) {
+  .search-form__close {
+    right: -1px;
+    color: #0D0D0D;
+  }
+}
+
+.search-form__close:hover {
+  color: #272727;
+}
+
+.search-form__close-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 960px) {
+  .search-form__close-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .search-form_separate {

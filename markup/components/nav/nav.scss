@@ -289,8 +289,12 @@
         position: absolute;
         // top: 100%;
         top: 0;
-        left: 0;
-        right: 0;
+        left: -15px;
+        right: -15px;
+        @include mq($medium) {
+            right: 0;
+            left: 0;
+        }
     }
 
     &__user {

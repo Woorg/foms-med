@@ -1,6 +1,6 @@
 .search-form {
     top: -100%;
-    width: 100%;
+    width: auto;
     height: 50px;
     display: flex;
     opacity: 0;
@@ -9,6 +9,7 @@
     border-radius: 0px 0px 1px 1px;
     @include tr(opacity .1s ease);
     @include mq($medium) {
+        border: solid 1px #d9d9d9;
         height: 100%;
         border-radius: 0;
         box-shadow: none;
@@ -21,7 +22,7 @@
     &__input {
         @include resetbutton();
         padding-top: 14px;
-        padding-right: 15px;
+        padding-right: 44px;
         padding-bottom: 14px;
         padding-left: 52px;
         width: 100%;
@@ -32,7 +33,8 @@
         font-weight: normal;
         // box-shadow: 0 6px 15px 0 rgba(2, 21, 21, 0.05);
         @include mq($medium) {
-            @include font-size(16px);
+            padding-left: 84px;
+            @include font-size(18px);
         }
     }
 
@@ -46,28 +48,57 @@
     }
     &__submit {
         @include resetbutton();
-        left: 15px;
-        width: 24px;
-        height: 24px;
-        opacity: 1;
+        // left: 15px;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        // opacity: 1;
+        color: #086DE0;
         @include tr(.3s ease);
         &:hover {
-            opacity: .8;
+            color: darken(#086DE0, 20);
             @include tr(.3s ease);
+        }
+        @include mq($medium) {
+            padding-left: 27px;
+            width: 64px;
         }
     }
 
     &__icon {
         width: 24px;
         height: 24px;
+        @include mq($medium) {
+            width: 34px;
+            height: 34px;
+        }
     }
     &__close {
         @include resetbutton();
         position: absolute;
-        right: 15px;
-        width: 24px;
+        right: 0;
+        width: 50px;
         height: 100%;
+        color: #086DE0;
+        @include mq($medium) {
+            right: -1px;
+            color: #0D0D0D;
+        }
+
+        &:hover {
+            color: lighten(#0D0D0D, 10);
+        }
     }
+
+    &__close-icon {
+        width: 20px;
+        height: 20px;
+        @include mq($medium) {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
 }
 
 .search-form_separate {
