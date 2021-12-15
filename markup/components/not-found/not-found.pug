@@ -1,0 +1,10 @@
+mixin not-found(data)
+    section.not-found
+        h1.not-found__title 404
+        .not-found__text
+            p Прости. контент, который вы ищете, не существует. <br/>Либо она была удалена, либо вы ошиблись при вводе ссылки.
+        .not-found__buttons
+            a.not-found__button.button.button_filled(href="#main") На главную
+            a.not-found__button.button.button_stroke(href="#main") Контакты
+
+        +search-form-404().not-found__search

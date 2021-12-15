@@ -1,2 +1,15 @@
 mixin search-form(data)
-    .search-form
+    form.search-form&attributes(attributes)
+        .search-form__field
+            input.search-form__input(type="text", value="", placeholder="Поиск по сайту")
+            button.search-form__submit(type="submit")
+                != pugHelpers.Icon.call(locals, {iconName: 'search-icon',className: 'search-form__icon'})
+            button.search-form__close(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'search-form__close-icon'})
+
+mixin search-form-404(data)
+    form.search-form.search-form_separate&attributes(attributes)
+        .search-form__field
+            input.search-form__input(type="text", value="", placeholder="Поиск по сайту")
+            button.search-form__submit(type="submit")
+                != pugHelpers.Icon.call(locals, {iconName: 'search-2-icon',className: 'search-form__icon'})

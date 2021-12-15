@@ -181,13 +181,22 @@ html, body {
     }
 }
 
-.page_management {
+.page_management,
+.page_not-found {
     .page__main {
         &:after {
             display: none;
         }
     }
 }
+
+.page_not-found {
+    .page__icon_left {
+        top: 745px;
+        left: -33px;
+    }
+}
+
 
 .page_nav_open {
     overflow-y: hidden;

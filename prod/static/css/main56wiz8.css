@@ -256,6 +256,14 @@ pseudo:before, pseudo:after {
 }
 
 @font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url("../fonts/hinted-subset-Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/hinted-subset-Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Lato';
   src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/subset-Lato-Regular.woff2") format("woff2"), url("../fonts/subset-Lato-Regular.woff") format("woff");
   font-weight: normal;
@@ -267,70 +275,6 @@ pseudo:before, pseudo:after {
   font-family: 'Inter Extra';
   src: local("Inter Extra Bold"), local("Inter-ExtraBold"), url("../fonts/hinted-subset-Inter-ExtraBold.woff2") format("woff2"), url("../fonts/hinted-subset-Inter-ExtraBold.woff") format("woff");
   font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: local("Inter Black"), local("Inter-Black"), url("../fonts/hinted-subset-Inter-Black.woff2") format("woff2"), url("../fonts/hinted-subset-Inter-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/hinted-subset-Inter-Regular.woff2") format("woff2"), url("../fonts/hinted-subset-Inter-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: local("Inter Italic"), local("Inter-Italic"), url("../fonts/hinted-subset-Inter-Italic.woff2") format("woff2"), url("../fonts/hinted-subset-Inter-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local("Raleway"), local("Raleway-Regular"), url("../fonts/hinted-subset-Raleway-Regular.woff2") format("woff2"), url("../fonts/hinted-subset-Raleway-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local("Raleway Bold"), local("Raleway-Bold"), url("../fonts/hinted-subset-Raleway-Bold.woff2") format("woff2"), url("../fonts/hinted-subset-Raleway-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local("Raleway ExtraBold"), local("Raleway-ExtraBold"), url("../fonts/hinted-subset-Raleway-ExtraBold.woff2") format("woff2"), url("../fonts/hinted-subset-Raleway-ExtraBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local("Raleway Black"), local("Raleway-Black"), url("../fonts/hinted-subset-Raleway-Black.woff2") format("woff2"), url("../fonts/hinted-subset-Raleway-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("../fonts/hinted-subset-Raleway-SemiBold.woff2") format("woff2"), url("../fonts/hinted-subset-Raleway-SemiBold.woff") format("woff");
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -619,6 +563,7 @@ pseudo:before, pseudo:after {
 .button_stroke:hover,
 .button_stroke.button_hover {
   background-color: rgba(32, 50, 86, 0.8);
+  color: var(--white);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -1639,8 +1584,14 @@ html, body {
   }
 }
 
-.page_management .page__main:after {
+.page_management .page__main:after,
+.page_not-found .page__main:after {
   display: none;
+}
+
+.page_not-found .page__icon_left {
+  top: 745px;
+  left: -33px;
 }
 
 .page_nav_open {
@@ -5905,7 +5856,7 @@ a:hover {
       flex-wrap: wrap;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
   .management__manager {
     margin-bottom: 30px;
     -ms-flex-wrap: nowrap;
@@ -5926,7 +5877,7 @@ a:hover {
           flex-grow: 1;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
   .management__photo {
     margin-bottom: 0;
   }
@@ -5937,10 +5888,16 @@ a:hover {
   height: 100%;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
   .management__entry {
-    margin-left: 30px;
+    margin-left: calc(1.3125rem + 0.75vw);
     width: 63.9%;
+  }
+}
+
+@media (min-width: 640px) and (min-width: 1200px) {
+  .management__entry {
+    margin-left: 1.875rem;
   }
 }
 
@@ -6005,6 +5962,87 @@ a:hover {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.not-found {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  max-width: 730px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 960px) {
+  .not-found {
+    padding-top: 168px;
+    padding-bottom: 168px;
+    height: 100vh;
+  }
+}
+
+.not-found__title {
+  margin-bottom: 12px;
+  color: #ff4c29;
+  font-size: calc(1.75rem + 6vw);
+  font-weight: bold;
+  line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .not-found__title {
+    font-size: 6.25rem;
+  }
+}
+
+.not-found__text {
+  margin-bottom: 45px;
+  color: #2d4642;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (min-width: 960px) {
+  .not-found__text {
+    font-size: 1.125rem;
+  }
+}
+
+.not-found__text p {
+  line-height: 1.4;
+}
+
+.not-found__text p:last-child() {
+  margin-bottom: 0;
+}
+
+.not-found__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.not-found__button {
+  margin-left: 1rem;
+}
+
+.not-found__button:first-child {
+  margin-left: 0;
+}
+
+.not-found__search {
+  position: relative;
+  left: 5px;
+  margin-top: 33px;
 }
 
 .form__row {
@@ -6950,6 +6988,9 @@ a:hover {
 @media (min-width: 960px) {
   .search-form {
     height: 100%;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
@@ -6976,8 +7017,6 @@ a:hover {
   color: ligten(#021515, 50);
   font-size: 0.875rem;
   font-weight: normal;
-  -webkit-box-shadow: 0 6px 15px 0 rgba(2, 21, 21, 0.05);
-          box-shadow: 0 6px 15px 0 rgba(2, 21, 21, 0.05);
 }
 
 @media (min-width: 960px) {
@@ -7024,6 +7063,40 @@ a:hover {
   right: 15px;
   width: 24px;
   height: 100%;
+}
+
+.search-form_separate {
+  top: 0;
+  border: solid 1px #c6cecd;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 309px;
+  height: 55px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-form_separate .search-form__input {
+  padding-left: 44px;
+  color: #818c8b;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.search-form_separate .search-form__submit {
+  left: 0;
+  width: 48px;
+  height: 55px;
+  color: #818C8B;
+}
+
+.search-form_separate .search-form__submit:hover {
+  color: #505757;
+  opacity: 1;
+}
+
+.search-form_separate .search-form__submit {
+  color: #818c8b;
 }
 
 .search-form_open {

@@ -41,6 +41,16 @@
 }
 
 @font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+        url('../fonts/hinted-subset-Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Lato';
     src: local('Lato Regular'), local('Lato-Regular'),
         url('../fonts/subset-Lato-Regular.woff2') format('woff2'),
@@ -60,92 +70,91 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Black'), local('Inter-Black'),
-        url('../fonts/hinted-subset-Inter-Black.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Inter-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Inter';
+//     src: local('Inter Black'), local('Inter-Black'),
+//         url('../fonts/hinted-subset-Inter-Black.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Inter-Black.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Regular'), local('Inter-Regular'),
-        url('../fonts/hinted-subset-Inter-Regular.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Inter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Inter';
+//     src: local('Inter Regular'), local('Inter-Regular'),
+//         url('../fonts/hinted-subset-Inter-Regular.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Inter-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Italic'), local('Inter-Italic'),
-        url('../fonts/hinted-subset-Inter-Italic.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Inter-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Inter';
+//     src: local('Inter Italic'), local('Inter-Italic'),
+//         url('../fonts/hinted-subset-Inter-Italic.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Inter-Italic.woff') format('woff');
+//     font-weight: normal;
+//     font-style: italic;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway'), local('Raleway-Regular'),
-        url('../fonts/hinted-subset-Raleway-Regular.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Raleway-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     src: local('Raleway'), local('Raleway-Regular'),
+//         url('../fonts/hinted-subset-Raleway-Regular.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Raleway-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway Bold'), local('Raleway-Bold'),
-        url('../fonts/hinted-subset-Raleway-Bold.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Raleway-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     src: local('Raleway Bold'), local('Raleway-Bold'),
+//         url('../fonts/hinted-subset-Raleway-Bold.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Raleway-Bold.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'),
-        url('../fonts/hinted-subset-Raleway-ExtraBold.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Raleway-ExtraBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'),
+//         url('../fonts/hinted-subset-Raleway-ExtraBold.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Raleway-ExtraBold.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway Black'), local('Raleway-Black'),
-        url('../fonts/hinted-subset-Raleway-Black.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Raleway-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     src: local('Raleway Black'), local('Raleway-Black'),
+//         url('../fonts/hinted-subset-Raleway-Black.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Raleway-Black.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway SemiBold'), local('Raleway-SemiBold'),
-        url('../fonts/hinted-subset-Raleway-SemiBold.woff2') format('woff2'),
-        url('../fonts/hinted-subset-Raleway-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Raleway';
+//     src: local('Raleway SemiBold'), local('Raleway-SemiBold'),
+//         url('../fonts/hinted-subset-Raleway-SemiBold.woff2') format('woff2'),
+//         url('../fonts/hinted-subset-Raleway-SemiBold.woff') format('woff');
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
 
 
 $golos-text: 'Golos Text', Helvetica, Arial, sans-serif;
-$inter: 'Inter', Helvetica, Arial, sans-serif;
+// $inter: 'Inter', Helvetica, Arial, sans-serif;
 $inter-extra: 'Inter Extra', Helvetica, Arial, sans-serif;
 $montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
 $lato: 'Lato', Helvetica, Arial, sans-serif;
-$raleway: 'Raleway', Helvetica, Arial, sans-serif;
-
+// $raleway: 'Raleway', Helvetica, Arial, sans-serif;

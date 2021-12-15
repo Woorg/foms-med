@@ -218,6 +218,7 @@
     &:hover,
     &.button_hover {
         background-color: rgba(32, 50, 86, 0.8);
+        color: var(--white);
         @include tr(.3s ease);
 
     }

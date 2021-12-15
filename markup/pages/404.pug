@@ -6,24 +6,18 @@ html(class="no-js", lang="ru")
     include ../components/nav/nav.pug
     include ../components/side-nav/side-nav.pug
     include ../components/breadcrumbs/breadcrumbs.pug
-    include ../components/pagination/pagination.pug
-    include ../components/management/management.pug
+    include ../components/not-found/not-found.pug
     include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
-    body.page.page_inner.page_management
+    body.page.page_inner.page_not-found
         |%=symbols=%
 
         .page__wrapper
             +header()
             main.page__main.container
-                .page__row
-                    aside.side.page__side
-                        +side-nav()
-                    .content.page__content
-                        +breadcrumbs-news().page__breadcrumbs
-                        +management()
+                +not-found()
 
             != pugHelpers.Icon.call(locals, {iconName: 'page-left-icon', className: 'page__icon page__icon_left'})
             != pugHelpers.Icon.call(locals, {iconName: 'page-right-icon', className: 'page__icon page__icon_right'})

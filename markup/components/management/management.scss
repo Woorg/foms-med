@@ -21,7 +21,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
-        @include mq($medium) {
+        @include mq($small) {
             margin-bottom: 30px;
             flex-wrap: nowrap;
         }
@@ -35,7 +35,7 @@
         max-width: 288px;
         width: 100%;
         flex-grow: 1;
-        @include mq($medium) {
+        @include mq($small) {
             margin-bottom: 0;
         }
         img {
@@ -45,8 +45,8 @@
     }
 
     &__entry {
-        @include mq($medium) {
-            margin-left: 30px;
+        @include mq($small) {
+            @include margin-left(30px);
             width: 63.9%;
         }
     }

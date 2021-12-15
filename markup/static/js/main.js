@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         'question',
         'contacts',
         'management',
+        '404',
         'universal'
 
     ]);

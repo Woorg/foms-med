@@ -8,6 +8,7 @@
 <clipPath id="a"><path fill="currentColor" transform="translate(0 .5)" d="M0 0h48v48H0z"/></clipPath><clipPath id="b"><path fill="currentColor" transform="translate(.5 5.5)" d="M0 0h48v37.92H0z"/></clipPath>
 <filter id="filter0_d_143_312" x="0" y="0" width="68" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_143_312"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_143_312" result="shape"/></filter>
 <clipPath id="a"><path fill="#fff" transform="translate(1.534 1.534)" d="M0 0h15.338v15.338H0z"/></clipPath>
+<clipPath id="clip0_584_7038"><path fill="#fff" d="M0 0H23V23H0z"/></clipPath>
   </defs>
     <symbol id="arrow-down-icon" viewBox="0 0 24 24">
       <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -101,6 +102,9 @@
     </symbol>
     <symbol id="radio-check" viewBox="0 0 18 19">
       <g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.203 16.872c-4.2 0-7.67-3.47-7.67-7.67 0-4.199 3.464-7.668 7.664-7.668 4.2 0 7.675 3.47 7.675 7.669 0 4.2-3.47 7.669-7.67 7.669zm-.943-3.817c.218 0 .407-.1.548-.318l3.958-6.202c.089-.13.165-.29.165-.43 0-.313-.277-.507-.565-.507-.171 0-.342.1-.471.3L8.23 11.724 6.28 9.279c-.153-.194-.312-.265-.5-.265a.53.53 0 0 0-.53.542c0 .147.058.306.159.43l2.273 2.757c.183.224.36.312.577.312z" fill="#0A7AFF"/></g>
+    </symbol>
+    <symbol id="search-2-icon" viewBox="0 0 23 23">
+      <g clip-path="url(#clip0_584_7038)"><path d="M15.9154 13.6482C18.6763 9.74957 17.7529 4.3511 13.8543 1.59086C9.95562 -1.16939 4.55715 -0.246668 1.79691 3.65263C-0.963332 7.55126 -0.0406128 12.9491 3.85868 15.7093C6.64135 17.6794 10.3204 17.8311 13.2554 16.0978L19.6326 22.4368C20.3212 23.1616 21.4669 23.1907 22.1917 22.5021C22.9166 21.8142 22.9456 20.6685 22.2577 19.9437C22.2359 19.9206 22.2148 19.8995 22.1917 19.8777L15.9154 13.6482ZM8.85086 14.2392C5.77008 14.2398 3.27234 11.7441 3.27036 8.66328C3.2697 5.58249 5.76546 3.08475 8.8469 3.08343C11.9237 3.08211 14.4202 5.57392 14.4261 8.65074C14.4314 11.7322 11.9369 14.2339 8.85482 14.2392C8.8535 14.2392 8.85284 14.2392 8.85086 14.2392Z" fill="currentColor"/></g>
     </symbol>
     <symbol id="search-icon" viewBox="0 0 34 34">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M14.167 7.084a7.083 7.083 0 1 0 0 14.166 7.083 7.083 0 0 0 0-14.166zM4.25 14.167a9.918 9.918 0 1 1 17.858 5.94l7.227 7.225a1.417 1.417 0 1 1-2.003 2.004l-7.225-7.225A9.916 9.916 0 0 1 4.25 14.167z" fill="currentColor"/>
