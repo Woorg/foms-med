@@ -1877,17 +1877,17 @@ a:hover {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  max-width: 368px;
   width: 290px;
-  height: 75px;
+  height: 76px;
   line-height: 1;
 }
 
 @media (min-width: 960px) {
   .logo {
     margin-top: 0;
+    max-width: 368px;
     width: 100%;
-    height: 95px;
+    height: 96px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -1896,20 +1896,19 @@ a:hover {
 
 .logo img.lazy {
   display: block;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .logo_style_second {
-  max-width: 275px;
-  height: 71px;
+  max-width: 274px;
+  height: 70px;
 }
 
 @media (min-width: 960px) {
   .logo_style_second {
-    width: 275px;
-    height: 71px;
+    width: 274px;
+    height: 70px;
   }
 }
 
@@ -2296,10 +2295,14 @@ a:hover {
 }
 
 .nav__user-text {
+  max-width: 310px;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.43;
   display: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .nav__phone {

@@ -301,10 +301,14 @@
     }
 
     &__user-text {
+        max-width: 310px;
         font-weight: 600;
         font-size: 14px;
         line-height: 1.43;
         display: none;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
 
     }
 
