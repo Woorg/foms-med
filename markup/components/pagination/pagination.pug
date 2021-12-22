@@ -7,8 +7,8 @@ mixin pagination(data)
                     != pugHelpers.Icon.call(locals, {iconName: 'more-icon',className: 'pagination__icon'})
             li.pagination__item.pagination__item_active
                 a.pagination__link(href='#') 1
-            li.pagination__item
-                .pagination__sep
+            li.pagination__item.pagination__item_sep
+                span.pagination__sep
                     != pugHelpers.Icon.call(locals, {iconName: 'pagination-sep',className: 'pagination__sep-icon'})
             li.pagination__item
                 a.pagination__link(href='#') 24

@@ -6,107 +6,30 @@ mixin map-organizations(data)
         .map-organizations__container.container
             h2.map-organizations__title.title.title_second Карта страховых <br/>и медицинских организаций
 
-            .map-organizations__tabs.tabs
-                .map-organizations__tabs-top
-                    //- .map-organizations__tabs-title Филиалы фонда
 
-                    ul.map-organizations__tabs-nav.tabs__nav(data-tabs)
+            .map-organizations__nav
 
-                        li.tabs__nav-item
-                            a.tabs__nav-link( href='#tab-1' ) Филиалы фонда
+                label.map-organizations__nav-item(title='Филиалы фонда')
+                    input.map-organizations__nav-link(type='radio' name='map-option' value='filial' autocomplete='off' checked)
+                    span.map-organizations__nav-text Филиалы фонда
+                label.map-organizations__nav-item(title='СМО')
+                    input.map-organizations__nav-link(type='radio' name='map-option' value='so' autocomplete='off')
+                    span.map-organizations__nav-text СМО
+                label.map-organizations__nav-item(title='Центры здоровья')
+                    input.map-organizations__nav-link(type='radio' name='map-option' value='center' autocomplete='off')
+                    span.map-organizations__nav-text Центры здоровья
+                label.map-organizations__nav-item(title='МО')
+                    input.map-organizations__nav-link(type='radio' name='map-option' value='mo' autocomplete='off')
+                    span.map-organizations__nav-text МО
 
-                        li.tabs__nav-item
-                            a.tabs__nav-link( href='#tab-2' data-tabby-default) СМО
+            input#map-selected-region.map-organizations__selected(type='hidden' value='')
 
-                        li.tabs__nav-item
-                            a.tabs__nav-link(href='#tab-3' ) Центр здоровья
-
-                        li.tabs__nav-item
-                            a.tabs__nav-link(href='#tab-4') МО
-
-
-                .map-organizations__tab.tabs__tab#tab-1
-
-                    .map-organizations__tab-in
-
-                        .map-organizations__addresses
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                        .map-organizations__map
-                            +map-area()
+            #interactive-map-contacts.map-organizations__addresses
 
 
+                address.map-organizations__address.address
+                    strong.address__title Левокумский муниципальный район
+                    .address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85 <br/><a href="tel:+78656033461">+7(86560)3-34-61</a>
 
-
-                .map-organizations__tab.tabs__tab#tab-2
-
-                    .map-organizations__tab-in
-                        .map-organizations__addresses
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                        .map-organizations__map
-                            +map-area()
-
-
-                .map-organizations__tab.tabs__tab#tab-3
-
-                    .map-organizations__tab-in
-                        .map-organizations__addresses
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                        .map-organizations__map
-                            +map-area()
-
-                .map-organizations__tab.tabs__tab#tab-4
-                    .map-organizations__tab-in
-                        .map-organizations__addresses
-
-                            address.map-organizations__address.address
-                                strong.address__title Левокумский муниципальный район
-                                p.address__text <span>ООО «СК «Ингосстрах - М» Дополнительный офис:</span> <br/> 357940, Арзгирский район, с. Арзгир, ул. Кирова, 85
-                                a.address__phone(href='tel:+78656033461') +7(86560)3-34-61
-
-                        .map-organizations__map
-                            +map-area()
+            .map-organizations__map
+                +map-area()

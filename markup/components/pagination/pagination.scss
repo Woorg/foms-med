@@ -7,7 +7,7 @@
         margin-top: 45px;
         // margin-right: -122px;
         margin-bottom: 65px;
-        // padding-left: 122px;
+        padding-left: 105px;
     }
     &__list {
         margin-bottom: 0;
@@ -18,11 +18,12 @@
     }
 
     &__item {
-        margin-left: 20px;
+        // margin-left: 20px;
         display: flex;
 
         @include mq($medium) {
-            @include margin-left(18px);
+            @include margin-right(9px);
+            @include margin-left(9px);
         }
 
         &:first-child {
@@ -107,6 +108,12 @@
         }
     }
 
+    &__item_sep {
+        margin-right: 20px;
+        margin-left: 20px;
+        height: 100%;
+    }
+
     &__link {
         border: solid 1px #086de0;
         margin-left: 0;
@@ -140,6 +147,8 @@
     }
 
     &__sep {
+        padding-top: 10px;
+        // display: flex;
     }
 
     &__icon {

@@ -22,6 +22,7 @@
         padding-right: 0;
         padding-left: 0;
         padding-bottom: 34px;
+        min-height: 540px;
     }
 
     &__title {
@@ -30,31 +31,118 @@
 
     }
 
-    &__tabs {
-
-    }
-
-    &__tabs-top {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    &__tabs-nav {
-
-    }
-
-
-    &__tab {
-
-    }
-
-    &__tab-in {
+    &__nav {
+        margin-bottom: 0;
+        max-width: 688px;
+        width: 100%;
+        border: none;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+        overflow-x: overlay;
+        @include mq($small) {
+            overflow-x: unset;
+        }
+    }
+
+    &__nav-item {
+        @include font-size(16px);
+        font-weight: 600;
+        line-height: 1.2;
+        border-radius: 0;
+        @include tr(.3s ease);
+
+        &.active {
+            border: none;
+            @include padding-top(10px);
+            @include padding-right(14px);
+            @include padding-bottom(10px);
+            @include padding-left(14px);
+            background-color: #ff4c29;
+            color: var(--white);
+            box-shadow: 16px 16px 24px 0 rgba(255, 76, 41, 0.15);
+            @include tr( .3s ease);
+
+            @include mq($medium) {
+                @include padding-top(14px);
+                @include padding-right(16px);
+                @include padding-bottom(14px);
+                @include padding-left(16px);
+            }
+
+            .map-organizations__nav-text {
+                color: var(--white);
+            }
+        }
 
     }
+
+    &__nav-link {
+        appearance: none;
+
+        &:hover {
+            .map-organizations__nav-text {
+
+                @include tr( .3s ease);
+            }
+        }
+
+        &:checked + .map-organizations__nav-text {
+
+
+            border: none;
+            @include padding-top(10px);
+            @include padding-right(14px);
+            @include padding-bottom(10px);
+            @include padding-left(14px);
+            background-color: #ff4c29;
+            color: var(--white);
+            box-shadow: 16px 16px 24px 0 rgba(255, 76, 41, 0.15);
+            @include tr( .3s ease);
+
+            @include mq($medium) {
+                @include padding-top(14px);
+                @include padding-right(16px);
+                @include padding-bottom(14px);
+                @include padding-left(16px);
+            }
+        }
+    }
+
+    &__nav-text {
+        border: none;
+        @include padding-top(10px);
+        @include padding-right(14px);
+        @include padding-bottom(10px);
+        @include padding-left(14px);
+        display: block;
+        color: #334756;
+        @include font-size(16px);
+        font-weight: 600;
+        line-height: 1.2;
+        cursor: pointer;
+        border-radius: 0;
+        @include tr(.3s ease);
+
+        @include mq($small) {
+            @include font-size(18px);
+        }
+
+        @include mq($medium) {
+            @include padding-top(14px);
+            @include padding-right(16px);
+            @include padding-bottom(14px);
+            @include padding-left(16px);
+            @include font-size(24px);
+
+        }
+
+    }
+
+    // &__selected {
+    //     visibility: visible;
+    //     appearance: none;
+    // }
 
     &__addresses {
         @include padding-top(25px);
@@ -72,19 +160,15 @@
     }
 
     &__map {
-        position: relative;
+        position: absolute;
+        top: 40px;
+        right: 0;
         margin-top: 0;
-        @include padding-top(25px);
-        width: 449px;
-        height: 656px;
+        width: 322px;
+        height: 470px;
         display: none;
 
-        @include mq($medium) {
-            @include padding-top(50px);
-        }
-
         @include mq($large) {
-            margin-top: -155px;
             padding-top: 0;
             display: block;
         }
@@ -92,9 +176,19 @@
     }
 
 
+}
 
-    // 322
 
-    // 802
 
+
+@keyframes fadeInUp {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

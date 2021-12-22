@@ -2,7 +2,7 @@ import svg4everybody from 'svg4everybody';
 import header from '../../components/header/header';
 import sectionNavToggle from '../../components/section-nav/section-nav';
 import {slider, sliderMob, sliderVideo, sliderVideoMob} from '../../components/slider/slider';
-import tabs from '../../components/tabs/tabs';
+// import tabs from '../../components/tabs/tabs';
 
 // import about from '../../components/about/about';
 
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
         Tabs
     */
 
-    const $mapOrganizationsTabs = document.querySelector('.map-organizations');
+    // const $mapOrganizationsTabs = document.querySelector('.map-organizations');
 
-    if ( $mapOrganizationsTabs) {
-        tabs();
-    }
+    // if ( $mapOrganizationsTabs) {
+    //     tabs();
+    // }
 
     /*
         Departments
@@ -146,6 +146,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     if ( $selectpickerField ) {
         select();
     }
+
+
+    /*
+        map region picker
+    */
+
+
+
+
+
 
     /*
         Footer nav toggle

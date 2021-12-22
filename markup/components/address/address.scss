@@ -1,4 +1,22 @@
 .address {
+    color: #828282;
+    @include font-size(14px);
+    font-weight: normal;
+    line-height: 1.2;
+    @include mq($medium) {
+        @include font-size(16px);
+    }
+    span,
+    strong {
+        color: #333;
+    }
+    a {
+        color: var(--blue);
+        &:hover {
+            color: darken($blue, 20);
+
+        }
+    }
     &__title {
         margin-bottom: 10px;
         display: block;
@@ -21,8 +39,16 @@
         @include mq($medium) {
             @include font-size(16px);
         }
-        span {
+        span,
+        strong {
             color: #333;
+        }
+        a {
+            color: var(--blue);
+            &:hover {
+                color: darken($blue, 20);
+
+            }
         }
     }
 
